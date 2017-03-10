@@ -71,46 +71,42 @@
 ;
 ;*******************************************************************
 ;
-          .include "general.inc"
+    .include "general.inc"
 
 ; External references
-          .include "ReadADC.inc"
+    .include "ReadADC.inc"
 
 ; Register usage
-          .equ ParmBaseW,w0  ; Base of parm structure
-          .equ Work0W,   w4
-          .equ Work1W,   w5
-
-
+    .equ ParmBaseW,w0  ; Base of parm structure
+    .equ Work0W,   w4
+    .equ Work1W,   w5
 
 ;=================== CODE =====================
 
-          .section  .text  
+    .section .text  
 
-          .global   _ReadSignedADC0
-          .global   ReadSignedADC0
+    .global _ReadSignedADC0
+    .global ReadSignedADC0
 
 _ReadSignedADC0:
 ReadSignedADC0:
 
-     ;; iResult = qK * ADCBUF0
+    ;; iResult = qK * ADCBUF0
       
-		  mov.w     [ParmBaseW+ADC_qK],Work0W
-          mov.w		_ADCBuffer+0, Work1W
+    mov.w   [ParmBaseW + ADC_qK],Work0W
+    mov.w   _ADCBuffer + 0, Work1W
 
-          mpy       Work0W*Work1W,A
-          sac       A,#0,Work0W
-          mov.w     Work0W,[ParmBaseW+ADC_qADValue]
+    mpy	    Work0W*Work1W,A
+    sac     A, #0, Work0W
+    mov.w   Work0W, [ParmBaseW + ADC_qADValue]
+    
+    ; Read DC Bus, remove sign
+    mov.w   _ADCBuffer + 6, Work0W
+    asr.w   Work0W, Work1W
+    mov.w   #0x4000, Work0W
+    add.w   Work1W, Work0W, Work0W
+    mov.w   Work0W, _DCbus
 
-		; Read DC Bus, remove sign
-		mov.w	_ADCBuffer+6, Work0W
-		asr.w 	Work0W, Work1W
-  		mov.w	#0x4000, Work0W
-		add.w	Work1W, Work0W, Work0W
-		mov.w	Work0W, _DCbus
+    return
 
-		return
-
-          .end
-
-
+    .end

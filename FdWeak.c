@@ -61,8 +61,8 @@ SFRAC16 FieldWeakening(SFRAC16 qMotorSpeed)
 
 		FdWeakParm.qIdRef = FdWeakParm.qFwCurve[FdWeakParm.qIndex] \
 							- FracMpy(FdWeakParm.qFwCurve[FdWeakParm.qIndex] \
-									- FdWeakParm.qFwCurve[FdWeakParm.qIndex+1] \
-									 ,FdWeakParm.qInterpolPortion);
+							- FdWeakParm.qFwCurve[FdWeakParm.qIndex+1] \
+							,FdWeakParm.qInterpolPortion);
 
 	}
 	return FdWeakParm.qIdRef;
@@ -87,6 +87,6 @@ void FWInit(void)
 	FdWeakParm.qFwCurve[12]	= dqKFw12;
 	FdWeakParm.qFwCurve[13]	= dqKFw13;
 	FdWeakParm.qFwCurve[14]	= dqKFw14;
-	FdWeakParm.qFwCurve[15]	= dqKFw15;	
+	FdWeakParm.qFwCurve[15]	= dqKFw15;
 	return;
 }

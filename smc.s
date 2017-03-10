@@ -30,17 +30,17 @@
 ; *    Linker File:    p33FJ256MC710.gld                                 *
 ; *                                                                     *
 ; **********************************************************************/
-          .include "general.inc"
+    .include "general.inc"
 
 ; External references
-          .include "smcpos.inc"
+    .include "smcpos.inc"
 
 ;=================== CODE =====================
 
-          .section  .text  
+    .section .text  
 
-          .global   _CalcEstI
-          .global   CalcEstI
+    .global _CalcEstI
+    .global CalcEstI
 
 _CalcEstI:
 CalcEstI:
@@ -54,27 +54,27 @@ CalcEstI:
 ;	//				 + s->Fsmopos * s->EstIalpha
 ;	//
 
-	mov _smc1+SMC_Gsmopos,W4
-	mov _smc1+SMC_Valpha,W5
-	mpy W4*W5,A
+    mov     _smc1 + SMC_Gsmopos, W4
+    mov     _smc1 + SMC_Valpha, W5
+    mpy     W4 * W5, A
 
-	mov _smc1+SMC_Ealpha,W5
-	mpy W4*W5,B
-	neg B
-	add A
+    mov     _smc1 + SMC_Ealpha, W5
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	mov _smc1+SMC_Zalpha,W5
-	mpy W4*W5,B
-	neg B
-	add A
+    mov     _smc1 + SMC_Zalpha, W5
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	mov _smc1+SMC_Fsmopos,W4
-	mov _smc1+SMC_EstIalpha,W5
-	mpy W4*W5,B
-	add A
+    mov     _smc1 + SMC_Fsmopos, W4
+    mov     _smc1 + SMC_EstIalpha, W5
+    mpy     W4 * W5, B
+    add     A
 
-	sac.r A,#0,W0
-	mov W0,_smc1+SMC_EstIalpha
+    sac.r   A, #0, W0
+    mov     W0, _smc1+ SMC_EstIalpha
 
 ;	//
 ;	//	s->EstIbeta = s->Gsmopos * s->Vbeta
@@ -83,184 +83,181 @@ CalcEstI:
 ;	//				+ s->Fsmopos * s->EstIbeta
 ;	//
 
-	mov _smc1+SMC_Gsmopos,W4
-	mov _smc1+SMC_Vbeta,W5
-	mpy W4*W5,A
+    mov     _smc1 + SMC_Gsmopos, W4
+    mov     _smc1 + SMC_Vbeta, W5
+    mpy     W4 * W5, A
 
-	mov _smc1+SMC_Ebeta,W5
-	mpy W4*W5,B
-	neg B
-	add A
+    mov     _smc1 + SMC_Ebeta, W5
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	mov _smc1+SMC_Zbeta,W5
-	mpy W4*W5,B
-	neg B
-	add A
+    mov     _smc1 + SMC_Zbeta, W5
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	mov _smc1+SMC_Fsmopos,W4
-	mov _smc1+SMC_EstIbeta,W5
-	mpy W4*W5,B
-	add A
+    mov     _smc1 + SMC_Fsmopos, W4
+    mov     _smc1 + SMC_EstIbeta, W5
+    mpy     W4 * W5, B
+    add     A
 
-	sac.r A,#0,W0
-	mov W0,_smc1+SMC_EstIbeta
+    sac.r   A, #0, W0
+    mov     W0, _smc1 + SMC_EstIbeta
 
-	return;
+    return
 
-          .global   _CalcIError
-          .global   CalcIError
+    .global _CalcIError
+    .global CalcIError
 
 _CalcIError:
 CalcIError:
 
 ;	// s->IalphaError = s->EstIalpha - s->Ialpha;
 
-	mov _smc1+SMC_EstIalpha,W0
-	mov _smc1+SMC_Ialpha,W1
-	lac W0, A
-	lac W1, B
-	sub A
-	sac.r A, #0, W0
-	mov W0, _smc1+SMC_IalphaError
+    mov     _smc1 + SMC_EstIalpha, W0
+    mov     _smc1 + SMC_Ialpha, W1
+    lac     W0, A
+    lac     W1, B
+    sub     A
+    sac.r   A, #0, W0
+    mov     W0, _smc1 + SMC_IalphaError
 
 ;	// s->IbetaError = s->EstIbeta - s->Ibeta;
 
-	mov _smc1+SMC_EstIbeta,W0
-	mov _smc1+SMC_Ibeta,W1
-	lac W0, A
-	lac W1, B
-	sub A
-	sac.r A, #0, W0
-	mov W0, _smc1+SMC_IbetaError
+    mov     _smc1 + SMC_EstIbeta, W0
+    mov     _smc1 + SMC_Ibeta, W1
+    lac     W0, A
+    lac     W1, B
+    sub     A
+    sac.r   A, #0, W0
+    mov     W0, _smc1 + SMC_IbetaError
 
-	return
+    return
 
-          .global   _CalcZalpha
-          .global   CalcZalpha
+    .global _CalcZalpha
+    .global CalcZalpha
 
 _CalcZalpha:
 CalcZalpha:
 
-		; s->Zalpha = (s->Kslide * s->IalphaError) / s->MaxSMCError
+    ; s->Zalpha = (s->Kslide * s->IalphaError) / s->MaxSMCError
+    mov     _smc1 + SMC_Kslide, W4
+    mov     _smc1 + SMC_IalphaError, W5
+    mov     _smc1 + SMC_MaxSMCError, W9
+    mpy     W4 * W5, A
+    sac.r   A, #0, W0
+    repeat  #17
+    divf    W0, W9
+    mov     W0, _smc1 + SMC_Zalpha
 
-		mov _smc1+SMC_Kslide, W4
-		mov _smc1+SMC_IalphaError, W5
-		mov _smc1+SMC_MaxSMCError, W9
-		mpy W4*W5, A
-		sac.r A, #0, W0
-		repeat #17
-		divf W0, W9
-		mov W0,_smc1+SMC_Zalpha
+    return
 
-	return
-
-          .global   _CalcZbeta
-          .global   CalcZbeta
+    .global _CalcZbeta
+    .global CalcZbeta
 
 _CalcZbeta:
 CalcZbeta:
+    ; s->Zbeta = (s->Kslide * s->IbetaError) / s->MaxSMCError
 
-		; s->Zbeta = (s->Kslide * s->IbetaError) / s->MaxSMCError
+    mov     _smc1 + SMC_Kslide, W4
+    mov     _smc1 + SMC_IbetaError, W5
+    mov     _smc1 + SMC_MaxSMCError, W9
+    mpy     W4 * W5, A
+    sac.r   A, #0, W0
+    repeat  #17
+    divf    W0, W9
+    mov     W0, _smc1 + SMC_Zbeta
 
-		mov _smc1+SMC_Kslide, W4
-		mov _smc1+SMC_IbetaError, W5
-		mov _smc1+SMC_MaxSMCError, W9
-		mpy W4*W5, A
-		sac.r A, #0, W0
-		repeat #17
-		divf W0, W9
-		mov W0,_smc1+SMC_Zbeta
+    return
 
-	return
-
-          .global   _CalcBEMF
-          .global   CalcBEMF
+    .global _CalcBEMF
+    .global CalcBEMF
 
 _CalcBEMF:
 CalcBEMF:
 
-	;// Sliding control filter -> back EMF calculator
-	;// s->Ealpha = s->Ealpha + s->Kslf * s->Zalpha
-	;//                       - s->Kslf * s->Ealpha
+    ;// Sliding control filter -> back EMF calculator
+    ;// s->Ealpha = s->Ealpha + s->Kslf * s->Zalpha
+    ;//                       - s->Kslf * s->Ealpha
+    mov     _smc1 + SMC_Ealpha, W0
+    lac     W0, A
 
-	mov _smc1+SMC_Ealpha, W0
-	lac W0, A
+    mov     _smc1 + SMC_Zalpha, W4
+    mov     _smc1 + SMC_Kslf, W5
+    mpy     W4 * W5, B
+    add     A
 
-	mov _smc1+SMC_Zalpha, W4
-	mov _smc1+SMC_Kslf, W5
-	mpy W4*W5, B
-	add A
+    mov     _smc1 + SMC_Ealpha, W4
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	mov _smc1+SMC_Ealpha, W4
-	mpy W4*W5, B
-	neg B
-	add A
-
-	sac.r A, #0, W0
-	mov W0,_smc1+SMC_Ealpha
+    sac.r   A, #0, W0
+    mov     W0, _smc1 + SMC_Ealpha
 
 	;// s->Ebeta = s->Ebeta + s->Kslf * s->Zbeta
 	;//                     - s->Kslf * s->Ebeta
 
-	mov _smc1+SMC_Ebeta, W0
-	lac W0, A
+    mov     _smc1 + SMC_Ebeta, W0
+    lac     W0, A
 
-	mov _smc1+SMC_Zbeta, W4
-	mov _smc1+SMC_Kslf, W5
-	mpy W4*W5, B
-	add A
+    mov     _smc1 + SMC_Zbeta, W4
+    mov     _smc1 + SMC_Kslf, W5
+    mpy     W4 * W5, B
+    add     A
 
-	mov _smc1+SMC_Ebeta, W4
-	mpy W4*W5, B
-	neg B
-	add A
+    mov     _smc1 + SMC_Ebeta, W4
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	sac.r A, #0, W0
-	mov W0,_smc1+SMC_Ebeta
+    sac.r   A, #0, W0
+    mov     W0, _smc1 + SMC_Ebeta
 
-	;// New filter used to calculate Position	
+	;// New filter used to calculate Position
 	;// s->EalphaFinal = s->EalphaFinal + s->KslfFinal * s->Ealpha
 	;//                                 - s->KslfFinal * s->EalphaFinal
 
-	mov _smc1+SMC_EalphaFinal, W0
-	lac W0, A
+    mov     _smc1 + SMC_EalphaFinal, W0
+    lac     W0, A
 
-	mov _smc1+SMC_Ealpha, W4
-	mov _smc1+SMC_KslfFinal, W5
-	mpy W4*W5, B
-	add A
+    mov     _smc1 + SMC_Ealpha, W4
+    mov     _smc1 + SMC_KslfFinal, W5
+    mpy     W4 * W5, B
+    add     A
 
-	mov _smc1+SMC_EalphaFinal, W4
-	mpy W4*W5, B
-	neg B
-	add A
+    mov     _smc1 + SMC_EalphaFinal, W4
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	sac.r A, #0, W0
-	mov W0,_smc1+SMC_EalphaFinal
+    sac.r   A, #0, W0
+    mov     W0, _smc1 + SMC_EalphaFinal
 
 	;// s->EbetaFinal = s->EbetaFinal + s->KslfFinal * s->Ebeta
 	;//                               - s->KslfFinal * s->EbetaFinal
 
-	mov _smc1+SMC_EbetaFinal, W0
-	lac W0, A
+    mov     _smc1 + SMC_EbetaFinal, W0
+    lac     W0, A
 
-	mov _smc1+SMC_Ebeta, W4
-	mov _smc1+SMC_KslfFinal, W5
-	mpy W4*W5, B
-	add A
+    mov     _smc1 + SMC_Ebeta, W4
+    mov     _smc1 + SMC_KslfFinal, W5
+    mpy     W4 * W5, B
+    add     A
 
-	mov _smc1+SMC_EbetaFinal, W4
-	mpy W4*W5, B
-	neg B
-	add A
+    mov     _smc1 + SMC_EbetaFinal, W4
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	sac.r A, #0, W0
-	mov W0,_smc1+SMC_EbetaFinal
+    sac.r   A, #0, W0
+    mov     W0, _smc1 + SMC_EbetaFinal
 
-	return;
+	return
 
-          .global   _CalcOmegaFltred
-          .global   CalcOmegaFltred
+    .global _CalcOmegaFltred
+    .global CalcOmegaFltred
 
 _CalcOmegaFltred:
 CalcOmegaFltred:
@@ -268,51 +265,51 @@ CalcOmegaFltred:
 	;// s->OmegaFltred = s->OmegaFltred + s->FiltOmCoef * s->Omega
 	;//                                 - s->FiltOmCoef * s->OmegaFltred
 
-	mov _smc1+SMC_OmegaFltred, W0
-	mov _smc1+SMC_Omega, W4
-	mov _smc1+SMC_FiltOmCoef, W5
+    mov     _smc1 + SMC_OmegaFltred, W0
+    mov     _smc1 + SMC_Omega, W4
+    mov     _smc1 + SMC_FiltOmCoef, W5
 
-	lac W0, A
-	mpy W4*W5, B
-	add A
+    lac     W0, A
+    mpy     W4 * W5, B
+    add     A
 
-	mov _smc1+SMC_OmegaFltred, W4
-	mpy W4*W5, B
-	neg B
-	add A
+    mov     _smc1 + SMC_OmegaFltred, W4
+    mpy     W4 * W5, B
+    neg     B
+    add     A
 
-	sac.r A, #0, W0
-	mov W0, _smc1+SMC_OmegaFltred
+    sac.r   A, #0, W0
+    mov     W0, _smc1 + SMC_OmegaFltred
 
-	return
+    return
 
-          .global   _FracMpy
-          .global   FracMpy
+    .global _FracMpy
+    .global FracMpy
 
 _FracMpy:
 FracMpy:
 
-	push W4
-	push W5
-	mov	W0, W4
-	mov	W1, W5
-	mpy W4*W5, A
-	sac.r A, W0
-	pop W5
-	pop W4
-	return
+    push    W4
+    push    W5
+    mov     W0, W4
+    mov     W1, W5
+    mpy     W4 * W5, A
+    sac.r   A, W0
+    pop     W5
+    pop     W4
+    return
 
-          .global   _FracDiv
-          .global   FracDiv
+    .global _FracDiv
+    .global FracDiv
 
 _FracDiv:
 FracDiv:
 
-	push W2
-	mov	W1, W2
-	repeat #17
-	divf W0, W2
-	pop W2
-	return
+    push    W2
+    mov     W1, W2
+    repeat  #17
+    divf    W0, W2
+    pop     W2
+    return
 
-          .end
+    .end

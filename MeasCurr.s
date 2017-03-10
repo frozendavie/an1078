@@ -77,48 +77,48 @@
 ;
 ;*******************************************************************
 
-          .include "general.inc"
+    .include "general.inc"
 
 ; External references
-          .include "MeasCurr.inc"
-          .include "Park.inc"
+    .include "MeasCurr.inc"
+    .include "Park.inc"
 
-          .global   _MeasCompCurr
-          .global   MeasCompCurr
+    .global _MeasCompCurr
+    .global MeasCompCurr
 
 _MeasCompCurr:
 MeasCompCurr:
 
-     ;; CorrADC1 = ADCBUF1 - Offseta
-     ;; qIa = qKa * CorrADC1
-          mov.w		_ADCBuffer+2,w0					; W0 = ADCBUFF1
-	      sub.w     _MeasCurrParm+ADC_Offseta,WREG	; w0 = ADC - Offset
-          mov.w     w0,w5
-          mov.w     _MeasCurrParm+ADC_qKa,w4
-          mpy       w4*w5,A
-          sac       A,#0,w4
-          mov.w     w4,_ParkParm+Park_qIa
+    ;; CorrADC1 = ADCBUF1 - Offseta
+    ;; qIa = qKa * CorrADC1
+    mov.w   _ADCBuffer + 2, w0                  ; W0 = ADCBUFF1
+	sub.w   _MeasCurrParm + ADC_Offseta, WREG   ; w0 = ADC - Offset
+    mov.w   w0, w5
+    mov.w   _MeasCurrParm + ADC_qKa, w4
+    mpy     w4 * w5, A
+    sac     A, #0, w4
+    mov.w   w4, _ParkParm + Park_qIa
 
-     ;; CorrADC2 = ADCBUF2 - iOffsetb
-     ;; qIb = qKb * CorrADC2
-          mov.w		_ADCBuffer+4,w0					; W0 = ADCBUFF2
-    	  sub.w     _MeasCurrParm+ADC_Offsetb,WREG	; w0 = ADC - Offset         
-          mov.w     w0,w5
-          mov.w     _MeasCurrParm+ADC_qKb,w4
-          mpy       w4*w5,A
-          sac       A,#0,w4
-          mov.w     w4,_ParkParm+Park_qIb
+    ;; CorrADC2 = ADCBUF2 - iOffsetb
+    ;; qIb = qKb * CorrADC2
+    mov.w   _ADCBuffer + 4, w0                  ; W0 = ADCBUFF2
+    sub.w   _MeasCurrParm + ADC_Offsetb, WREG   ; w0 = ADC - Offset
+    mov.w   w0, w5
+    mov.w   _MeasCurrParm + ADC_qKb, w4
+    mpy     w4 * w5, A
+    sac     A, #0, w4
+    mov.w   w4, _ParkParm + Park_qIb
 
-          return
+    return
 
-          .global   _InitMeasCompCurr
-          .global   InitMeasCompCurr
+    .global _InitMeasCompCurr
+    .global InitMeasCompCurr
 
 _InitMeasCompCurr:
 InitMeasCompCurr:
 
-          mov.w     w0,_MeasCurrParm+ADC_Offseta    
-          mov.w     w1,_MeasCurrParm+ADC_Offsetb    
-          return
+    mov.w   w0, _MeasCurrParm + ADC_Offseta
+    mov.w   w1, _MeasCurrParm + ADC_Offsetb
+    return
 
-          .end
+    .end

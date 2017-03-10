@@ -69,49 +69,49 @@
 ;
 ;*******************************************************************
 ;
-          .include "general.inc"
+    .include "general.inc"
 
 ; External references
-          .include "park.inc"
+    .include "park.inc"
 
 ; Register usage
-          .equ ParmW,  w3    ; Ptr to ParkParm structure
+    .equ ParmW,  w3    ; Ptr to ParkParm structure
 
-          .equ SinW,   w4
-          .equ CosW,   w5
-          .equ VdW,    w6    ; copy of qVd
-          .equ VqW,    w7    ; copy of qVq
+    .equ SinW,   w4
+    .equ CosW,   w5
+    .equ VdW,    w6    ; copy of qVd
+    .equ VqW,    w7    ; copy of qVq
 
 
 
 ;=================== CODE =====================
 
-          .section  .text
-          .global   _InvPark
-          .global   InvPark
+    .section .text
+    .global _InvPark
+    .global InvPark
 
 _InvPark:
 InvPark:
-     ;; Get qVd, qVq from ParkParm structure
-          mov.w     _ParkParm+Park_qVd,VdW
-          mov.w     _ParkParm+Park_qVq,VqW
+    ;; Get qVd, qVq from ParkParm structure
+    mov.w   _ParkParm + Park_qVd, VdW
+    mov.w   _ParkParm + Park_qVq, VqW
 
-     ;; Get qSin, qCos from ParkParm structure
-          mov.w     _ParkParm+Park_qSin,SinW
-          mov.w     _ParkParm+Park_qCos,CosW
+    ;; Get qSin, qCos from ParkParm structure
+    mov.w   _ParkParm + Park_qSin, SinW
+    mov.w   _ParkParm + Park_qCos, CosW
 
-     ;; Valpha =  Vd*cos(Angle) - Vq*sin(Angle)
+    ;; Valpha =  Vd*cos(Angle) - Vq*sin(Angle)
 
-          mpy       CosW*VdW,A        ; Vd*qCos -> A
-          msc       SinW*VqW,A        ; sub Vq*qSin from A
+    mpy     CosW * VdW, A       ; Vd*qCos -> A
+    msc     SinW * VqW, A       ; sub Vq*qSin from A
 
-          mov.w     #_ParkParm+Park_qValpha,ParmW
-          sac       A,[ParmW++]        ; store to qValpha, inc ptr to qVbeta
+    mov.w   #_ParkParm + Park_qValpha, ParmW
+    sac     A, [ParmW++]        ; store to qValpha, inc ptr to qVbeta
 
-     ;; Vbeta  =  Vd*sin(Angle) + Vq*cos(Angle)
-          mpy       SinW*VdW,A        ; Vd*qSin -> A
-          mac       CosW*VqW,A        ; add Vq*qCos to A
-          sac       A,[ParmW]          ; store to Vbeta
+    ;; Vbeta  =  Vd*sin(Angle) + Vq*cos(Angle)
+    mpy     SinW * VdW, A       ; Vd*qSin -> A
+    mac     CosW * VqW, A       ; add Vq*qCos to A
+    sac     A, [ParmW]          ; store to Vbeta
 
-           return
-          .end
+    return
+    .end

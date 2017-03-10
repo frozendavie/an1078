@@ -63,10 +63,14 @@ void SMC_Position_Estimation (SMC *s)
 		CalcZalpha();
 	}
 	else if (s->IalphaError > 0)
+    {
 		s->Zalpha = s->Kslide;
-	else
-		s->Zalpha = -s->Kslide;
-
+	}
+    else
+	{
+        s->Zalpha = -s->Kslide;
+    }
+    
 	if (_Q15abs(s->IbetaError) < s->MaxSMCError)
 	{
 		// s->Zbeta = (s->Kslide * s->IbetaError) / s->MaxSMCError
@@ -76,10 +80,14 @@ void SMC_Position_Estimation (SMC *s)
 		CalcZbeta();
 	}
 	else if (s->IbetaError > 0)
+    {
 		s->Zbeta = s->Kslide;
-	else
-		s->Zbeta = -s->Kslide;
-
+	}
+    else
+	{
+        s->Zbeta = -s->Kslide;
+    }
+    
 	// Sliding control filter -> back EMF calculator
 	// s->Ealpha = s->Ealpha + s->Kslf * s->Zalpha -
 	//						   s->Kslf * s->Ealpha
@@ -211,8 +219,10 @@ void SMC_Position_Estimation (SMC *s)
 		s->ThetaOffset += CONSTANT5;
 	}
 	else
+    {
 		s->ThetaOffset = DEFAULTCONSTANT;
-
+    }
+    
 	s->Theta = s->Theta + s->ThetaOffset;
 
 	POPCORCON();
@@ -239,15 +249,23 @@ void SMCInit(SMC *s)
     //     measured from phase to phase, then L = 1 mH
 
 	if (Q15(PHASERES * LOOPTIMEINSEC) > Q15(PHASEIND))
+    {
 		s->Fsmopos = Q15(0.0);
-	else
-		s->Fsmopos = Q15(1 - PHASERES * LOOPTIMEINSEC / PHASEIND);
-
+	}
+    else
+	{
+        s->Fsmopos = Q15(1 - PHASERES * LOOPTIMEINSEC / PHASEIND);
+    }
+    
 	if (Q15(LOOPTIMEINSEC) > Q15(PHASEIND))
+    {
 		s->Gsmopos = Q15(0.99999);
-	else
-		s->Gsmopos = Q15(LOOPTIMEINSEC / PHASEIND);
-
+	}
+    else
+	{
+        s->Gsmopos = Q15(LOOPTIMEINSEC / PHASEIND);
+    }
+    
 	s->Kslide = Q15(SMCGAIN);
 	s->MaxSMCError = Q15(MAXLINEARSMC);
 	s->FiltOmCoef = Q15(OMEGA0 * _PI / IRP_PERCALC); // Cutoff frequency for omega filter

@@ -74,70 +74,71 @@
 ;
 ;*******************************************************************
 ;
-          .include "general.inc"
+    .include "general.inc"
 
 ; External references
-          .include "park.inc"
+    .include "park.inc"
 
 ; Register usage
-          .equ ParmW,  w3    ; Ptr to ParkParm structure
+    .equ ParmW,  w3    ; Ptr to ParkParm structure
 
-          .equ Sq3W,   w4    ; OneBySq3
-          .equ SinW,   w4    ; replaces Work0W
+    .equ Sq3W,   w4    ; OneBySq3
+    .equ SinW,   w4    ; replaces Work0W
 
-          .equ CosW,   w5
+    .equ CosW,   w5
 
 
-          .equ IaW,    w6    ; copy of qIa
-          .equ IalphaW,w6    ; replaces Ia
+    .equ IaW,    w6    ; copy of qIa
+    .equ IalphaW,w6    ; replaces Ia
 
-          .equ IbW,    w7    ; copy of qIb
-          .equ IbetaW, w7    ; Ibeta  replaces Ib
+    .equ IbW,    w7    ; copy of qIb
+    .equ IbetaW, w7    ; Ibeta  replaces Ib
 
 ; Constants
-          .equ OneBySq3,0x49E7   ; 1/sqrt(3) in 1.15 format
+    .equ OneBySq3, 0x49E7   ; 1/sqrt(3) in 1.15 format
 
 
 ;=================== CODE =====================
 
-          .section  .text
-          .global   _ClarkePark
-          .global   ClarkePark
+    .section .text
+    .global _ClarkePark
+    .global ClarkePark
 
 _ClarkePark:
 ClarkePark:
-     ;; Ibeta = Ia*OneBySq3 + 2*Ib*OneBySq3;
+    ;; Ibeta = Ia*OneBySq3 + 2*Ib*OneBySq3;
 
-          mov.w     #OneBySq3,Sq3W     ; 1/sqrt(3) in 1.15 format
+    mov.w   #OneBySq3, Sq3W     ; 1/sqrt(3) in 1.15 format
 
-          mov.w     _ParkParm+Park_qIa,IaW
-          mpy       Sq3W*IaW,A
+    mov.w   _ParkParm + Park_qIa, IaW
+    mpy     Sq3W * IaW, A
 
-          mov.w     _ParkParm+Park_qIb,IbW
-          mac       Sq3W*IbW,A
-          mac       Sq3W*IbW,A
+    mov.w   _ParkParm + Park_qIb, IbW
+    mac     Sq3W * IbW, A
+    mac     Sq3W * IbW, A
 
-          mov.w     _ParkParm+Park_qIa,IalphaW
-          mov.w     IalphaW,_ParkParm+Park_qIalpha
-          sac       A,IbetaW
-          mov.w     IbetaW,_ParkParm+Park_qIbeta
+    mov.w   _ParkParm + Park_qIa, IalphaW
+    mov.w   IalphaW, _ParkParm + Park_qIalpha
+    sac     A, IbetaW
+    mov.w   IbetaW, _ParkParm + Park_qIbeta
 
-     ;; Ialpha and Ibeta have been calculated. Now do rotation.
+    ;; Ialpha and Ibeta have been calculated. Now do rotation.
 
-     ;; Get qSin, qCos from ParkParm structure
-          mov.w     _ParkParm+Park_qSin,SinW
-          mov.w     _ParkParm+Park_qCos,CosW
+    ;; Get qSin, qCos from ParkParm structure
+    mov.w   _ParkParm + Park_qSin, SinW
+    mov.w   _ParkParm + Park_qCos, CosW
 
-     ;; Id =  Ialpha*cos(Angle) + Ibeta*sin(Angle)
+    ;; Id =  Ialpha*cos(Angle) + Ibeta*sin(Angle)
 
-          mpy       SinW*IbetaW,A     ; Ibeta*qSin -> A
-          mac       CosW*IalphaW,A    ; add Ialpha*qCos to A
-          mov.w     #_ParkParm+Park_qId,ParmW
-          sac       A,[ParmW++]        ; store to qId, inc ptr to qIq
+    mpy     SinW * IbetaW, A     ; Ibeta*qSin -> A
+    mac     CosW * IalphaW, A    ; add Ialpha*qCos to A
+    mov.w   #_ParkParm + Park_qId, ParmW
+    sac     A, [ParmW++]         ; store to qId, inc ptr to qIq
 
-     ;; Iq = -Ialpha*sin(Angle) + Ibeta*cos(Angle)
-          mpy       CosW*IbetaW,A     ; Ibeta*qCos -> A
-          msc       SinW*IalphaW,A    ; sub Ialpha*qSin from A
-          sac       A,[ParmW]          ; store to qIq
-          return
-          .end
+    ;; Iq = -Ialpha*sin(Angle) + Ibeta*cos(Angle)
+    mpy     CosW * IbetaW, A     ; Ibeta*qCos -> A
+    msc     SinW * IalphaW, A    ; sub Ialpha*qSin from A
+    sac     A, [ParmW]           ; store to qIq
+    return
+
+    .end

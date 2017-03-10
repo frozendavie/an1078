@@ -96,95 +96,94 @@
 ;
 ;*******************************************************************
 ;
-          .include "general.inc"
+    .include "general.inc"
 
 ; External references
-          .include "PI.inc"
+    .include "PI.inc"
 
 ; Register usage
 
-          .equ BaseW0,   w0  ; Base of parm structure
+    .equ BaseW0,   w0  ; Base of parm structure
 
-          .equ OutW1,    w1  ; Output
-          .equ SumLW2,   w2  ; Integral sum
-          .equ SumHW3,   w3  ; Integral sum
+    .equ OutW1,    w1  ; Output
+    .equ SumLW2,   w2  ; Integral sum
+    .equ SumHW3,   w3  ; Integral sum
 
-          .equ ErrW4,    w4  ; Error term: InRef-InMeas
-          .equ WorkW5,   w5  ; Working register
-          .equ UnlimitW6,w6  ; U: unlimited output 
-          .equ WorkW7,   w7  ; Working register
+    .equ ErrW4,    w4  ; Error term: InRef-InMeas
+    .equ WorkW5,   w5  ; Working register
+    .equ UnlimitW6,w6  ; U: unlimited output 
+    .equ WorkW7,   w7  ; Working register
 
 
 ;=================== CODE =====================
 
-          .section  .text
+    .section  .text
 
-          .global   _InitPI
-          .global   InitPI
+    .global _InitPI
+    .global InitPI
 _InitPI:
 InitPI:
-          mov.w     w1,[BaseW0+PI_qOut]
-          return
+    mov.w   w1, [BaseW0 + PI_qOut]
+    return
 
-
-          .global   _CalcPI
-          .global   CalcPI
+    .global _CalcPI
+    .global CalcPI
 
 _CalcPI:
 CalcPI:
-     ;; Err  = InRef - InMeas
+    ;; Err  = InRef - InMeas
 
-          mov.w     [BaseW0+PI_qInRef],WorkW7
-          mov.w     [BaseW0+PI_qInMeas],WorkW5
-          sub.w     WorkW7,WorkW5,ErrW4
-          
-     ;; U  = Sum + Kp * Err * 2^NKo
-          lac       [++BaseW0],B               ; AccB = Sum          
-          mov.w     [--BaseW0],WorkW5
-          mov.w     WorkW5,ACCBLL
+    mov.w   [BaseW0 + PI_qInRef], WorkW7
+    mov.w   [BaseW0 + PI_qInMeas], WorkW5
+    sub.w   WorkW7, WorkW5, ErrW4
 
-          mov.w     [BaseW0+PI_qKp],WorkW5
-          mpy       ErrW4*WorkW5,A
-          sftac     A,#-NKo                  ; AccA = Kp*Err*2^NKo     
-          add       A                        ; Sum = Sum + Kp*Err*2^NKo
-          sac       A,UnlimitW6              ; store U before tests
+    ;; U  = Sum + Kp * Err * 2^NKo
+    lac     [++BaseW0], B               ; AccB = Sum
+    mov.w   [--BaseW0], WorkW5
+    mov.w   WorkW5, ACCBLL
 
-     ;; if( U > Outmax )
-     ;;     Out = Outmax
-     ;; else if( U < Outmin )
-     ;;     Out = Outmin
-     ;; else        
-     ;;     Out = U 
+    mov.w   [BaseW0 + PI_qKp], WorkW5
+    mpy     ErrW4 * WorkW5, A
+    sftac   A, #-NKo                    ; AccA = Kp*Err*2^NKo
+    add     A                           ; Sum = Sum + Kp*Err*2^NKo
+    sac     A, UnlimitW6                ; store U before tests
 
-          mov.w     [BaseW0+PI_qOutMax],OutW1
-          cp        UnlimitW6,OutW1
-          bra       GT,jPI5            ; U > Outmax; OutW1 = Outmax
+    ;; if( U > Outmax )
+    ;;     Out = Outmax
+    ;; else if( U < Outmin )
+    ;;     Out = Outmin
+    ;; else        
+    ;;     Out = U 
 
-          mov.w     [BaseW0+PI_qOutMin],OutW1
-          cp        UnlimitW6,OutW1
-          bra       LE,jPI5            ; U < Outmin; OutW1 = Outmin
+    mov.w   [BaseW0 + PI_qOutMax], OutW1
+    cp      UnlimitW6, OutW1
+    bra     GT, jPI5                    ; U > Outmax; OutW1 = Outmax
 
-          mov.w     UnlimitW6,OutW1         ; OutW1 = U
+    mov.w   [BaseW0 + PI_qOutMin], OutW1
+    cp      UnlimitW6, OutW1
+    bra     LE, jPI5                    ; U < Outmin; OutW1 = Outmin
+
+    mov.w   UnlimitW6, OutW1            ; OutW1 = U
 jPI5:
-          mov.w     OutW1,[BaseW0+PI_qOut]
+    mov.w   OutW1, [BaseW0 + PI_qOut]
 
-     ;; Ki * Err
-          mov.w     [BaseW0+PI_qKi],WorkW5
-          mpy       ErrW4*WorkW5,A
+    ;; Ki * Err
+    mov.w   [BaseW0 + PI_qKi], WorkW5
+    mpy     ErrW4 * WorkW5, A
 
-     ;; Exc = U - Out
-          sub.w     UnlimitW6,OutW1,UnlimitW6
+    ;; Exc = U - Out
+    sub.w   UnlimitW6, OutW1, UnlimitW6
 
-     ;; Ki * Err - Kc * Exc 
-          mov.w     [BaseW0+PI_qKc],WorkW5
-          msc       WorkW5*UnlimitW6,A
+    ;; Ki * Err - Kc * Exc
+    mov.w   [BaseW0 + PI_qKc], WorkW5
+    msc     WorkW5 * UnlimitW6, A
 
-     ;; Sum = Sum + Ki * Err - Kc * Exc 
-          add       A
-          
-          sac       A,[++BaseW0]             ; store Sum 
-          mov.w     ACCALL,WorkW5
-          mov.w     WorkW5,[--BaseW0]
-          return
+    ;; Sum = Sum + Ki * Err - Kc * Exc 
+    add     A
 
-          .end
+    sac     A, [++BaseW0]               ; store Sum
+    mov.w   ACCALL, WorkW5
+    mov.w   WorkW5, [--BaseW0]
+    return
+
+    .end

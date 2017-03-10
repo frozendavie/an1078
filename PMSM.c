@@ -149,25 +149,26 @@ unsigned int Startup_Lock = 0;	/* This is a counter that is incremented in
 								then theta will start increasing moving the 
 								motor in open loop. */
 
-union   {
-        struct
-            {
-            unsigned OpenLoop:1;	// Indicates if motor is running in open or closed loop
-            unsigned RunMotor:1;	// If motor is running, or stopped.
-			unsigned EnTorqueMod:1;	// This bit enables Torque mode when running closed loop
-			unsigned EnVoltRipCo:1;	// Bit that enables Voltage Ripple Compensation
-            unsigned Btn1Pressed:1;	// Button 1 has been pressed.
-            unsigned Btn2Pressed:1;	// Button 2 has been pressed.
-            unsigned ChangeMode:1;	// This flag indicates that a transition from open to closed
-									// loop, or closed to open loop has happened. This
-									// causes DoControl subroutine to initialize some variables
-									// before executing open or closed loop for the first time
-            unsigned ChangeSpeed:1;	// This flag indicates a step command in speed reference.
-									// This is mainly used to analyze step response
-            unsigned    :8;
-            }bit;
-        WORD Word;
-        } uGF;
+union
+{
+    struct
+    {
+        unsigned OpenLoop : 1;      // Indicates if motor is running in open or closed loop
+        unsigned RunMotor : 1;      // If motor is running, or stopped.
+        unsigned EnTorqueMod : 1;   // This bit enables Torque mode when running closed loop
+        unsigned EnVoltRipCo : 1;   // Bit that enables Voltage Ripple Compensation
+        unsigned Btn1Pressed : 1;   // Button 1 has been pressed.
+        unsigned Btn2Pressed : 1;   // Button 2 has been pressed.
+        unsigned ChangeMode : 1;    // This flag indicates that a transition from open to closed
+                                    // loop, or closed to open loop has happened. This
+                                    // causes DoControl subroutine to initialize some variables
+                                    // before executing open or closed loop for the first time
+        unsigned ChangeSpeed : 1;   // This flag indicates a step command in speed reference.
+                                    // This is mainly used to analyze step response
+        unsigned : 8;
+    } bit;
+    WORD Word;
+} uGF;
 
 tPIParm     PIParmD;	// Structure definition for Flux component of current, or Id
 tPIParm     PIParmQ;	// Structure definition for Torque component of current, or Iq
@@ -235,14 +236,14 @@ int main ( void )
 	__builtin_write_OSCCONH(0x03);
 	__builtin_write_OSCCONL(0x01);
 
-	while(OSCCONbits.COSC != 0b011);
+	while(OSCCONbits.COSC != 0b011) { }
 	// Wait for PLL to lock
-	while(OSCCONbits.LOCK != 1);
+	while(OSCCONbits.LOCK != 1) { }
 
-	#ifdef RTDM
+#ifdef RTDM
     RTDM_Start();  // Configure the UART module used by RTDM
 				   // it also initializes the RTDM variables
-	#endif
+#endif
 
 	SMCInit(&smc1);
 	SetupDMA();
@@ -251,16 +252,16 @@ int main ( void )
 	FWInit();
     uGF.Word = 0;                   // clear flags
 
-	#ifdef TORQUEMODE
+#ifdef TORQUEMODE
     uGF.bit.EnTorqueMod = 1;
-	#endif
+#endif
 
 	// To use DC BUS ripple compensation with dsPIC33FJ256MC710
 	// device and MA330013 PIM, user must connect AN11 with AN2
 	// with external wire
-	#ifdef ENVOLTRIPPLE
+#ifdef ENVOLTRIPPLE
     uGF.bit.EnVoltRipCo = 1;
-	#endif
+#endif
 
     while(1)
     {
@@ -293,12 +294,12 @@ int main ( void )
         {	            
             // Initialize current offset compensation
             while(!pinButton1)                  //wait here until button 1 is pressed 
-                {
-					#ifdef RTDM
+            {
+#ifdef RTDM
 					RTDM_ProcessMsgs();
-					#endif
-                }
-            while(pinButton1);                  //when button 1 is released 
+#endif
+            }
+            while(pinButton1) { }               //when button 1 is released 
 			SetupParm();
             uGF.bit.RunMotor = 1;               //then start motor
         }
@@ -310,17 +311,19 @@ int main ( void )
 		//Run Motor loop
         while(1)
         {
-			#ifdef RTDM
+#ifdef RTDM
 	        RTDM_ProcessMsgs();			//RTDM process incoming and outgoing messages
-			#endif                          
+#endif                          
 
             // The code that polls the buttons executes every 100 msec.
             if(iADCisrCnt >= BUTPOLLOOPCNT)
             {
 
 				if (uGF.bit.RunMotor == 0)
+                {
 					break;
-
+                }
+                
       			// Button 1 starts or stops the motor
 				if(pinButton1)  
 	            {
@@ -328,7 +331,10 @@ int main ( void )
                     if(pinButton1)  
 					{
 						if( !uGF.bit.Btn1Pressed )
+                        {
                         	uGF.bit.Btn1Pressed  = 1;
+                    
+                        }
                     }
                 	else
                     {
@@ -349,8 +355,11 @@ int main ( void )
 					if(pinButton2)
 					{
 	                    if( !uGF.bit.Btn2Pressed )
+                        {
 	                        uGF.bit.Btn2Pressed  = 1; 
-	                }
+	                
+                        }
+                    }
                 	else
                     {
                     	if( uGF.bit.Btn2Pressed )
@@ -377,7 +386,7 @@ void DoControl( void )
 	ReadSignedADC0( &ReadADCParm );
 
     if( uGF.bit.OpenLoop )
-        {
+    {
         // OPENLOOP:	force rotating angle, and control Iq and Id
 		//				Also limits Vs vector to ensure maximum PWM duty
 		//				cycle and no saturation
@@ -527,8 +536,10 @@ void DoControl( void )
 		// torque mode as well.
 
 		if (uGF.bit.EnTorqueMod)
+        {
 			CtrlParm.qVqRef = CtrlParm.qVelRef;
-
+        }
+        
 		// Get Id reference from Field Weakening table. If Field weakening
 		// is not needed or user does not want to enable this feature, 
 		// let NOMINALSPEEDINRPM be equal to FIELDWEAKSPEEDRPM in
@@ -557,10 +568,14 @@ void DoControl( void )
 		// device and MA330013 PIM, user must connect AN11 with AN2
 		// with external wire
 		if(uGF.bit.EnVoltRipCo)
+        {
         	ParkParm.qVd = VoltRippleComp(PIParmD.qOut);
+        }
 		else
+        {
 			ParkParm.qVd = PIParmD.qOut;
-
+        }
+        
 		// Vector limitation
 		// Vd is not limited
 		// Vq is limited so the vector Vs is less than a maximum of 95%. 
@@ -578,10 +593,14 @@ void DoControl( void )
 		// If voltage ripple compensation flag is set, adjust the output
 		// of the Q controller depending on measured DC Bus voltage
 		if(uGF.bit.EnVoltRipCo)
+        {
         	ParkParm.qVq = VoltRippleComp(PIParmQ.qOut);
+        }
 		else
+        {
         	ParkParm.qVq = PIParmQ.qOut;
-
+        }
+        
 		// Limit, if motor is stalled, stop motor commutation
 		if (smc1.OmegaFltred < 0)
 		{
@@ -606,34 +625,33 @@ void __attribute__((interrupt, no_auto_psv)) _DMA0Interrupt(void)
  
     if( uGF.bit.RunMotor )
     {
-                      
-            // Calculate qIa,qIb
-            MeasCompCurr();
-            
-            // Calculate commutation angle using estimator
-            CalculateParkAngle();
 
-            // Calculate qId,qIq from qSin,qCos,qIa,qIb
-            ClarkePark();
-                           
-            // Calculate control values
-            DoControl();
-			
-            // Calculate qSin,qCos from qAngle
-            SinCos();
+        // Calculate qIa,qIb
+        MeasCompCurr();
 
-            // Calculate qValpha, qVbeta from qSin,qCos,qVd,qVq
-            InvPark();    
+        // Calculate commutation angle using estimator
+        CalculateParkAngle();
 
-            // Calculate Vr1,Vr2,Vr3 from qValpha, qVbeta 
-            CalcRefVec();
+        // Calculate qId,qIq from qSin,qCos,qIa,qIb
+        ClarkePark();
 
-            // Calculate and set PWM duty cycles from Vr1,Vr2,Vr3
-            CalcSVGen();
-            
+        // Calculate control values
+        DoControl();
+
+        // Calculate qSin,qCos from qAngle
+        SinCos();
+
+        // Calculate qValpha, qVbeta from qSin,qCos,qVd,qVq
+        InvPark();
+
+        // Calculate Vr1,Vr2,Vr3 from qValpha, qVbeta 
+        CalcRefVec();
+
+        // Calculate and set PWM duty cycles from Vr1,Vr2,Vr3
+        CalcSVGen();
     }    
 
-	#ifdef RTDM
+#ifdef RTDM
     /********************* DMCI Dynamic Data Views  ***************************/
 	/********************** RECORDING MOTOR PHASE VALUES ***************/
 	if(DMCIFlags.Recorder)
@@ -656,7 +674,7 @@ void __attribute__((interrupt, no_auto_psv)) _DMA0Interrupt(void)
 		    }   
 		}
 	}
-	#endif
+#endif
 	return;
 }
 
@@ -744,16 +762,13 @@ bool SetupParm(void)
     // SAMP bit is auto set.
     AD1CON1bits.ASAM = 1;  
 
-
     AD1CON2 = 0;
     // Samples CH0, CH1, CH2, CH3 simultaneously (when CHPS = 1x)
     AD1CON2bits.CHPS = 2;  
 
-
     AD1CON3 = 0;
     // A/D Conversion Clock Select bits = 8 * Tcy
     AD1CON3bits.ADCS = 15;  
-
 
     /* ADCHS: ADC Input Channel Select Register */
     AD1CHS0 = 0;
@@ -761,7 +776,6 @@ bool SetupParm(void)
     AD1CHS0bits.CH0SA = 8;
     // CH1 positive input is AN0, CH2 positive input is AN1, CH3 positive input is AN2
     AD1CHS123bits.CH123SA = 0;
-
 
     /* ADPCFG: ADC Port Configuration Register */
     // Set all ports digital
@@ -794,13 +808,17 @@ void CalculateParkAngle(void)
 	if(uGF.bit.OpenLoop)	
 	{
 		if (Startup_Lock < MotorParm.LockTime)
+        {
 			Startup_Lock += 1;	// This variable is incremented until
 								// lock time expires, them the open loop
 								// ramp begins
+        }
 		else if (Startup_Ramp < MotorParm.EndSpeed)
+        {
 			// Ramp starts, and increases linearly until EndSpeed is reached.
 			// After ramp, estimated theta is used to commutate motor.
 			Startup_Ramp += DELTA_STARTUP_RAMP;
+        }
 		else
 		{
 			// This section enables closed loop, right after open loop ramp.
@@ -827,17 +845,21 @@ void CalculateParkAngle(void)
 		if (_Q15abs(Theta_error) > _0_05DEG)
 		{
 			if (Theta_error < 0)
+            {
 				Theta_error += _0_05DEG;
+            }
 			else
+            {
 				Theta_error -= _0_05DEG;
-		}
+		
+            }
+        }
 	}
 	return;
 }
 
 void SetupControlParameters(void)
 {
-
 // ============= PI D Term ===============      
     PIParmD.qKp = DKP;       
     PIParmD.qKi = DKI;              
@@ -871,7 +893,7 @@ void DebounceDelay(void)
 {
 	long i;
 	for (i = 0;i < 100000;i++)
-		;
+	{ }
 	return;
 }
 
@@ -905,18 +927,23 @@ SFRAC16 VoltRippleComp(SFRAC16 Vdq)
 	// If target and measured are equal, no operation is made.
 	//
 	if (TargetDCbus > DCbus)
+    {
 		CompVdq = Vdq + FracMpy(FracDiv(TargetDCbus - DCbus, DCbus), Vdq);
+    }
 	else if (DCbus > TargetDCbus)
+    {
 		CompVdq = FracMpy(FracDiv(TargetDCbus, DCbus), Vdq);
+    }
 	else
+    {
 		CompVdq = Vdq;
+    }
 
 	return CompVdq;
 }
 
 void SetupDMA (void)
 {
-
 	DMA0CONbits.AMODE = 0;
 	DMA0CONbits.MODE = 0;
 	
@@ -929,4 +956,3 @@ void SetupDMA (void)
 	DMA0CONbits.CHEN = 1;
 	return;
 }
-

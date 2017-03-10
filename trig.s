@@ -79,165 +79,164 @@
 ;
 ;*******************************************************************
 ;
-          .include "general.inc"
+    .include "general.inc"
 
 ; External references
-          .include "park.inc"
+    .include "park.inc"
 
 ; Constants
-          .equ TableSize,128
+    .equ TableSize, 128
 
 ; Local register usage
-          .equ Work0W, w0        ; Working register
-          .equ Work1W, w1        ; Working register
+    .equ Work0W, w0        ; Working register
+    .equ Work1W, w1        ; Working register
 
-          .equ RemainderW, w2    ; Fraction for interpolation: 0->0xFFFF
-          .equ IndexW, w3        ; Index into table
+    .equ RemainderW, w2    ; Fraction for interpolation: 0->0xFFFF
+    .equ IndexW, w3        ; Index into table
 
-          .equ pTabPtrW, w4      ; Pointer into table 
-          .equ pTabBaseW,w5      ; Pointer into table base
+    .equ pTabPtrW, w4      ; Pointer into table 
+    .equ pTabBaseW, w5     ; Pointer into table base
 
-          .equ Y0W,w6            ; Y0 = SinTable[Index]
-          .equ ParkParmW,w7      ; Base of ParkParm structure
+    .equ Y0W,w6            ; Y0 = SinTable[Index]
+    .equ ParkParmW, w7     ; Base of ParkParm structure
 
-      ;; Note: RemainderW and Work0W must be even registers
+    ;; Note: RemainderW and Work0W must be even registers
 
 
 ;=================== LOCAL DATA =====================
 
-          .section .const,psv
-         
-          .align	256
+    .section .const, psv
+
+    .align	256
 SinTable: 
-  .word 0,1608,3212,4808,6393,7962,9512,11039
-  .word 12540,14010,15446,16846,18205,19520,20787,22005
-  .word 23170,24279,25330,26319,27245,28106,28898,29621
-  .word 30273,30852,31357,31785,32138,32413,32610,32728
-  .word 32767,32728,32610,32413,32138,31785,31357,30852
-  .word 30273,29621,28898,28106,27245,26319,25330,24279
-  .word 23170,22005,20787,19520,18205,16846,15446,14010
-  .word 12540,11039,9512,7962,6393,4808,3212,1608
-  .word 0,-1608,-3212,-4808,-6393,-7962,-9512,-11039
-  .word -12540,-14010,-15446,-16846,-18205,-19520,-20787,-22005
-  .word -23170,-24279,-25330,-26319,-27245,-28106,-28898,-29621
-  .word -30273,-30852,-31357,-31785,-32138,-32413,-32610,-32728
-  .word -32767,-32728,-32610,-32413,-32138,-31785,-31357,-30852
-  .word -30273,-29621,-28898,-28106,-27245,-26319,-25330,-24279
-  .word -23170,-22005,-20787,-19520,-18205,-16846,-15446,-14010
-  .word -12540,-11039,-9512,-7962,-6393,-4808,-3212,-1608
+    .word 0,1608,3212,4808,6393,7962,9512,11039
+    .word 12540,14010,15446,16846,18205,19520,20787,22005
+    .word 23170,24279,25330,26319,27245,28106,28898,29621
+    .word 30273,30852,31357,31785,32138,32413,32610,32728
+    .word 32767,32728,32610,32413,32138,31785,31357,30852
+    .word 30273,29621,28898,28106,27245,26319,25330,24279
+    .word 23170,22005,20787,19520,18205,16846,15446,14010
+    .word 12540,11039,9512,7962,6393,4808,3212,1608
+    .word 0,-1608,-3212,-4808,-6393,-7962,-9512,-11039
+    .word -12540,-14010,-15446,-16846,-18205,-19520,-20787,-22005
+    .word -23170,-24279,-25330,-26319,-27245,-28106,-28898,-29621
+    .word -30273,-30852,-31357,-31785,-32138,-32413,-32610,-32728
+    .word -32767,-32728,-32610,-32413,-32138,-31785,-31357,-30852
+    .word -30273,-29621,-28898,-28106,-27245,-26319,-25330,-24279
+    .word -23170,-22005,-20787,-19520,-18205,-16846,-15446,-14010
+    .word -12540,-11039,-9512,-7962,-6393,-4808,-3212,-1608
 
 ;=================== CODE =====================
 
-          .section  .text
-          .global   _SinCos
-          .global   SinCos
+    .section .text
+    .global _SinCos
+    .global SinCos
 
 _SinCos:
 SinCos:
 
-	 ;; Save the current CORCON and PSVPAG register
-	 	  mov		CORCON,w0
-	 	  mov		PSVPAG,w1
-	 	  push.d	w0
-	 ;; Set the PSV bit to enable PSV access
-	 	  bset		CORCON,#PSV
-	 ;; Load the PSVPAG register to point to the sine table
-	 	  mov		#psvpage(SinTable),w0
-	 	  mov		w0,PSVPAG
-		
-     ;; Base of qAngle, qSin, qCos group in ParkParm structure
-          mov.w     #_ParkParm+#Park_qAngle,ParkParmW     
+	;; Save the current CORCON and PSVPAG register
+	mov     CORCON, w0
+	mov     PSVPAG, w1
+	push.d  w0
+	;; Set the PSV bit to enable PSV access
+	bset    CORCON, #PSV
+	;; Load the PSVPAG register to point to the sine table
+	mov     #psvpage(SinTable), w0
+	mov     w0, PSVPAG
 
-     ;; Calculate Index and Remainder for fetching and interpolating Sin
-          mov.w     #TableSize,Work0W
-          mov.w     [ParkParmW++],Work1W        ; load qAngle & inc ptr to qCos
-          mul.uu    Work0W,Work1W,RemainderW   ; high word in IndexW
+    ;; Base of qAngle, qSin, qCos group in ParkParm structure
+    mov.w   #_ParkParm + #Park_qAngle, ParkParmW     
 
-     ;; Double Index since offsets are in bytes not words
-          add.w     IndexW,IndexW,IndexW
+    ;; Calculate Index and Remainder for fetching and interpolating Sin
+    mov.w   #TableSize, Work0W
+    mov.w   [ParkParmW++], Work1W        ; load qAngle & inc ptr to qCos
+    mul.uu  Work0W, Work1W, RemainderW   ; high word in IndexW
 
-     ;; Note at this point the IndexW register has a value 0x00nn where nn
-     ;; is the offset in bytes from the TabBase.  If below we always
-     ;; use BYTE operations on the IndexW register it will automatically
-     ;; wrap properly for a TableSize of 128.
+    ;; Double Index since offsets are in bytes not words
+    add.w   IndexW, IndexW, IndexW
+
+    ;; Note at this point the IndexW register has a value 0x00nn where nn
+    ;; is the offset in bytes from the TabBase.  If below we always
+    ;; use BYTE operations on the IndexW register it will automatically
+    ;; wrap properly for a TableSize of 128.
   
-          mov.w     #psvoffset(SinTable),pTabBaseW     ; Pointer into table base
+    mov.w   #psvoffset(SinTable), pTabBaseW     ; Pointer into table base
 
-     ;; Check for zero remainder
-          cp0.w     RemainderW
-          bra       nz,jInterpolate
+    ;; Check for zero remainder
+    cp0.w   RemainderW
+    bra     nz, jInterpolate
 
-     ;; Zero remainder allows us to skip the interpolation and use the 
-     ;; table value directly
+    ;; Zero remainder allows us to skip the interpolation and use the 
+    ;; table value directly
 
-          add.w     IndexW,pTabBaseW,pTabPtrW
-          mov.w    [pTabPtrW],[ParkParmW++]    ; write qSin & inc pt to qCos
+    add.w   IndexW, pTabBaseW, pTabPtrW
+    mov.w   [pTabPtrW], [ParkParmW++]    ; write qSin & inc pt to qCos
 
-     ;; Add 0x40 to Sin index to get Cos index.  This may go off end of
-     ;; table but if we use only BYTE operations the wrap is automatic.
-          add.b     #0x40,IndexW
-          add.w     IndexW,pTabBaseW,pTabPtrW
+    ;; Add 0x40 to Sin index to get Cos index.  This may go off end of
+    ;; table but if we use only BYTE operations the wrap is automatic.
+    add.b   #0x40, IndexW
+    add.w   IndexW, pTabBaseW, pTabPtrW
 
-          mov.w     [pTabPtrW],[ParkParmW]      ; write qCos
+    mov.w   [pTabPtrW], [ParkParmW]      ; write qCos
 
-     ;; Restore PSVPAG and CORCON to original states
-          pop.d		w0
-          mov		w0,CORCON
-          mov		w1,PSVPAG
-          return
+    ;; Restore PSVPAG and CORCON to original states
+    pop.d   w0
+    mov     w0, CORCON
+    mov     w1, PSVPAG
+    return
 
 jInterpolate:
 
-     ;; Get Y1-Y0 = SinTable[Index+1] - SinTable[Index]  
+    ;; Get Y1-Y0 = SinTable[Index+1] - SinTable[Index]  
+    add.w   IndexW, pTabBaseW, pTabPtrW
+    mov.w   [pTabPtrW], Y0W              ; Y0
 
-          add.w     IndexW,pTabBaseW,pTabPtrW
-          mov.w     [pTabPtrW],Y0W              ; Y0
+    inc2.b  IndexW, IndexW               ; (Index += 2)&0xFF
+    add.w   IndexW, pTabBaseW, pTabPtrW
 
-          inc2.b    IndexW,IndexW               ; (Index += 2)&0xFF
-          add.w     IndexW,pTabBaseW,pTabPtrW
+    subr.w  Y0W, [pTabPtrW], Work0W      ; Y1 - Y0
+ 
+    ;; Calcuate Delta = (Remainder*(Y1-Y0)) >> 16
 
-          subr.w    Y0W,[pTabPtrW],Work0W      ; Y1 - Y0
+    mul.us  RemainderW, Work0W, Work0W
+
+    ;; Work1W contains upper word of (Remainder*(Y1-Y0)) 
+    ;; *pSin = Y0 + Delta
+
+    add.w   Work1W, Y0W, [ParkParmW++]   ; write qSin & inc pt to qCos
+
+    ;; ================= COS =========================
+
+    ;; Add 0x40 to Sin index to get Cos index.  This may go off end of
+    ;; table but if we use only BYTE operations the wrap is automatic.
+    ;; Actualy only add 0x3E since Index increment by two above
+    add.b   #0x3E, IndexW
+    add.w   IndexW, pTabBaseW, pTabPtrW
+
+    ;; Get Y1-Y0 = SinTable[Index+1] - SinTable[Index]  
+
+    add.w   IndexW, pTabBaseW, pTabPtrW
+    mov.w   [pTabPtrW], Y0W              ; Y0
+
+    inc2.b  IndexW, IndexW               ; (Index += 2)&0xFF
+    add.w   IndexW, pTabBaseW, pTabPtrW
+
+    subr.w  Y0W, [pTabPtrW], Work0W      ; Y1 - Y0
   
-     ;; Calcuate Delta = (Remainder*(Y1-Y0)) >> 16
+    ;; Calcuate Delta = (Remainder*(Y1-Y0)) >> 16
 
-          mul.us    RemainderW,Work0W,Work0W
+    mul.us  RemainderW, Work0W, Work0W
 
-     ;; Work1W contains upper word of (Remainder*(Y1-Y0)) 
-     ;; *pSin = Y0 + Delta
+    ;; Work1W contains upper word of (Remainder*(Y1-Y0)) 
+    ;; *pCos = Y0 + Delta
 
-          add.w     Work1W,Y0W,[ParkParmW++]   ; write qSin & inc pt to qCos
+    add.w   Work1W, Y0W, [ParkParmW]     ; write qCos
 
-     ;; ================= COS =========================
+    ;; Restore PSVPAG and CORCON to original states
+    pop.d   w0
+    mov     w0, CORCON
+    mov     w1, PSVPAG
+    return
 
-     ;; Add 0x40 to Sin index to get Cos index.  This may go off end of
-     ;; table but if we use only BYTE operations the wrap is automatic.
-     ;; Actualy only add 0x3E since Index increment by two above
-          add.b     #0x3E,IndexW
-          add.w     IndexW,pTabBaseW,pTabPtrW
-
-     ;; Get Y1-Y0 = SinTable[Index+1] - SinTable[Index]  
-
-          add.w     IndexW,pTabBaseW,pTabPtrW
-          mov.w     [pTabPtrW],Y0W              ; Y0
-
-          inc2.b    IndexW,IndexW               ; (Index += 2)&0xFF
-          add.w     IndexW,pTabBaseW,pTabPtrW
-
-          subr.w    Y0W,[pTabPtrW],Work0W      ; Y1 - Y0
-  
-     ;; Calcuate Delta = (Remainder*(Y1-Y0)) >> 16
-
-          mul.us    RemainderW,Work0W,Work0W
-
-     ;; Work1W contains upper word of (Remainder*(Y1-Y0)) 
-     ;; *pCos = Y0 + Delta
-
-          add.w     Work1W,Y0W,[ParkParmW]     ; write qCos
-          
-     ;; Restore PSVPAG and CORCON to original states
-          pop.d		w0
-          mov		w0,CORCON
-          mov		w1,PSVPAG
-          return
-
-          .end
+    .end

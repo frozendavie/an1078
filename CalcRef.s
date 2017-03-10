@@ -70,53 +70,54 @@
 ;*******************************************************************
 ;
 ; External references
-          .include "park.inc"
-          .include "SVGen.inc"
+    .include "park.inc"
+    .include "SVGen.inc"
 
 ; Register usage
-          .equ WorkW,   w0    ; working
+    .equ WorkW,   w0    ; working
 
-          .equ ValphaW, w4    ; qValpha (scaled)
-          .equ VbetaW,  w5    ; qVbeta (scaled)
-          .equ ScaleW,  w6    ; scaling
+    .equ ValphaW, w4    ; qValpha (scaled)
+    .equ VbetaW,  w5    ; qVbeta (scaled)
+    .equ ScaleW,  w6    ; scaling
 
 ; Constants
 
-          .equ Sq3OV2,0x6ED9 ; sqrt(3)/2 in 1.15 format
+    .equ Sq3OV2, 0x6ED9 ; sqrt(3)/2 in 1.15 format
 
 ;=================== CODE =====================
 
-          .section  .text
-          .global   _CalcRefVec
-          .global   CalcRefVec
+    .section .text
+    .global _CalcRefVec
+    .global CalcRefVec
 
 _CalcRefVec:
 CalcRefVec:
-     ;; Get qValpha, qVbeta from ParkParm structure
-          mov.w     _ParkParm+Park_qValpha,ValphaW
-          mov.w     _ParkParm+Park_qVbeta,VbetaW
+    ;; Get qValpha, qVbeta from ParkParm structure
+    mov.w   _ParkParm + Park_qValpha, ValphaW
+    mov.w   _ParkParm + Park_qVbeta, VbetaW
 
-     ;; Put Vr1 = Vbeta
-          mov.w     VbetaW,_SVGenParm+SVGen_qVr1
+    ;; Put Vr1 = Vbeta
+    mov.w   VbetaW, _SVGenParm + SVGen_qVr1
 
-     ;; Load Sq(3)/2
-          mov.w     #Sq3OV2,ScaleW
+    ;; Load Sq(3)/2
+    mov.w   #Sq3OV2, ScaleW
 
-     ;; AccA = -Vbeta/2
-          neg.w     VbetaW,VbetaW
-          lac       VbetaW,#1,A
+    ;; AccA = -Vbeta/2
+    neg.w   VbetaW, VbetaW
+    lac     VbetaW, #1, A
 
-     ;; Vr2 = -Vbeta/2 + sqrt(3)2 * Valpha)
-          mac       ValphaW*ScaleW,A ; add Valpha*sqrt(3)/2 to A
-          sac       A,WorkW
-          mov.w     WorkW,_SVGenParm+SVGen_qVr2
+    ;; Vr2 = -Vbeta/2 + sqrt(3)2 * Valpha)
+    mac     ValphaW * ScaleW, A ; add Valpha*sqrt(3)/2 to A
+    sac     A, WorkW
+    mov.w   WorkW, _SVGenParm + SVGen_qVr2
 
-     ;; AccA = -Vbeta/2
-          lac       VbetaW,#1,A
+    ;; AccA = -Vbeta/2
+    lac     VbetaW, #1, A
 
-     ;; Vr3 = (-Vbeta/2 - sqrt(3)2 * Valpha)
-          msc       ValphaW*ScaleW,A ; sub Valpha*sqrt(3)2 to A
-          sac       A,WorkW
-          mov.w     WorkW,_SVGenParm+SVGen_qVr3
-          return
-          .end
+    ;; Vr3 = (-Vbeta/2 - sqrt(3)2 * Valpha)
+    msc     ValphaW * ScaleW, A ; sub Valpha*sqrt(3)2 to A
+    sac     A, WorkW
+    mov.w   WorkW, _SVGenParm + SVGen_qVr3
+    return
+    
+    .end

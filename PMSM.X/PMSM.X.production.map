@@ -15,21 +15,6 @@ Command:
   -Lc:/microchip/xc16/v1.31/bin/bin/../../support/dsPIC30F/gld \
   -Lc:/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33E/gld \
   -Lc:/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33F/gld \
-  build/default/production/_ext/1472/CalcRef.o \
-  build/default/production/_ext/1472/clrkpark.o \
-  build/default/production/_ext/1472/InvPark.o \
-  build/default/production/_ext/1472/pi.o \
-  build/default/production/_ext/1472/ReadADC0.o \
-  build/default/production/_ext/1472/SVGEN.o \
-  build/default/production/_ext/1472/trig.o \
-  build/default/production/_ext/1472/MeasCurr.o \
-  build/default/production/_ext/1472/PMSM.o \
-  build/default/production/_ext/1472/initdspic.o \
-  build/default/production/_ext/1472/smcpos.o \
-  build/default/production/_ext/1472/smc.o \
-  build/default/production/_ext/1472/RTDM.o \
-  build/default/production/_ext/1472/atan2CORDIC.o \
-  build/default/production/_ext/1472/FdWeak.o \
   build/default/production/_ext/760574787/BusyUART1.o \
   build/default/production/_ext/760574787/BusyUART2.o \
   build/default/production/_ext/760574787/BusyUART3.o \
@@ -66,6 +51,21 @@ Command:
   build/default/production/_ext/760574787/putsUART2.o \
   build/default/production/_ext/760574787/putsUART3.o \
   build/default/production/_ext/760574787/putsUART4.o \
+  build/default/production/_ext/1472/CalcRef.o \
+  build/default/production/_ext/1472/clrkpark.o \
+  build/default/production/_ext/1472/InvPark.o \
+  build/default/production/_ext/1472/pi.o \
+  build/default/production/_ext/1472/ReadADC0.o \
+  build/default/production/_ext/1472/SVGEN.o \
+  build/default/production/_ext/1472/trig.o \
+  build/default/production/_ext/1472/MeasCurr.o \
+  build/default/production/_ext/1472/PMSM.o \
+  build/default/production/_ext/1472/initdspic.o \
+  build/default/production/_ext/1472/smcpos.o \
+  build/default/production/_ext/1472/smc.o \
+  build/default/production/_ext/1472/RTDM.o \
+  build/default/production/_ext/1472/atan2CORDIC.o \
+  build/default/production/_ext/1472/FdWeak.o \
   --defsym=__MPLAB_BUILD=1 \
   -Tp33FJ128MC802.gld.00 \
   --stack=16 \
@@ -157,7 +157,7 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                        0x800                   0            0x2c  (44)
 .bss                         0x82c                   0            0xc8  (200)
 .data                        0x8f4                   0            0x20  (32)
-_04E09A8058c1035c           0x47f8                   0             0x8  (8)
+_04E68A8058c26c3a           0x47f8                   0             0x8  (8)
 
                  Total data memory used (bytes):          0x11c  (284) 1%
 
@@ -413,21 +413,6 @@ FUID3            0xf80016           0x000002
 
 Linker script and memory map
 
-LOAD build/default/production/_ext/1472/CalcRef.o
-LOAD build/default/production/_ext/1472/clrkpark.o
-LOAD build/default/production/_ext/1472/InvPark.o
-LOAD build/default/production/_ext/1472/pi.o
-LOAD build/default/production/_ext/1472/ReadADC0.o
-LOAD build/default/production/_ext/1472/SVGEN.o
-LOAD build/default/production/_ext/1472/trig.o
-LOAD build/default/production/_ext/1472/MeasCurr.o
-LOAD build/default/production/_ext/1472/PMSM.o
-LOAD build/default/production/_ext/1472/initdspic.o
-LOAD build/default/production/_ext/1472/smcpos.o
-LOAD build/default/production/_ext/1472/smc.o
-LOAD build/default/production/_ext/1472/RTDM.o
-LOAD build/default/production/_ext/1472/atan2CORDIC.o
-LOAD build/default/production/_ext/1472/FdWeak.o
 LOAD build/default/production/_ext/760574787/BusyUART1.o
 LOAD build/default/production/_ext/760574787/BusyUART2.o
 LOAD build/default/production/_ext/760574787/BusyUART3.o
@@ -464,6 +449,21 @@ LOAD build/default/production/_ext/760574787/putsUART1.o
 LOAD build/default/production/_ext/760574787/putsUART2.o
 LOAD build/default/production/_ext/760574787/putsUART3.o
 LOAD build/default/production/_ext/760574787/putsUART4.o
+LOAD build/default/production/_ext/1472/CalcRef.o
+LOAD build/default/production/_ext/1472/clrkpark.o
+LOAD build/default/production/_ext/1472/InvPark.o
+LOAD build/default/production/_ext/1472/pi.o
+LOAD build/default/production/_ext/1472/ReadADC0.o
+LOAD build/default/production/_ext/1472/SVGEN.o
+LOAD build/default/production/_ext/1472/trig.o
+LOAD build/default/production/_ext/1472/MeasCurr.o
+LOAD build/default/production/_ext/1472/PMSM.o
+LOAD build/default/production/_ext/1472/initdspic.o
+LOAD build/default/production/_ext/1472/smcpos.o
+LOAD build/default/production/_ext/1472/smc.o
+LOAD build/default/production/_ext/1472/RTDM.o
+LOAD build/default/production/_ext/1472/atan2CORDIC.o
+LOAD build/default/production/_ext/1472/FdWeak.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p33FJ128MC802
 LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
@@ -606,215 +606,215 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x7f29
+.debug_info       0x000000       0x7a94
  *(.debug_info)
- .debug_info      0x000000         0x88 build/default/production/_ext/1472/CalcRef.o
- .debug_info      0x000088         0x89 build/default/production/_ext/1472/clrkpark.o
- .debug_info      0x000111         0x88 build/default/production/_ext/1472/InvPark.o
- .debug_info      0x000199         0x83 build/default/production/_ext/1472/pi.o
- .debug_info      0x00021c         0x89 build/default/production/_ext/1472/ReadADC0.o
- .debug_info      0x0002a5         0x86 build/default/production/_ext/1472/SVGEN.o
- .debug_info      0x00032b         0x85 build/default/production/_ext/1472/trig.o
- .debug_info      0x0003b0         0x89 build/default/production/_ext/1472/MeasCurr.o
- .debug_info      0x000439       0x23e4 build/default/production/_ext/1472/PMSM.o
- .debug_info      0x00281d        0x170 build/default/production/_ext/1472/initdspic.o
- .debug_info      0x00298d        0x51b build/default/production/_ext/1472/smcpos.o
- .debug_info      0x002ea8         0x84 build/default/production/_ext/1472/smc.o
- .debug_info      0x002f2c         0xbf build/default/production/_ext/1472/RTDM.o
- .debug_info      0x002feb         0x8c build/default/production/_ext/1472/atan2CORDIC.o
- .debug_info      0x003077        0x21d build/default/production/_ext/1472/FdWeak.o
- .debug_info      0x003294        0x297 build/default/production/_ext/760574787/BusyUART1.o
- .debug_info      0x00352b        0x297 build/default/production/_ext/760574787/BusyUART2.o
- .debug_info      0x0037c2         0xac build/default/production/_ext/760574787/BusyUART3.o
- .debug_info      0x00386e         0xac build/default/production/_ext/760574787/BusyUART4.o
- .debug_info      0x00391a        0x573 build/default/production/_ext/760574787/CloseUART1.o
- .debug_info      0x003e8d        0x5fd build/default/production/_ext/760574787/CloseUART2.o
- .debug_info      0x00448a         0xad build/default/production/_ext/760574787/CloseUART3.o
- .debug_info      0x004537         0xad build/default/production/_ext/760574787/CloseUART4.o
- .debug_info      0x0045e4        0x720 build/default/production/_ext/760574787/ConfigIntUART1.o
- .debug_info      0x004d04        0x62d build/default/production/_ext/760574787/ConfigIntUART2.o
- .debug_info      0x005331         0xb1 build/default/production/_ext/760574787/ConfigIntUART3.o
- .debug_info      0x0053e2         0xb1 build/default/production/_ext/760574787/ConfigIntUART4.o
- .debug_info      0x005493        0x29d build/default/production/_ext/760574787/DataRdyUART1.o
- .debug_info      0x005730        0x29d build/default/production/_ext/760574787/DataRdyUART2.o
- .debug_info      0x0059cd         0xaf build/default/production/_ext/760574787/DataRdyUART3.o
- .debug_info      0x005a7c         0xaf build/default/production/_ext/760574787/DataRdyUART4.o
- .debug_info      0x005b2b        0x164 build/default/production/_ext/760574787/OpenUART1.o
- .debug_info      0x005c8f        0x164 build/default/production/_ext/760574787/OpenUART2.o
- .debug_info      0x005df3         0xac build/default/production/_ext/760574787/OpenUART3.o
- .debug_info      0x005e9f         0xac build/default/production/_ext/760574787/OpenUART4.o
- .debug_info      0x005f4b        0x2ac build/default/production/_ext/760574787/ReadUART1.o
- .debug_info      0x0061f7        0x2ac build/default/production/_ext/760574787/ReadUART2.o
- .debug_info      0x0064a3         0xac build/default/production/_ext/760574787/ReadUART3.o
- .debug_info      0x00654f         0xac build/default/production/_ext/760574787/ReadUART4.o
- .debug_info      0x0065fb        0x2be build/default/production/_ext/760574787/WriteUART1.o
- .debug_info      0x0068b9        0x2be build/default/production/_ext/760574787/WriteUART2.o
- .debug_info      0x006b77         0xad build/default/production/_ext/760574787/WriteUART3.o
- .debug_info      0x006c24         0xad build/default/production/_ext/760574787/WriteUART4.o
- .debug_info      0x006cd1        0x329 build/default/production/_ext/760574787/getsUART1.o
- .debug_info      0x006ffa        0x329 build/default/production/_ext/760574787/getsUART2.o
- .debug_info      0x007323         0xac build/default/production/_ext/760574787/getsUART3.o
- .debug_info      0x0073cf         0xac build/default/production/_ext/760574787/getsUART4.o
- .debug_info      0x00747b        0x4ab build/default/production/_ext/760574787/putsUART1.o
- .debug_info      0x007926        0x4ab build/default/production/_ext/760574787/putsUART2.o
- .debug_info      0x007dd1         0xac build/default/production/_ext/760574787/putsUART3.o
- .debug_info      0x007e7d         0xac build/default/production/_ext/760574787/putsUART4.o
+ .debug_info      0x000000        0x280 build/default/production/_ext/760574787/BusyUART1.o
+ .debug_info      0x000280        0x280 build/default/production/_ext/760574787/BusyUART2.o
+ .debug_info      0x000500         0x95 build/default/production/_ext/760574787/BusyUART3.o
+ .debug_info      0x000595         0x95 build/default/production/_ext/760574787/BusyUART4.o
+ .debug_info      0x00062a        0x55c build/default/production/_ext/760574787/CloseUART1.o
+ .debug_info      0x000b86        0x5e6 build/default/production/_ext/760574787/CloseUART2.o
+ .debug_info      0x00116c         0x96 build/default/production/_ext/760574787/CloseUART3.o
+ .debug_info      0x001202         0x96 build/default/production/_ext/760574787/CloseUART4.o
+ .debug_info      0x001298        0x709 build/default/production/_ext/760574787/ConfigIntUART1.o
+ .debug_info      0x0019a1        0x616 build/default/production/_ext/760574787/ConfigIntUART2.o
+ .debug_info      0x001fb7         0x9a build/default/production/_ext/760574787/ConfigIntUART3.o
+ .debug_info      0x002051         0x9a build/default/production/_ext/760574787/ConfigIntUART4.o
+ .debug_info      0x0020eb        0x286 build/default/production/_ext/760574787/DataRdyUART1.o
+ .debug_info      0x002371        0x286 build/default/production/_ext/760574787/DataRdyUART2.o
+ .debug_info      0x0025f7         0x98 build/default/production/_ext/760574787/DataRdyUART3.o
+ .debug_info      0x00268f         0x98 build/default/production/_ext/760574787/DataRdyUART4.o
+ .debug_info      0x002727        0x14d build/default/production/_ext/760574787/OpenUART1.o
+ .debug_info      0x002874        0x14d build/default/production/_ext/760574787/OpenUART2.o
+ .debug_info      0x0029c1         0x95 build/default/production/_ext/760574787/OpenUART3.o
+ .debug_info      0x002a56         0x95 build/default/production/_ext/760574787/OpenUART4.o
+ .debug_info      0x002aeb        0x295 build/default/production/_ext/760574787/ReadUART1.o
+ .debug_info      0x002d80        0x295 build/default/production/_ext/760574787/ReadUART2.o
+ .debug_info      0x003015         0x95 build/default/production/_ext/760574787/ReadUART3.o
+ .debug_info      0x0030aa         0x95 build/default/production/_ext/760574787/ReadUART4.o
+ .debug_info      0x00313f        0x2a7 build/default/production/_ext/760574787/WriteUART1.o
+ .debug_info      0x0033e6        0x2a7 build/default/production/_ext/760574787/WriteUART2.o
+ .debug_info      0x00368d         0x96 build/default/production/_ext/760574787/WriteUART3.o
+ .debug_info      0x003723         0x96 build/default/production/_ext/760574787/WriteUART4.o
+ .debug_info      0x0037b9        0x312 build/default/production/_ext/760574787/getsUART1.o
+ .debug_info      0x003acb        0x312 build/default/production/_ext/760574787/getsUART2.o
+ .debug_info      0x003ddd         0x95 build/default/production/_ext/760574787/getsUART3.o
+ .debug_info      0x003e72         0x95 build/default/production/_ext/760574787/getsUART4.o
+ .debug_info      0x003f07        0x494 build/default/production/_ext/760574787/putsUART1.o
+ .debug_info      0x00439b        0x494 build/default/production/_ext/760574787/putsUART2.o
+ .debug_info      0x00482f         0x95 build/default/production/_ext/760574787/putsUART3.o
+ .debug_info      0x0048c4         0x95 build/default/production/_ext/760574787/putsUART4.o
+ .debug_info      0x004959         0x71 build/default/production/_ext/1472/CalcRef.o
+ .debug_info      0x0049ca         0x72 build/default/production/_ext/1472/clrkpark.o
+ .debug_info      0x004a3c         0x71 build/default/production/_ext/1472/InvPark.o
+ .debug_info      0x004aad         0x6c build/default/production/_ext/1472/pi.o
+ .debug_info      0x004b19         0x72 build/default/production/_ext/1472/ReadADC0.o
+ .debug_info      0x004b8b         0x6f build/default/production/_ext/1472/SVGEN.o
+ .debug_info      0x004bfa         0x6e build/default/production/_ext/1472/trig.o
+ .debug_info      0x004c68         0x72 build/default/production/_ext/1472/MeasCurr.o
+ .debug_info      0x004cda       0x23cd build/default/production/_ext/1472/PMSM.o
+ .debug_info      0x0070a7        0x159 build/default/production/_ext/1472/initdspic.o
+ .debug_info      0x007200        0x504 build/default/production/_ext/1472/smcpos.o
+ .debug_info      0x007704         0x6d build/default/production/_ext/1472/smc.o
+ .debug_info      0x007771         0xa8 build/default/production/_ext/1472/RTDM.o
+ .debug_info      0x007819         0x75 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_info      0x00788e        0x206 build/default/production/_ext/1472/FdWeak.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000       0x1411
  *(.debug_abbrev)
- .debug_abbrev    0x000000         0x14 build/default/production/_ext/1472/CalcRef.o
- .debug_abbrev    0x000014         0x14 build/default/production/_ext/1472/clrkpark.o
- .debug_abbrev    0x000028         0x14 build/default/production/_ext/1472/InvPark.o
- .debug_abbrev    0x00003c         0x14 build/default/production/_ext/1472/pi.o
- .debug_abbrev    0x000050         0x14 build/default/production/_ext/1472/ReadADC0.o
- .debug_abbrev    0x000064         0x14 build/default/production/_ext/1472/SVGEN.o
- .debug_abbrev    0x000078         0x14 build/default/production/_ext/1472/trig.o
- .debug_abbrev    0x00008c         0x14 build/default/production/_ext/1472/MeasCurr.o
- .debug_abbrev    0x0000a0        0x254 build/default/production/_ext/1472/PMSM.o
- .debug_abbrev    0x0002f4         0x4c build/default/production/_ext/1472/initdspic.o
- .debug_abbrev    0x000340         0xf9 build/default/production/_ext/1472/smcpos.o
- .debug_abbrev    0x000439         0x14 build/default/production/_ext/1472/smc.o
- .debug_abbrev    0x00044d         0x1f build/default/production/_ext/1472/RTDM.o
- .debug_abbrev    0x00046c         0x14 build/default/production/_ext/1472/atan2CORDIC.o
- .debug_abbrev    0x000480         0xb9 build/default/production/_ext/1472/FdWeak.o
- .debug_abbrev    0x000539         0xa9 build/default/production/_ext/760574787/BusyUART1.o
- .debug_abbrev    0x0005e2         0xa9 build/default/production/_ext/760574787/BusyUART2.o
- .debug_abbrev    0x00068b         0x1f build/default/production/_ext/760574787/BusyUART3.o
- .debug_abbrev    0x0006aa         0x1f build/default/production/_ext/760574787/BusyUART4.o
- .debug_abbrev    0x0006c9         0xa7 build/default/production/_ext/760574787/CloseUART1.o
- .debug_abbrev    0x000770         0xa7 build/default/production/_ext/760574787/CloseUART2.o
- .debug_abbrev    0x000817         0x1f build/default/production/_ext/760574787/CloseUART3.o
- .debug_abbrev    0x000836         0x1f build/default/production/_ext/760574787/CloseUART4.o
- .debug_abbrev    0x000855         0xb8 build/default/production/_ext/760574787/ConfigIntUART1.o
- .debug_abbrev    0x00090d         0xb8 build/default/production/_ext/760574787/ConfigIntUART2.o
- .debug_abbrev    0x0009c5         0x1f build/default/production/_ext/760574787/ConfigIntUART3.o
- .debug_abbrev    0x0009e4         0x1f build/default/production/_ext/760574787/ConfigIntUART4.o
- .debug_abbrev    0x000a03         0xa9 build/default/production/_ext/760574787/DataRdyUART1.o
- .debug_abbrev    0x000aac         0xa9 build/default/production/_ext/760574787/DataRdyUART2.o
- .debug_abbrev    0x000b55         0x1f build/default/production/_ext/760574787/DataRdyUART3.o
- .debug_abbrev    0x000b74         0x1f build/default/production/_ext/760574787/DataRdyUART4.o
- .debug_abbrev    0x000b93         0x5d build/default/production/_ext/760574787/OpenUART1.o
- .debug_abbrev    0x000bf0         0x5d build/default/production/_ext/760574787/OpenUART2.o
- .debug_abbrev    0x000c4d         0x1f build/default/production/_ext/760574787/OpenUART3.o
- .debug_abbrev    0x000c6c         0x1f build/default/production/_ext/760574787/OpenUART4.o
- .debug_abbrev    0x000c8b         0xba build/default/production/_ext/760574787/ReadUART1.o
- .debug_abbrev    0x000d45         0xba build/default/production/_ext/760574787/ReadUART2.o
- .debug_abbrev    0x000dff         0x1f build/default/production/_ext/760574787/ReadUART3.o
- .debug_abbrev    0x000e1e         0x1f build/default/production/_ext/760574787/ReadUART4.o
- .debug_abbrev    0x000e3d         0xc9 build/default/production/_ext/760574787/WriteUART1.o
- .debug_abbrev    0x000f06         0xc9 build/default/production/_ext/760574787/WriteUART2.o
- .debug_abbrev    0x000fcf         0x1f build/default/production/_ext/760574787/WriteUART3.o
- .debug_abbrev    0x000fee         0x1f build/default/production/_ext/760574787/WriteUART4.o
- .debug_abbrev    0x00100d         0xe3 build/default/production/_ext/760574787/getsUART1.o
- .debug_abbrev    0x0010f0         0xe3 build/default/production/_ext/760574787/getsUART2.o
- .debug_abbrev    0x0011d3         0x1f build/default/production/_ext/760574787/getsUART3.o
- .debug_abbrev    0x0011f2         0x1f build/default/production/_ext/760574787/getsUART4.o
- .debug_abbrev    0x001211         0xe1 build/default/production/_ext/760574787/putsUART1.o
- .debug_abbrev    0x0012f2         0xe1 build/default/production/_ext/760574787/putsUART2.o
- .debug_abbrev    0x0013d3         0x1f build/default/production/_ext/760574787/putsUART3.o
- .debug_abbrev    0x0013f2         0x1f build/default/production/_ext/760574787/putsUART4.o
+ .debug_abbrev    0x000000         0xa9 build/default/production/_ext/760574787/BusyUART1.o
+ .debug_abbrev    0x0000a9         0xa9 build/default/production/_ext/760574787/BusyUART2.o
+ .debug_abbrev    0x000152         0x1f build/default/production/_ext/760574787/BusyUART3.o
+ .debug_abbrev    0x000171         0x1f build/default/production/_ext/760574787/BusyUART4.o
+ .debug_abbrev    0x000190         0xa7 build/default/production/_ext/760574787/CloseUART1.o
+ .debug_abbrev    0x000237         0xa7 build/default/production/_ext/760574787/CloseUART2.o
+ .debug_abbrev    0x0002de         0x1f build/default/production/_ext/760574787/CloseUART3.o
+ .debug_abbrev    0x0002fd         0x1f build/default/production/_ext/760574787/CloseUART4.o
+ .debug_abbrev    0x00031c         0xb8 build/default/production/_ext/760574787/ConfigIntUART1.o
+ .debug_abbrev    0x0003d4         0xb8 build/default/production/_ext/760574787/ConfigIntUART2.o
+ .debug_abbrev    0x00048c         0x1f build/default/production/_ext/760574787/ConfigIntUART3.o
+ .debug_abbrev    0x0004ab         0x1f build/default/production/_ext/760574787/ConfigIntUART4.o
+ .debug_abbrev    0x0004ca         0xa9 build/default/production/_ext/760574787/DataRdyUART1.o
+ .debug_abbrev    0x000573         0xa9 build/default/production/_ext/760574787/DataRdyUART2.o
+ .debug_abbrev    0x00061c         0x1f build/default/production/_ext/760574787/DataRdyUART3.o
+ .debug_abbrev    0x00063b         0x1f build/default/production/_ext/760574787/DataRdyUART4.o
+ .debug_abbrev    0x00065a         0x5d build/default/production/_ext/760574787/OpenUART1.o
+ .debug_abbrev    0x0006b7         0x5d build/default/production/_ext/760574787/OpenUART2.o
+ .debug_abbrev    0x000714         0x1f build/default/production/_ext/760574787/OpenUART3.o
+ .debug_abbrev    0x000733         0x1f build/default/production/_ext/760574787/OpenUART4.o
+ .debug_abbrev    0x000752         0xba build/default/production/_ext/760574787/ReadUART1.o
+ .debug_abbrev    0x00080c         0xba build/default/production/_ext/760574787/ReadUART2.o
+ .debug_abbrev    0x0008c6         0x1f build/default/production/_ext/760574787/ReadUART3.o
+ .debug_abbrev    0x0008e5         0x1f build/default/production/_ext/760574787/ReadUART4.o
+ .debug_abbrev    0x000904         0xc9 build/default/production/_ext/760574787/WriteUART1.o
+ .debug_abbrev    0x0009cd         0xc9 build/default/production/_ext/760574787/WriteUART2.o
+ .debug_abbrev    0x000a96         0x1f build/default/production/_ext/760574787/WriteUART3.o
+ .debug_abbrev    0x000ab5         0x1f build/default/production/_ext/760574787/WriteUART4.o
+ .debug_abbrev    0x000ad4         0xe3 build/default/production/_ext/760574787/getsUART1.o
+ .debug_abbrev    0x000bb7         0xe3 build/default/production/_ext/760574787/getsUART2.o
+ .debug_abbrev    0x000c9a         0x1f build/default/production/_ext/760574787/getsUART3.o
+ .debug_abbrev    0x000cb9         0x1f build/default/production/_ext/760574787/getsUART4.o
+ .debug_abbrev    0x000cd8         0xe1 build/default/production/_ext/760574787/putsUART1.o
+ .debug_abbrev    0x000db9         0xe1 build/default/production/_ext/760574787/putsUART2.o
+ .debug_abbrev    0x000e9a         0x1f build/default/production/_ext/760574787/putsUART3.o
+ .debug_abbrev    0x000eb9         0x1f build/default/production/_ext/760574787/putsUART4.o
+ .debug_abbrev    0x000ed8         0x14 build/default/production/_ext/1472/CalcRef.o
+ .debug_abbrev    0x000eec         0x14 build/default/production/_ext/1472/clrkpark.o
+ .debug_abbrev    0x000f00         0x14 build/default/production/_ext/1472/InvPark.o
+ .debug_abbrev    0x000f14         0x14 build/default/production/_ext/1472/pi.o
+ .debug_abbrev    0x000f28         0x14 build/default/production/_ext/1472/ReadADC0.o
+ .debug_abbrev    0x000f3c         0x14 build/default/production/_ext/1472/SVGEN.o
+ .debug_abbrev    0x000f50         0x14 build/default/production/_ext/1472/trig.o
+ .debug_abbrev    0x000f64         0x14 build/default/production/_ext/1472/MeasCurr.o
+ .debug_abbrev    0x000f78        0x254 build/default/production/_ext/1472/PMSM.o
+ .debug_abbrev    0x0011cc         0x4c build/default/production/_ext/1472/initdspic.o
+ .debug_abbrev    0x001218         0xf9 build/default/production/_ext/1472/smcpos.o
+ .debug_abbrev    0x001311         0x14 build/default/production/_ext/1472/smc.o
+ .debug_abbrev    0x001325         0x1f build/default/production/_ext/1472/RTDM.o
+ .debug_abbrev    0x001344         0x14 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_abbrev    0x001358         0xb9 build/default/production/_ext/1472/FdWeak.o
 
 .debug_line       0x000000       0x1464
  *(.debug_line)
- .debug_line      0x000000         0x47 build/default/production/_ext/1472/CalcRef.o
- .debug_line      0x000047         0x4e build/default/production/_ext/1472/clrkpark.o
- .debug_line      0x000095         0x45 build/default/production/_ext/1472/InvPark.o
- .debug_line      0x0000da         0x57 build/default/production/_ext/1472/pi.o
- .debug_line      0x000131         0x45 build/default/production/_ext/1472/ReadADC0.o
- .debug_line      0x000176         0x7f build/default/production/_ext/1472/SVGEN.o
- .debug_line      0x0001f5         0x61 build/default/production/_ext/1472/trig.o
- .debug_line      0x000256         0x4c build/default/production/_ext/1472/MeasCurr.o
- .debug_line      0x0002a2        0x232 build/default/production/_ext/1472/PMSM.o
- .debug_line      0x0004d4         0x8c build/default/production/_ext/1472/initdspic.o
- .debug_line      0x000560         0xef build/default/production/_ext/1472/smcpos.o
- .debug_line      0x00064f         0xd1 build/default/production/_ext/1472/smc.o
- .debug_line      0x000720         0x1a build/default/production/_ext/1472/RTDM.o
- .debug_line      0x00073a         0x73 build/default/production/_ext/1472/atan2CORDIC.o
- .debug_line      0x0007ad         0x77 build/default/production/_ext/1472/FdWeak.o
- .debug_line      0x000824         0x8e build/default/production/_ext/760574787/BusyUART1.o
- .debug_line      0x0008b2         0x8e build/default/production/_ext/760574787/BusyUART2.o
- .debug_line      0x000940         0x1a build/default/production/_ext/760574787/BusyUART3.o
- .debug_line      0x00095a         0x1a build/default/production/_ext/760574787/BusyUART4.o
- .debug_line      0x000974         0x93 build/default/production/_ext/760574787/CloseUART1.o
- .debug_line      0x000a07         0x93 build/default/production/_ext/760574787/CloseUART2.o
- .debug_line      0x000a9a         0x1a build/default/production/_ext/760574787/CloseUART3.o
- .debug_line      0x000ab4         0x1a build/default/production/_ext/760574787/CloseUART4.o
- .debug_line      0x000ace         0x9c build/default/production/_ext/760574787/ConfigIntUART1.o
- .debug_line      0x000b6a         0x9c build/default/production/_ext/760574787/ConfigIntUART2.o
- .debug_line      0x000c06         0x1a build/default/production/_ext/760574787/ConfigIntUART3.o
- .debug_line      0x000c20         0x1a build/default/production/_ext/760574787/ConfigIntUART4.o
- .debug_line      0x000c3a         0x91 build/default/production/_ext/760574787/DataRdyUART1.o
- .debug_line      0x000ccb         0x91 build/default/production/_ext/760574787/DataRdyUART2.o
- .debug_line      0x000d5c         0x1a build/default/production/_ext/760574787/DataRdyUART3.o
- .debug_line      0x000d76         0x1a build/default/production/_ext/760574787/DataRdyUART4.o
- .debug_line      0x000d90         0x90 build/default/production/_ext/760574787/OpenUART1.o
- .debug_line      0x000e20         0x90 build/default/production/_ext/760574787/OpenUART2.o
- .debug_line      0x000eb0         0x1a build/default/production/_ext/760574787/OpenUART3.o
- .debug_line      0x000eca         0x1a build/default/production/_ext/760574787/OpenUART4.o
- .debug_line      0x000ee4         0x90 build/default/production/_ext/760574787/ReadUART1.o
- .debug_line      0x000f74         0x90 build/default/production/_ext/760574787/ReadUART2.o
- .debug_line      0x001004         0x1a build/default/production/_ext/760574787/ReadUART3.o
- .debug_line      0x00101e         0x1a build/default/production/_ext/760574787/ReadUART4.o
- .debug_line      0x001038         0x91 build/default/production/_ext/760574787/WriteUART1.o
- .debug_line      0x0010c9         0x91 build/default/production/_ext/760574787/WriteUART2.o
- .debug_line      0x00115a         0x1a build/default/production/_ext/760574787/WriteUART3.o
- .debug_line      0x001174         0x1a build/default/production/_ext/760574787/WriteUART4.o
- .debug_line      0x00118e         0x9f build/default/production/_ext/760574787/getsUART1.o
- .debug_line      0x00122d         0x9f build/default/production/_ext/760574787/getsUART2.o
- .debug_line      0x0012cc         0x1a build/default/production/_ext/760574787/getsUART3.o
- .debug_line      0x0012e6         0x1a build/default/production/_ext/760574787/getsUART4.o
- .debug_line      0x001300         0x98 build/default/production/_ext/760574787/putsUART1.o
- .debug_line      0x001398         0x98 build/default/production/_ext/760574787/putsUART2.o
- .debug_line      0x001430         0x1a build/default/production/_ext/760574787/putsUART3.o
- .debug_line      0x00144a         0x1a build/default/production/_ext/760574787/putsUART4.o
+ .debug_line      0x000000         0x8e build/default/production/_ext/760574787/BusyUART1.o
+ .debug_line      0x00008e         0x8e build/default/production/_ext/760574787/BusyUART2.o
+ .debug_line      0x00011c         0x1a build/default/production/_ext/760574787/BusyUART3.o
+ .debug_line      0x000136         0x1a build/default/production/_ext/760574787/BusyUART4.o
+ .debug_line      0x000150         0x93 build/default/production/_ext/760574787/CloseUART1.o
+ .debug_line      0x0001e3         0x93 build/default/production/_ext/760574787/CloseUART2.o
+ .debug_line      0x000276         0x1a build/default/production/_ext/760574787/CloseUART3.o
+ .debug_line      0x000290         0x1a build/default/production/_ext/760574787/CloseUART4.o
+ .debug_line      0x0002aa         0x9c build/default/production/_ext/760574787/ConfigIntUART1.o
+ .debug_line      0x000346         0x9c build/default/production/_ext/760574787/ConfigIntUART2.o
+ .debug_line      0x0003e2         0x1a build/default/production/_ext/760574787/ConfigIntUART3.o
+ .debug_line      0x0003fc         0x1a build/default/production/_ext/760574787/ConfigIntUART4.o
+ .debug_line      0x000416         0x91 build/default/production/_ext/760574787/DataRdyUART1.o
+ .debug_line      0x0004a7         0x91 build/default/production/_ext/760574787/DataRdyUART2.o
+ .debug_line      0x000538         0x1a build/default/production/_ext/760574787/DataRdyUART3.o
+ .debug_line      0x000552         0x1a build/default/production/_ext/760574787/DataRdyUART4.o
+ .debug_line      0x00056c         0x90 build/default/production/_ext/760574787/OpenUART1.o
+ .debug_line      0x0005fc         0x90 build/default/production/_ext/760574787/OpenUART2.o
+ .debug_line      0x00068c         0x1a build/default/production/_ext/760574787/OpenUART3.o
+ .debug_line      0x0006a6         0x1a build/default/production/_ext/760574787/OpenUART4.o
+ .debug_line      0x0006c0         0x90 build/default/production/_ext/760574787/ReadUART1.o
+ .debug_line      0x000750         0x90 build/default/production/_ext/760574787/ReadUART2.o
+ .debug_line      0x0007e0         0x1a build/default/production/_ext/760574787/ReadUART3.o
+ .debug_line      0x0007fa         0x1a build/default/production/_ext/760574787/ReadUART4.o
+ .debug_line      0x000814         0x91 build/default/production/_ext/760574787/WriteUART1.o
+ .debug_line      0x0008a5         0x91 build/default/production/_ext/760574787/WriteUART2.o
+ .debug_line      0x000936         0x1a build/default/production/_ext/760574787/WriteUART3.o
+ .debug_line      0x000950         0x1a build/default/production/_ext/760574787/WriteUART4.o
+ .debug_line      0x00096a         0x9f build/default/production/_ext/760574787/getsUART1.o
+ .debug_line      0x000a09         0x9f build/default/production/_ext/760574787/getsUART2.o
+ .debug_line      0x000aa8         0x1a build/default/production/_ext/760574787/getsUART3.o
+ .debug_line      0x000ac2         0x1a build/default/production/_ext/760574787/getsUART4.o
+ .debug_line      0x000adc         0x98 build/default/production/_ext/760574787/putsUART1.o
+ .debug_line      0x000b74         0x98 build/default/production/_ext/760574787/putsUART2.o
+ .debug_line      0x000c0c         0x1a build/default/production/_ext/760574787/putsUART3.o
+ .debug_line      0x000c26         0x1a build/default/production/_ext/760574787/putsUART4.o
+ .debug_line      0x000c40         0x47 build/default/production/_ext/1472/CalcRef.o
+ .debug_line      0x000c87         0x4e build/default/production/_ext/1472/clrkpark.o
+ .debug_line      0x000cd5         0x45 build/default/production/_ext/1472/InvPark.o
+ .debug_line      0x000d1a         0x57 build/default/production/_ext/1472/pi.o
+ .debug_line      0x000d71         0x45 build/default/production/_ext/1472/ReadADC0.o
+ .debug_line      0x000db6         0x7f build/default/production/_ext/1472/SVGEN.o
+ .debug_line      0x000e35         0x61 build/default/production/_ext/1472/trig.o
+ .debug_line      0x000e96         0x4c build/default/production/_ext/1472/MeasCurr.o
+ .debug_line      0x000ee2        0x232 build/default/production/_ext/1472/PMSM.o
+ .debug_line      0x001114         0x8c build/default/production/_ext/1472/initdspic.o
+ .debug_line      0x0011a0         0xef build/default/production/_ext/1472/smcpos.o
+ .debug_line      0x00128f         0xd1 build/default/production/_ext/1472/smc.o
+ .debug_line      0x001360         0x1a build/default/production/_ext/1472/RTDM.o
+ .debug_line      0x00137a         0x73 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_line      0x0013ed         0x77 build/default/production/_ext/1472/FdWeak.o
 
 .debug_frame      0x000000        0x562
  *(.debug_frame)
- .debug_frame     0x000000        0x134 build/default/production/_ext/1472/PMSM.o
- .debug_frame     0x000134         0x30 build/default/production/_ext/1472/initdspic.o
- .debug_frame     0x000164         0x4c build/default/production/_ext/1472/smcpos.o
- .debug_frame     0x0001b0         0x52 build/default/production/_ext/1472/FdWeak.o
- .debug_frame     0x000202         0x30 build/default/production/_ext/760574787/BusyUART1.o
- .debug_frame     0x000232         0x30 build/default/production/_ext/760574787/BusyUART2.o
- .debug_frame     0x000262         0x30 build/default/production/_ext/760574787/CloseUART1.o
- .debug_frame     0x000292         0x30 build/default/production/_ext/760574787/CloseUART2.o
- .debug_frame     0x0002c2         0x30 build/default/production/_ext/760574787/ConfigIntUART1.o
- .debug_frame     0x0002f2         0x30 build/default/production/_ext/760574787/ConfigIntUART2.o
- .debug_frame     0x000322         0x30 build/default/production/_ext/760574787/DataRdyUART1.o
- .debug_frame     0x000352         0x30 build/default/production/_ext/760574787/DataRdyUART2.o
- .debug_frame     0x000382         0x30 build/default/production/_ext/760574787/OpenUART1.o
- .debug_frame     0x0003b2         0x30 build/default/production/_ext/760574787/OpenUART2.o
- .debug_frame     0x0003e2         0x30 build/default/production/_ext/760574787/ReadUART1.o
- .debug_frame     0x000412         0x30 build/default/production/_ext/760574787/ReadUART2.o
- .debug_frame     0x000442         0x30 build/default/production/_ext/760574787/WriteUART1.o
- .debug_frame     0x000472         0x30 build/default/production/_ext/760574787/WriteUART2.o
- .debug_frame     0x0004a2         0x30 build/default/production/_ext/760574787/getsUART1.o
- .debug_frame     0x0004d2         0x30 build/default/production/_ext/760574787/getsUART2.o
- .debug_frame     0x000502         0x30 build/default/production/_ext/760574787/putsUART1.o
- .debug_frame     0x000532         0x30 build/default/production/_ext/760574787/putsUART2.o
+ .debug_frame     0x000000         0x30 build/default/production/_ext/760574787/BusyUART1.o
+ .debug_frame     0x000030         0x30 build/default/production/_ext/760574787/BusyUART2.o
+ .debug_frame     0x000060         0x30 build/default/production/_ext/760574787/CloseUART1.o
+ .debug_frame     0x000090         0x30 build/default/production/_ext/760574787/CloseUART2.o
+ .debug_frame     0x0000c0         0x30 build/default/production/_ext/760574787/ConfigIntUART1.o
+ .debug_frame     0x0000f0         0x30 build/default/production/_ext/760574787/ConfigIntUART2.o
+ .debug_frame     0x000120         0x30 build/default/production/_ext/760574787/DataRdyUART1.o
+ .debug_frame     0x000150         0x30 build/default/production/_ext/760574787/DataRdyUART2.o
+ .debug_frame     0x000180         0x30 build/default/production/_ext/760574787/OpenUART1.o
+ .debug_frame     0x0001b0         0x30 build/default/production/_ext/760574787/OpenUART2.o
+ .debug_frame     0x0001e0         0x30 build/default/production/_ext/760574787/ReadUART1.o
+ .debug_frame     0x000210         0x30 build/default/production/_ext/760574787/ReadUART2.o
+ .debug_frame     0x000240         0x30 build/default/production/_ext/760574787/WriteUART1.o
+ .debug_frame     0x000270         0x30 build/default/production/_ext/760574787/WriteUART2.o
+ .debug_frame     0x0002a0         0x30 build/default/production/_ext/760574787/getsUART1.o
+ .debug_frame     0x0002d0         0x30 build/default/production/_ext/760574787/getsUART2.o
+ .debug_frame     0x000300         0x30 build/default/production/_ext/760574787/putsUART1.o
+ .debug_frame     0x000330         0x30 build/default/production/_ext/760574787/putsUART2.o
+ .debug_frame     0x000360        0x134 build/default/production/_ext/1472/PMSM.o
+ .debug_frame     0x000494         0x30 build/default/production/_ext/1472/initdspic.o
+ .debug_frame     0x0004c4         0x4c build/default/production/_ext/1472/smcpos.o
+ .debug_frame     0x000510         0x52 build/default/production/_ext/1472/FdWeak.o
 
 .debug_str        0x000000        0x2ba
  *(.debug_str)
- .debug_str       0x000000        0x174 build/default/production/_ext/1472/PMSM.o
- .debug_str       0x000174         0x2e build/default/production/_ext/1472/smcpos.o
- .debug_str       0x0001a2          0xb build/default/production/_ext/1472/FdWeak.o
- .debug_str       0x0001ad          0xa build/default/production/_ext/760574787/BusyUART1.o
- .debug_str       0x0001b7          0xa build/default/production/_ext/760574787/BusyUART2.o
- .debug_str       0x0001c1         0x1d build/default/production/_ext/760574787/CloseUART1.o
- .debug_str       0x0001de         0x1d build/default/production/_ext/760574787/CloseUART2.o
- .debug_str       0x0001fb         0x24 build/default/production/_ext/760574787/ConfigIntUART1.o
- .debug_str       0x00021f         0x1b build/default/production/_ext/760574787/ConfigIntUART2.o
- .debug_str       0x00023a          0xa build/default/production/_ext/760574787/DataRdyUART1.o
- .debug_str       0x000244          0xa build/default/production/_ext/760574787/DataRdyUART2.o
- .debug_str       0x00024e          0xb build/default/production/_ext/760574787/ReadUART1.o
- .debug_str       0x000259          0xb build/default/production/_ext/760574787/ReadUART2.o
- .debug_str       0x000264          0xb build/default/production/_ext/760574787/WriteUART1.o
- .debug_str       0x00026f          0xb build/default/production/_ext/760574787/WriteUART2.o
- .debug_str       0x00027a          0xb build/default/production/_ext/760574787/getsUART1.o
- .debug_str       0x000285          0xb build/default/production/_ext/760574787/getsUART2.o
- .debug_str       0x000290         0x15 build/default/production/_ext/760574787/putsUART1.o
- .debug_str       0x0002a5         0x15 build/default/production/_ext/760574787/putsUART2.o
+ .debug_str       0x000000          0xa build/default/production/_ext/760574787/BusyUART1.o
+ .debug_str       0x00000a          0xa build/default/production/_ext/760574787/BusyUART2.o
+ .debug_str       0x000014         0x1d build/default/production/_ext/760574787/CloseUART1.o
+ .debug_str       0x000031         0x1d build/default/production/_ext/760574787/CloseUART2.o
+ .debug_str       0x00004e         0x24 build/default/production/_ext/760574787/ConfigIntUART1.o
+ .debug_str       0x000072         0x1b build/default/production/_ext/760574787/ConfigIntUART2.o
+ .debug_str       0x00008d          0xa build/default/production/_ext/760574787/DataRdyUART1.o
+ .debug_str       0x000097          0xa build/default/production/_ext/760574787/DataRdyUART2.o
+ .debug_str       0x0000a1          0xb build/default/production/_ext/760574787/ReadUART1.o
+ .debug_str       0x0000ac          0xb build/default/production/_ext/760574787/ReadUART2.o
+ .debug_str       0x0000b7          0xb build/default/production/_ext/760574787/WriteUART1.o
+ .debug_str       0x0000c2          0xb build/default/production/_ext/760574787/WriteUART2.o
+ .debug_str       0x0000cd          0xb build/default/production/_ext/760574787/getsUART1.o
+ .debug_str       0x0000d8          0xb build/default/production/_ext/760574787/getsUART2.o
+ .debug_str       0x0000e3         0x15 build/default/production/_ext/760574787/putsUART1.o
+ .debug_str       0x0000f8         0x15 build/default/production/_ext/760574787/putsUART2.o
+ .debug_str       0x00010d        0x174 build/default/production/_ext/1472/PMSM.o
+ .debug_str       0x000281         0x2e build/default/production/_ext/1472/smcpos.o
+ .debug_str       0x0002af          0xb build/default/production/_ext/1472/FdWeak.o
 
 .debug_loc
  *(.debug_loc)
@@ -826,49 +826,49 @@ __FUID3
                   0x000000        0x4cf
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000        0x1e1 build/default/production/_ext/1472/PMSM.o
+                  0x000000         0x20 build/default/production/_ext/760574787/BusyUART1.o
  .debug_pubnames
-                  0x0001e1         0x21 build/default/production/_ext/1472/initdspic.o
+                  0x000020         0x20 build/default/production/_ext/760574787/BusyUART2.o
  .debug_pubnames
-                  0x000202         0x3a build/default/production/_ext/1472/smcpos.o
+                  0x000040         0x21 build/default/production/_ext/760574787/CloseUART1.o
  .debug_pubnames
-                  0x00023c         0x3f build/default/production/_ext/1472/FdWeak.o
+                  0x000061         0x21 build/default/production/_ext/760574787/CloseUART2.o
  .debug_pubnames
-                  0x00027b         0x20 build/default/production/_ext/760574787/BusyUART1.o
+                  0x000082         0x25 build/default/production/_ext/760574787/ConfigIntUART1.o
  .debug_pubnames
-                  0x00029b         0x20 build/default/production/_ext/760574787/BusyUART2.o
+                  0x0000a7         0x25 build/default/production/_ext/760574787/ConfigIntUART2.o
  .debug_pubnames
-                  0x0002bb         0x21 build/default/production/_ext/760574787/CloseUART1.o
+                  0x0000cc         0x23 build/default/production/_ext/760574787/DataRdyUART1.o
  .debug_pubnames
-                  0x0002dc         0x21 build/default/production/_ext/760574787/CloseUART2.o
+                  0x0000ef         0x23 build/default/production/_ext/760574787/DataRdyUART2.o
  .debug_pubnames
-                  0x0002fd         0x25 build/default/production/_ext/760574787/ConfigIntUART1.o
+                  0x000112         0x20 build/default/production/_ext/760574787/OpenUART1.o
  .debug_pubnames
-                  0x000322         0x25 build/default/production/_ext/760574787/ConfigIntUART2.o
+                  0x000132         0x20 build/default/production/_ext/760574787/OpenUART2.o
  .debug_pubnames
-                  0x000347         0x23 build/default/production/_ext/760574787/DataRdyUART1.o
+                  0x000152         0x20 build/default/production/_ext/760574787/ReadUART1.o
  .debug_pubnames
-                  0x00036a         0x23 build/default/production/_ext/760574787/DataRdyUART2.o
+                  0x000172         0x20 build/default/production/_ext/760574787/ReadUART2.o
  .debug_pubnames
-                  0x00038d         0x20 build/default/production/_ext/760574787/OpenUART1.o
+                  0x000192         0x21 build/default/production/_ext/760574787/WriteUART1.o
  .debug_pubnames
-                  0x0003ad         0x20 build/default/production/_ext/760574787/OpenUART2.o
+                  0x0001b3         0x21 build/default/production/_ext/760574787/WriteUART2.o
  .debug_pubnames
-                  0x0003cd         0x20 build/default/production/_ext/760574787/ReadUART1.o
+                  0x0001d4         0x20 build/default/production/_ext/760574787/getsUART1.o
  .debug_pubnames
-                  0x0003ed         0x20 build/default/production/_ext/760574787/ReadUART2.o
+                  0x0001f4         0x20 build/default/production/_ext/760574787/getsUART2.o
  .debug_pubnames
-                  0x00040d         0x21 build/default/production/_ext/760574787/WriteUART1.o
+                  0x000214         0x20 build/default/production/_ext/760574787/putsUART1.o
  .debug_pubnames
-                  0x00042e         0x21 build/default/production/_ext/760574787/WriteUART2.o
+                  0x000234         0x20 build/default/production/_ext/760574787/putsUART2.o
  .debug_pubnames
-                  0x00044f         0x20 build/default/production/_ext/760574787/getsUART1.o
+                  0x000254        0x1e1 build/default/production/_ext/1472/PMSM.o
  .debug_pubnames
-                  0x00046f         0x20 build/default/production/_ext/760574787/getsUART2.o
+                  0x000435         0x21 build/default/production/_ext/1472/initdspic.o
  .debug_pubnames
-                  0x00048f         0x20 build/default/production/_ext/760574787/putsUART1.o
+                  0x000456         0x3a build/default/production/_ext/1472/smcpos.o
  .debug_pubnames
-                  0x0004af         0x20 build/default/production/_ext/760574787/putsUART2.o
+                  0x000490         0x3f build/default/production/_ext/1472/FdWeak.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -876,69 +876,69 @@ __FUID3
 .debug_aranges    0x000000        0x390
  *(.debug_aranges)
  .debug_aranges
-                  0x000000         0x18 build/default/production/_ext/1472/CalcRef.o
+                  0x000000         0x20 build/default/production/_ext/760574787/BusyUART1.o
  .debug_aranges
-                  0x000018         0x18 build/default/production/_ext/1472/clrkpark.o
+                  0x000020         0x20 build/default/production/_ext/760574787/BusyUART2.o
  .debug_aranges
-                  0x000030         0x18 build/default/production/_ext/1472/InvPark.o
+                  0x000040         0x20 build/default/production/_ext/760574787/CloseUART1.o
  .debug_aranges
-                  0x000048         0x18 build/default/production/_ext/1472/pi.o
+                  0x000060         0x20 build/default/production/_ext/760574787/CloseUART2.o
  .debug_aranges
-                  0x000060         0x18 build/default/production/_ext/1472/ReadADC0.o
+                  0x000080         0x20 build/default/production/_ext/760574787/ConfigIntUART1.o
  .debug_aranges
-                  0x000078         0x18 build/default/production/_ext/1472/SVGEN.o
+                  0x0000a0         0x20 build/default/production/_ext/760574787/ConfigIntUART2.o
  .debug_aranges
-                  0x000090         0x18 build/default/production/_ext/1472/trig.o
+                  0x0000c0         0x20 build/default/production/_ext/760574787/DataRdyUART1.o
  .debug_aranges
-                  0x0000a8         0x18 build/default/production/_ext/1472/MeasCurr.o
+                  0x0000e0         0x20 build/default/production/_ext/760574787/DataRdyUART2.o
  .debug_aranges
-                  0x0000c0         0x18 build/default/production/_ext/1472/PMSM.o
+                  0x000100         0x20 build/default/production/_ext/760574787/OpenUART1.o
  .debug_aranges
-                  0x0000d8         0x18 build/default/production/_ext/1472/initdspic.o
+                  0x000120         0x20 build/default/production/_ext/760574787/OpenUART2.o
  .debug_aranges
-                  0x0000f0         0x18 build/default/production/_ext/1472/smcpos.o
+                  0x000140         0x20 build/default/production/_ext/760574787/ReadUART1.o
  .debug_aranges
-                  0x000108         0x18 build/default/production/_ext/1472/smc.o
+                  0x000160         0x20 build/default/production/_ext/760574787/ReadUART2.o
  .debug_aranges
-                  0x000120         0x18 build/default/production/_ext/1472/atan2CORDIC.o
+                  0x000180         0x20 build/default/production/_ext/760574787/WriteUART1.o
  .debug_aranges
-                  0x000138         0x18 build/default/production/_ext/1472/FdWeak.o
+                  0x0001a0         0x20 build/default/production/_ext/760574787/WriteUART2.o
  .debug_aranges
-                  0x000150         0x20 build/default/production/_ext/760574787/BusyUART1.o
+                  0x0001c0         0x20 build/default/production/_ext/760574787/getsUART1.o
  .debug_aranges
-                  0x000170         0x20 build/default/production/_ext/760574787/BusyUART2.o
+                  0x0001e0         0x20 build/default/production/_ext/760574787/getsUART2.o
  .debug_aranges
-                  0x000190         0x20 build/default/production/_ext/760574787/CloseUART1.o
+                  0x000200         0x20 build/default/production/_ext/760574787/putsUART1.o
  .debug_aranges
-                  0x0001b0         0x20 build/default/production/_ext/760574787/CloseUART2.o
+                  0x000220         0x20 build/default/production/_ext/760574787/putsUART2.o
  .debug_aranges
-                  0x0001d0         0x20 build/default/production/_ext/760574787/ConfigIntUART1.o
+                  0x000240         0x18 build/default/production/_ext/1472/CalcRef.o
  .debug_aranges
-                  0x0001f0         0x20 build/default/production/_ext/760574787/ConfigIntUART2.o
+                  0x000258         0x18 build/default/production/_ext/1472/clrkpark.o
  .debug_aranges
-                  0x000210         0x20 build/default/production/_ext/760574787/DataRdyUART1.o
+                  0x000270         0x18 build/default/production/_ext/1472/InvPark.o
  .debug_aranges
-                  0x000230         0x20 build/default/production/_ext/760574787/DataRdyUART2.o
+                  0x000288         0x18 build/default/production/_ext/1472/pi.o
  .debug_aranges
-                  0x000250         0x20 build/default/production/_ext/760574787/OpenUART1.o
+                  0x0002a0         0x18 build/default/production/_ext/1472/ReadADC0.o
  .debug_aranges
-                  0x000270         0x20 build/default/production/_ext/760574787/OpenUART2.o
+                  0x0002b8         0x18 build/default/production/_ext/1472/SVGEN.o
  .debug_aranges
-                  0x000290         0x20 build/default/production/_ext/760574787/ReadUART1.o
+                  0x0002d0         0x18 build/default/production/_ext/1472/trig.o
  .debug_aranges
-                  0x0002b0         0x20 build/default/production/_ext/760574787/ReadUART2.o
+                  0x0002e8         0x18 build/default/production/_ext/1472/MeasCurr.o
  .debug_aranges
-                  0x0002d0         0x20 build/default/production/_ext/760574787/WriteUART1.o
+                  0x000300         0x18 build/default/production/_ext/1472/PMSM.o
  .debug_aranges
-                  0x0002f0         0x20 build/default/production/_ext/760574787/WriteUART2.o
+                  0x000318         0x18 build/default/production/_ext/1472/initdspic.o
  .debug_aranges
-                  0x000310         0x20 build/default/production/_ext/760574787/getsUART1.o
+                  0x000330         0x18 build/default/production/_ext/1472/smcpos.o
  .debug_aranges
-                  0x000330         0x20 build/default/production/_ext/760574787/getsUART2.o
+                  0x000348         0x18 build/default/production/_ext/1472/smc.o
  .debug_aranges
-                  0x000350         0x20 build/default/production/_ext/760574787/putsUART1.o
+                  0x000360         0x18 build/default/production/_ext/1472/atan2CORDIC.o
  .debug_aranges
-                  0x000370         0x20 build/default/production/_ext/760574787/putsUART2.o
+                  0x000378         0x18 build/default/production/_ext/1472/FdWeak.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -2035,172 +2035,172 @@ LOAD data_init
 .debug_pubtypes
                   0x000390        0x913
  .debug_pubtypes
-                  0x000390        0x2a6 build/default/production/_ext/1472/PMSM.o
+                  0x000390         0x31 build/default/production/_ext/760574787/BusyUART1.o
  .debug_pubtypes
-                  0x000636         0x12 build/default/production/_ext/1472/initdspic.o
+                  0x0003c1         0x31 build/default/production/_ext/760574787/BusyUART2.o
  .debug_pubtypes
-                  0x000648         0x50 build/default/production/_ext/1472/smcpos.o
+                  0x0003f2         0x12 build/default/production/_ext/760574787/BusyUART3.o
  .debug_pubtypes
-                  0x000698         0x12 build/default/production/_ext/1472/RTDM.o
+                  0x000404         0x12 build/default/production/_ext/760574787/BusyUART4.o
  .debug_pubtypes
-                  0x0006aa         0x2e build/default/production/_ext/1472/FdWeak.o
+                  0x000416         0x6d build/default/production/_ext/760574787/CloseUART1.o
  .debug_pubtypes
-                  0x0006d8         0x31 build/default/production/_ext/760574787/BusyUART1.o
+                  0x000483         0x6d build/default/production/_ext/760574787/CloseUART2.o
  .debug_pubtypes
-                  0x000709         0x31 build/default/production/_ext/760574787/BusyUART2.o
+                  0x0004f0         0x12 build/default/production/_ext/760574787/CloseUART3.o
  .debug_pubtypes
-                  0x00073a         0x12 build/default/production/_ext/760574787/BusyUART3.o
+                  0x000502         0x12 build/default/production/_ext/760574787/CloseUART4.o
  .debug_pubtypes
-                  0x00074c         0x12 build/default/production/_ext/760574787/BusyUART4.o
+                  0x000514         0x86 build/default/production/_ext/760574787/ConfigIntUART1.o
  .debug_pubtypes
-                  0x00075e         0x6d build/default/production/_ext/760574787/CloseUART1.o
+                  0x00059a         0x69 build/default/production/_ext/760574787/ConfigIntUART2.o
  .debug_pubtypes
-                  0x0007cb         0x6d build/default/production/_ext/760574787/CloseUART2.o
+                  0x000603         0x12 build/default/production/_ext/760574787/ConfigIntUART3.o
  .debug_pubtypes
-                  0x000838         0x12 build/default/production/_ext/760574787/CloseUART3.o
+                  0x000615         0x12 build/default/production/_ext/760574787/ConfigIntUART4.o
  .debug_pubtypes
-                  0x00084a         0x12 build/default/production/_ext/760574787/CloseUART4.o
+                  0x000627         0x31 build/default/production/_ext/760574787/DataRdyUART1.o
  .debug_pubtypes
-                  0x00085c         0x86 build/default/production/_ext/760574787/ConfigIntUART1.o
+                  0x000658         0x31 build/default/production/_ext/760574787/DataRdyUART2.o
  .debug_pubtypes
-                  0x0008e2         0x69 build/default/production/_ext/760574787/ConfigIntUART2.o
+                  0x000689         0x12 build/default/production/_ext/760574787/DataRdyUART3.o
  .debug_pubtypes
-                  0x00094b         0x12 build/default/production/_ext/760574787/ConfigIntUART3.o
+                  0x00069b         0x12 build/default/production/_ext/760574787/DataRdyUART4.o
  .debug_pubtypes
-                  0x00095d         0x12 build/default/production/_ext/760574787/ConfigIntUART4.o
+                  0x0006ad         0x12 build/default/production/_ext/760574787/OpenUART1.o
  .debug_pubtypes
-                  0x00096f         0x31 build/default/production/_ext/760574787/DataRdyUART1.o
+                  0x0006bf         0x12 build/default/production/_ext/760574787/OpenUART2.o
  .debug_pubtypes
-                  0x0009a0         0x31 build/default/production/_ext/760574787/DataRdyUART2.o
+                  0x0006d1         0x12 build/default/production/_ext/760574787/OpenUART3.o
  .debug_pubtypes
-                  0x0009d1         0x12 build/default/production/_ext/760574787/DataRdyUART3.o
+                  0x0006e3         0x12 build/default/production/_ext/760574787/OpenUART4.o
  .debug_pubtypes
-                  0x0009e3         0x12 build/default/production/_ext/760574787/DataRdyUART4.o
+                  0x0006f5         0x33 build/default/production/_ext/760574787/ReadUART1.o
  .debug_pubtypes
-                  0x0009f5         0x12 build/default/production/_ext/760574787/OpenUART1.o
+                  0x000728         0x33 build/default/production/_ext/760574787/ReadUART2.o
  .debug_pubtypes
-                  0x000a07         0x12 build/default/production/_ext/760574787/OpenUART2.o
+                  0x00075b         0x12 build/default/production/_ext/760574787/ReadUART3.o
  .debug_pubtypes
-                  0x000a19         0x12 build/default/production/_ext/760574787/OpenUART3.o
+                  0x00076d         0x12 build/default/production/_ext/760574787/ReadUART4.o
  .debug_pubtypes
-                  0x000a2b         0x12 build/default/production/_ext/760574787/OpenUART4.o
+                  0x00077f         0x33 build/default/production/_ext/760574787/WriteUART1.o
  .debug_pubtypes
-                  0x000a3d         0x33 build/default/production/_ext/760574787/ReadUART1.o
+                  0x0007b2         0x33 build/default/production/_ext/760574787/WriteUART2.o
  .debug_pubtypes
-                  0x000a70         0x33 build/default/production/_ext/760574787/ReadUART2.o
+                  0x0007e5         0x12 build/default/production/_ext/760574787/WriteUART3.o
  .debug_pubtypes
-                  0x000aa3         0x12 build/default/production/_ext/760574787/ReadUART3.o
+                  0x0007f7         0x12 build/default/production/_ext/760574787/WriteUART4.o
  .debug_pubtypes
-                  0x000ab5         0x12 build/default/production/_ext/760574787/ReadUART4.o
+                  0x000809         0x33 build/default/production/_ext/760574787/getsUART1.o
  .debug_pubtypes
-                  0x000ac7         0x33 build/default/production/_ext/760574787/WriteUART1.o
+                  0x00083c         0x33 build/default/production/_ext/760574787/getsUART2.o
  .debug_pubtypes
-                  0x000afa         0x33 build/default/production/_ext/760574787/WriteUART2.o
+                  0x00086f         0x12 build/default/production/_ext/760574787/getsUART3.o
  .debug_pubtypes
-                  0x000b2d         0x12 build/default/production/_ext/760574787/WriteUART3.o
+                  0x000881         0x12 build/default/production/_ext/760574787/getsUART4.o
  .debug_pubtypes
-                  0x000b3f         0x12 build/default/production/_ext/760574787/WriteUART4.o
+                  0x000893         0x52 build/default/production/_ext/760574787/putsUART1.o
  .debug_pubtypes
-                  0x000b51         0x33 build/default/production/_ext/760574787/getsUART1.o
+                  0x0008e5         0x52 build/default/production/_ext/760574787/putsUART2.o
  .debug_pubtypes
-                  0x000b84         0x33 build/default/production/_ext/760574787/getsUART2.o
+                  0x000937         0x12 build/default/production/_ext/760574787/putsUART3.o
  .debug_pubtypes
-                  0x000bb7         0x12 build/default/production/_ext/760574787/getsUART3.o
+                  0x000949         0x12 build/default/production/_ext/760574787/putsUART4.o
  .debug_pubtypes
-                  0x000bc9         0x12 build/default/production/_ext/760574787/getsUART4.o
+                  0x00095b        0x2a6 build/default/production/_ext/1472/PMSM.o
  .debug_pubtypes
-                  0x000bdb         0x52 build/default/production/_ext/760574787/putsUART1.o
+                  0x000c01         0x12 build/default/production/_ext/1472/initdspic.o
  .debug_pubtypes
-                  0x000c2d         0x52 build/default/production/_ext/760574787/putsUART2.o
+                  0x000c13         0x50 build/default/production/_ext/1472/smcpos.o
  .debug_pubtypes
-                  0x000c7f         0x12 build/default/production/_ext/760574787/putsUART3.o
+                  0x000c63         0x12 build/default/production/_ext/1472/RTDM.o
  .debug_pubtypes
-                  0x000c91         0x12 build/default/production/_ext/760574787/putsUART4.o
+                  0x000c75         0x2e build/default/production/_ext/1472/FdWeak.o
 
 __c30_signature
                   0x000ca3        0x10e
  __c30_signature
-                  0x000ca3          0x6 build/default/production/_ext/1472/PMSM.o
+                  0x000ca3          0x6 build/default/production/_ext/760574787/BusyUART1.o
  __c30_signature
-                  0x000ca9          0x6 build/default/production/_ext/1472/initdspic.o
+                  0x000ca9          0x6 build/default/production/_ext/760574787/BusyUART2.o
  __c30_signature
-                  0x000caf          0x6 build/default/production/_ext/1472/smcpos.o
+                  0x000caf          0x6 build/default/production/_ext/760574787/BusyUART3.o
  __c30_signature
-                  0x000cb5          0x6 build/default/production/_ext/1472/RTDM.o
+                  0x000cb5          0x6 build/default/production/_ext/760574787/BusyUART4.o
  __c30_signature
-                  0x000cbb          0x6 build/default/production/_ext/1472/FdWeak.o
+                  0x000cbb          0x6 build/default/production/_ext/760574787/CloseUART1.o
  __c30_signature
-                  0x000cc1          0x6 build/default/production/_ext/760574787/BusyUART1.o
+                  0x000cc1          0x6 build/default/production/_ext/760574787/CloseUART2.o
  __c30_signature
-                  0x000cc7          0x6 build/default/production/_ext/760574787/BusyUART2.o
+                  0x000cc7          0x6 build/default/production/_ext/760574787/CloseUART3.o
  __c30_signature
-                  0x000ccd          0x6 build/default/production/_ext/760574787/BusyUART3.o
+                  0x000ccd          0x6 build/default/production/_ext/760574787/CloseUART4.o
  __c30_signature
-                  0x000cd3          0x6 build/default/production/_ext/760574787/BusyUART4.o
+                  0x000cd3          0x6 build/default/production/_ext/760574787/ConfigIntUART1.o
  __c30_signature
-                  0x000cd9          0x6 build/default/production/_ext/760574787/CloseUART1.o
+                  0x000cd9          0x6 build/default/production/_ext/760574787/ConfigIntUART2.o
  __c30_signature
-                  0x000cdf          0x6 build/default/production/_ext/760574787/CloseUART2.o
+                  0x000cdf          0x6 build/default/production/_ext/760574787/ConfigIntUART3.o
  __c30_signature
-                  0x000ce5          0x6 build/default/production/_ext/760574787/CloseUART3.o
+                  0x000ce5          0x6 build/default/production/_ext/760574787/ConfigIntUART4.o
  __c30_signature
-                  0x000ceb          0x6 build/default/production/_ext/760574787/CloseUART4.o
+                  0x000ceb          0x6 build/default/production/_ext/760574787/DataRdyUART1.o
  __c30_signature
-                  0x000cf1          0x6 build/default/production/_ext/760574787/ConfigIntUART1.o
+                  0x000cf1          0x6 build/default/production/_ext/760574787/DataRdyUART2.o
  __c30_signature
-                  0x000cf7          0x6 build/default/production/_ext/760574787/ConfigIntUART2.o
+                  0x000cf7          0x6 build/default/production/_ext/760574787/DataRdyUART3.o
  __c30_signature
-                  0x000cfd          0x6 build/default/production/_ext/760574787/ConfigIntUART3.o
+                  0x000cfd          0x6 build/default/production/_ext/760574787/DataRdyUART4.o
  __c30_signature
-                  0x000d03          0x6 build/default/production/_ext/760574787/ConfigIntUART4.o
+                  0x000d03          0x6 build/default/production/_ext/760574787/OpenUART1.o
  __c30_signature
-                  0x000d09          0x6 build/default/production/_ext/760574787/DataRdyUART1.o
+                  0x000d09          0x6 build/default/production/_ext/760574787/OpenUART2.o
  __c30_signature
-                  0x000d0f          0x6 build/default/production/_ext/760574787/DataRdyUART2.o
+                  0x000d0f          0x6 build/default/production/_ext/760574787/OpenUART3.o
  __c30_signature
-                  0x000d15          0x6 build/default/production/_ext/760574787/DataRdyUART3.o
+                  0x000d15          0x6 build/default/production/_ext/760574787/OpenUART4.o
  __c30_signature
-                  0x000d1b          0x6 build/default/production/_ext/760574787/DataRdyUART4.o
+                  0x000d1b          0x6 build/default/production/_ext/760574787/ReadUART1.o
  __c30_signature
-                  0x000d21          0x6 build/default/production/_ext/760574787/OpenUART1.o
+                  0x000d21          0x6 build/default/production/_ext/760574787/ReadUART2.o
  __c30_signature
-                  0x000d27          0x6 build/default/production/_ext/760574787/OpenUART2.o
+                  0x000d27          0x6 build/default/production/_ext/760574787/ReadUART3.o
  __c30_signature
-                  0x000d2d          0x6 build/default/production/_ext/760574787/OpenUART3.o
+                  0x000d2d          0x6 build/default/production/_ext/760574787/ReadUART4.o
  __c30_signature
-                  0x000d33          0x6 build/default/production/_ext/760574787/OpenUART4.o
+                  0x000d33          0x6 build/default/production/_ext/760574787/WriteUART1.o
  __c30_signature
-                  0x000d39          0x6 build/default/production/_ext/760574787/ReadUART1.o
+                  0x000d39          0x6 build/default/production/_ext/760574787/WriteUART2.o
  __c30_signature
-                  0x000d3f          0x6 build/default/production/_ext/760574787/ReadUART2.o
+                  0x000d3f          0x6 build/default/production/_ext/760574787/WriteUART3.o
  __c30_signature
-                  0x000d45          0x6 build/default/production/_ext/760574787/ReadUART3.o
+                  0x000d45          0x6 build/default/production/_ext/760574787/WriteUART4.o
  __c30_signature
-                  0x000d4b          0x6 build/default/production/_ext/760574787/ReadUART4.o
+                  0x000d4b          0x6 build/default/production/_ext/760574787/getsUART1.o
  __c30_signature
-                  0x000d51          0x6 build/default/production/_ext/760574787/WriteUART1.o
+                  0x000d51          0x6 build/default/production/_ext/760574787/getsUART2.o
  __c30_signature
-                  0x000d57          0x6 build/default/production/_ext/760574787/WriteUART2.o
+                  0x000d57          0x6 build/default/production/_ext/760574787/getsUART3.o
  __c30_signature
-                  0x000d5d          0x6 build/default/production/_ext/760574787/WriteUART3.o
+                  0x000d5d          0x6 build/default/production/_ext/760574787/getsUART4.o
  __c30_signature
-                  0x000d63          0x6 build/default/production/_ext/760574787/WriteUART4.o
+                  0x000d63          0x6 build/default/production/_ext/760574787/putsUART1.o
  __c30_signature
-                  0x000d69          0x6 build/default/production/_ext/760574787/getsUART1.o
+                  0x000d69          0x6 build/default/production/_ext/760574787/putsUART2.o
  __c30_signature
-                  0x000d6f          0x6 build/default/production/_ext/760574787/getsUART2.o
+                  0x000d6f          0x6 build/default/production/_ext/760574787/putsUART3.o
  __c30_signature
-                  0x000d75          0x6 build/default/production/_ext/760574787/getsUART3.o
+                  0x000d75          0x6 build/default/production/_ext/760574787/putsUART4.o
  __c30_signature
-                  0x000d7b          0x6 build/default/production/_ext/760574787/getsUART4.o
+                  0x000d7b          0x6 build/default/production/_ext/1472/PMSM.o
  __c30_signature
-                  0x000d81          0x6 build/default/production/_ext/760574787/putsUART1.o
+                  0x000d81          0x6 build/default/production/_ext/1472/initdspic.o
  __c30_signature
-                  0x000d87          0x6 build/default/production/_ext/760574787/putsUART2.o
+                  0x000d87          0x6 build/default/production/_ext/1472/smcpos.o
  __c30_signature
-                  0x000d8d          0x6 build/default/production/_ext/760574787/putsUART3.o
+                  0x000d8d          0x6 build/default/production/_ext/1472/RTDM.o
  __c30_signature
-                  0x000d93          0x6 build/default/production/_ext/760574787/putsUART4.o
+                  0x000d93          0x6 build/default/production/_ext/1472/FdWeak.o
  __c30_signature
                   0x000d99          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Abs_1_15.eo)
  __c30_signature
@@ -2210,9 +2210,9 @@ __c30_signature
  __c30_signature
                   0x000dab          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
 
-_04E09A8058c1035c
+_04E68A8058c26c3a
                     0x47f8          0x8
- _04E09A8058c1035c
+ _04E68A8058c26c3a
                     0x47f8          0x8 build/default/production/_ext/1472/PMSM.o
                     0x47f8                  _ADCBuffer
 

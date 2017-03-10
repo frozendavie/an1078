@@ -97,7 +97,7 @@
     .equ pTabPtrW, w4      ; Pointer into table 
     .equ pTabBaseW, w5     ; Pointer into table base
 
-    .equ Y0W,w6            ; Y0 = SinTable[Index]
+    .equ Y0W, w6           ; Y0 = SinTable[Index]
     .equ ParkParmW, w7     ; Base of ParkParm structure
 
     ;; Note: RemainderW and Work0W must be even registers

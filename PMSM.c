@@ -374,7 +374,7 @@ int main ( void )
         }   // End of Run Motor loop
     } // End of Main loop
     // should never get here
-    while(1){}
+    while(1) { }
 }
 
 //---------------------------------------------------------------------

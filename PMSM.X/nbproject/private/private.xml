@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Motor/AN1078_dsPIC33FJ128MC802_MCLV/general.h</file>
-            <file>file:/D:/Motor/AN1078_dsPIC33FJ128MC802_MCLV/PMSM.c</file>
-            <file>file:/D:/Motor/AN1078_dsPIC33FJ128MC802_MCLV/UserParms.h</file>
-            <file>file:/D:/Motor/AN1078_dsPIC33FJ128MC802_MCLV/atan2CORDIC.s</file>
-            <file>file:/D:/Motor/AN1078_dsPIC33FJ128MC802_MCLV/smcpos.h</file>
+            <file>file:/Users/ldc/Develop/an1078/smcpos.h</file>
+            <file>file:/Users/ldc/Develop/an1078/SVGEN.S</file>
+            <file>file:/Users/ldc/Develop/an1078/ReadADC0.s</file>
+            <file>file:/Users/ldc/Develop/an1078/trig.s</file>
+            <file>file:/Users/ldc/Develop/an1078/PMSM.c</file>
+            <file>file:/Users/ldc/Develop/an1078/ReadADC.inc</file>
+            <file>file:/Users/ldc/Develop/an1078/smcpos.c</file>
+            <file>file:/Users/ldc/Develop/an1078/UserParms.h</file>
         </group>
     </open-files>
 </project-private>

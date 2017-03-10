@@ -74,7 +74,7 @@ CalcEstI:
     add     A
 
     sac.r   A, #0, W0
-    mov     W0, _smc1+ SMC_EstIalpha
+    mov     W0, _smc1 + SMC_EstIalpha
 
 ;	//
 ;	//	s->EstIbeta = s->Gsmopos * s->Vbeta

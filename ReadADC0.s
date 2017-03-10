@@ -77,9 +77,9 @@
     .include "ReadADC.inc"
 
 ; Register usage
-    .equ ParmBaseW,w0  ; Base of parm structure
-    .equ Work0W,   w4
-    .equ Work1W,   w5
+    .equ ParmBaseW, w0  ; Base of parm structure
+    .equ Work0W,    w4
+    .equ Work1W,    w5
 
 ;=================== CODE =====================
 
@@ -93,10 +93,10 @@ ReadSignedADC0:
 
     ;; iResult = qK * ADCBUF0
       
-    mov.w   [ParmBaseW + ADC_qK],Work0W
+    mov.w   [ParmBaseW + ADC_qK], Work0W
     mov.w   _ADCBuffer + 0, Work1W
 
-    mpy	    Work0W*Work1W,A
+    mpy	    Work0W * Work1W, A
     sac     A, #0, Work0W
     mov.w   Work0W, [ParmBaseW + ADC_qADValue]
     

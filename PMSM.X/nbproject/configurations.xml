@@ -29,40 +29,22 @@
       <logicalFolder name="uart" displayName="uart" projectFiles="true">
         <itemPath>../uart/BusyUART1.c</itemPath>
         <itemPath>../uart/BusyUART2.c</itemPath>
-        <itemPath>../uart/BusyUART3.c</itemPath>
-        <itemPath>../uart/BusyUART4.c</itemPath>
         <itemPath>../uart/CloseUART1.c</itemPath>
         <itemPath>../uart/CloseUART2.c</itemPath>
-        <itemPath>../uart/CloseUART3.c</itemPath>
-        <itemPath>../uart/CloseUART4.c</itemPath>
         <itemPath>../uart/ConfigIntUART1.c</itemPath>
         <itemPath>../uart/ConfigIntUART2.c</itemPath>
-        <itemPath>../uart/ConfigIntUART3.c</itemPath>
-        <itemPath>../uart/ConfigIntUART4.c</itemPath>
         <itemPath>../uart/DataRdyUART1.c</itemPath>
         <itemPath>../uart/DataRdyUART2.c</itemPath>
-        <itemPath>../uart/DataRdyUART3.c</itemPath>
-        <itemPath>../uart/DataRdyUART4.c</itemPath>
         <itemPath>../uart/OpenUART1.c</itemPath>
         <itemPath>../uart/OpenUART2.c</itemPath>
-        <itemPath>../uart/OpenUART3.c</itemPath>
-        <itemPath>../uart/OpenUART4.c</itemPath>
         <itemPath>../uart/ReadUART1.c</itemPath>
         <itemPath>../uart/ReadUART2.c</itemPath>
-        <itemPath>../uart/ReadUART3.c</itemPath>
-        <itemPath>../uart/ReadUART4.c</itemPath>
         <itemPath>../uart/WriteUART1.c</itemPath>
         <itemPath>../uart/WriteUART2.c</itemPath>
-        <itemPath>../uart/WriteUART3.c</itemPath>
-        <itemPath>../uart/WriteUART4.c</itemPath>
         <itemPath>../uart/getsUART1.c</itemPath>
         <itemPath>../uart/getsUART2.c</itemPath>
-        <itemPath>../uart/getsUART3.c</itemPath>
-        <itemPath>../uart/getsUART4.c</itemPath>
         <itemPath>../uart/putsUART1.c</itemPath>
         <itemPath>../uart/putsUART2.c</itemPath>
-        <itemPath>../uart/putsUART3.c</itemPath>
-        <itemPath>../uart/putsUART4.c</itemPath>
       </logicalFolder>
       <itemPath>../CalcRef.s</itemPath>
       <itemPath>../clrkpark.s</itemPath>
@@ -103,7 +85,7 @@
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>3</platform>
+        <platform>4</platform>
       </toolsSet>
       <compileType>
         <linkerTool>

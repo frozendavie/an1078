@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../uart/BusyUART1.c ../uart/BusyUART2.c ../uart/BusyUART3.c ../uart/BusyUART4.c ../uart/CloseUART1.c ../uart/CloseUART2.c ../uart/CloseUART3.c ../uart/CloseUART4.c ../uart/ConfigIntUART1.c ../uart/ConfigIntUART2.c ../uart/ConfigIntUART3.c ../uart/ConfigIntUART4.c ../uart/DataRdyUART1.c ../uart/DataRdyUART2.c ../uart/DataRdyUART3.c ../uart/DataRdyUART4.c ../uart/OpenUART1.c ../uart/OpenUART2.c ../uart/OpenUART3.c ../uart/OpenUART4.c ../uart/ReadUART1.c ../uart/ReadUART2.c ../uart/ReadUART3.c ../uart/ReadUART4.c ../uart/WriteUART1.c ../uart/WriteUART2.c ../uart/WriteUART3.c ../uart/WriteUART4.c ../uart/getsUART1.c ../uart/getsUART2.c ../uart/getsUART3.c ../uart/getsUART4.c ../uart/putsUART1.c ../uart/putsUART2.c ../uart/putsUART3.c ../uart/putsUART4.c ../CalcRef.s ../clrkpark.s ../InvPark.s ../pi.s ../ReadADC0.s ../SVGEN.S ../trig.s ../MeasCurr.s ../PMSM.c ../initdspic.c ../smcpos.c ../smc.s ../RTDM.c ../atan2CORDIC.s ../FdWeak.c
+SOURCEFILES_QUOTED_IF_SPACED=../uart/BusyUART1.c ../uart/BusyUART2.c ../uart/CloseUART1.c ../uart/CloseUART2.c ../uart/ConfigIntUART1.c ../uart/ConfigIntUART2.c ../uart/DataRdyUART1.c ../uart/DataRdyUART2.c ../uart/OpenUART1.c ../uart/OpenUART2.c ../uart/ReadUART1.c ../uart/ReadUART2.c ../uart/WriteUART1.c ../uart/WriteUART2.c ../uart/getsUART1.c ../uart/getsUART2.c ../uart/putsUART1.c ../uart/putsUART2.c ../CalcRef.s ../clrkpark.s ../InvPark.s ../pi.s ../ReadADC0.s ../SVGEN.S ../trig.s ../MeasCurr.s ../PMSM.c ../initdspic.c ../smcpos.c ../smc.s ../RTDM.c ../atan2CORDIC.s ../FdWeak.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/760574787/BusyUART1.o ${OBJECTDIR}/_ext/760574787/BusyUART2.o ${OBJECTDIR}/_ext/760574787/BusyUART3.o ${OBJECTDIR}/_ext/760574787/BusyUART4.o ${OBJECTDIR}/_ext/760574787/CloseUART1.o ${OBJECTDIR}/_ext/760574787/CloseUART2.o ${OBJECTDIR}/_ext/760574787/CloseUART3.o ${OBJECTDIR}/_ext/760574787/CloseUART4.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART1.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o ${OBJECTDIR}/_ext/760574787/OpenUART1.o ${OBJECTDIR}/_ext/760574787/OpenUART2.o ${OBJECTDIR}/_ext/760574787/OpenUART3.o ${OBJECTDIR}/_ext/760574787/OpenUART4.o ${OBJECTDIR}/_ext/760574787/ReadUART1.o ${OBJECTDIR}/_ext/760574787/ReadUART2.o ${OBJECTDIR}/_ext/760574787/ReadUART3.o ${OBJECTDIR}/_ext/760574787/ReadUART4.o ${OBJECTDIR}/_ext/760574787/WriteUART1.o ${OBJECTDIR}/_ext/760574787/WriteUART2.o ${OBJECTDIR}/_ext/760574787/WriteUART3.o ${OBJECTDIR}/_ext/760574787/WriteUART4.o ${OBJECTDIR}/_ext/760574787/getsUART1.o ${OBJECTDIR}/_ext/760574787/getsUART2.o ${OBJECTDIR}/_ext/760574787/getsUART3.o ${OBJECTDIR}/_ext/760574787/getsUART4.o ${OBJECTDIR}/_ext/760574787/putsUART1.o ${OBJECTDIR}/_ext/760574787/putsUART2.o ${OBJECTDIR}/_ext/760574787/putsUART3.o ${OBJECTDIR}/_ext/760574787/putsUART4.o ${OBJECTDIR}/_ext/1472/CalcRef.o ${OBJECTDIR}/_ext/1472/clrkpark.o ${OBJECTDIR}/_ext/1472/InvPark.o ${OBJECTDIR}/_ext/1472/pi.o ${OBJECTDIR}/_ext/1472/ReadADC0.o ${OBJECTDIR}/_ext/1472/SVGEN.o ${OBJECTDIR}/_ext/1472/trig.o ${OBJECTDIR}/_ext/1472/MeasCurr.o ${OBJECTDIR}/_ext/1472/PMSM.o ${OBJECTDIR}/_ext/1472/initdspic.o ${OBJECTDIR}/_ext/1472/smcpos.o ${OBJECTDIR}/_ext/1472/smc.o ${OBJECTDIR}/_ext/1472/RTDM.o ${OBJECTDIR}/_ext/1472/atan2CORDIC.o ${OBJECTDIR}/_ext/1472/FdWeak.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/760574787/BusyUART1.o.d ${OBJECTDIR}/_ext/760574787/BusyUART2.o.d ${OBJECTDIR}/_ext/760574787/BusyUART3.o.d ${OBJECTDIR}/_ext/760574787/BusyUART4.o.d ${OBJECTDIR}/_ext/760574787/CloseUART1.o.d ${OBJECTDIR}/_ext/760574787/CloseUART2.o.d ${OBJECTDIR}/_ext/760574787/CloseUART3.o.d ${OBJECTDIR}/_ext/760574787/CloseUART4.o.d ${OBJECTDIR}/_ext/760574787/ConfigIntUART1.o.d ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o.d ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o.d ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o.d ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o.d ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o.d ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o.d ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o.d ${OBJECTDIR}/_ext/760574787/OpenUART1.o.d ${OBJECTDIR}/_ext/760574787/OpenUART2.o.d ${OBJECTDIR}/_ext/760574787/OpenUART3.o.d ${OBJECTDIR}/_ext/760574787/OpenUART4.o.d ${OBJECTDIR}/_ext/760574787/ReadUART1.o.d ${OBJECTDIR}/_ext/760574787/ReadUART2.o.d ${OBJECTDIR}/_ext/760574787/ReadUART3.o.d ${OBJECTDIR}/_ext/760574787/ReadUART4.o.d ${OBJECTDIR}/_ext/760574787/WriteUART1.o.d ${OBJECTDIR}/_ext/760574787/WriteUART2.o.d ${OBJECTDIR}/_ext/760574787/WriteUART3.o.d ${OBJECTDIR}/_ext/760574787/WriteUART4.o.d ${OBJECTDIR}/_ext/760574787/getsUART1.o.d ${OBJECTDIR}/_ext/760574787/getsUART2.o.d ${OBJECTDIR}/_ext/760574787/getsUART3.o.d ${OBJECTDIR}/_ext/760574787/getsUART4.o.d ${OBJECTDIR}/_ext/760574787/putsUART1.o.d ${OBJECTDIR}/_ext/760574787/putsUART2.o.d ${OBJECTDIR}/_ext/760574787/putsUART3.o.d ${OBJECTDIR}/_ext/760574787/putsUART4.o.d ${OBJECTDIR}/_ext/1472/CalcRef.o.d ${OBJECTDIR}/_ext/1472/clrkpark.o.d ${OBJECTDIR}/_ext/1472/InvPark.o.d ${OBJECTDIR}/_ext/1472/pi.o.d ${OBJECTDIR}/_ext/1472/ReadADC0.o.d ${OBJECTDIR}/_ext/1472/SVGEN.o.d ${OBJECTDIR}/_ext/1472/trig.o.d ${OBJECTDIR}/_ext/1472/MeasCurr.o.d ${OBJECTDIR}/_ext/1472/PMSM.o.d ${OBJECTDIR}/_ext/1472/initdspic.o.d ${OBJECTDIR}/_ext/1472/smcpos.o.d ${OBJECTDIR}/_ext/1472/smc.o.d ${OBJECTDIR}/_ext/1472/RTDM.o.d ${OBJECTDIR}/_ext/1472/atan2CORDIC.o.d ${OBJECTDIR}/_ext/1472/FdWeak.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/760574787/BusyUART1.o ${OBJECTDIR}/_ext/760574787/BusyUART2.o ${OBJECTDIR}/_ext/760574787/CloseUART1.o ${OBJECTDIR}/_ext/760574787/CloseUART2.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART1.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o ${OBJECTDIR}/_ext/760574787/OpenUART1.o ${OBJECTDIR}/_ext/760574787/OpenUART2.o ${OBJECTDIR}/_ext/760574787/ReadUART1.o ${OBJECTDIR}/_ext/760574787/ReadUART2.o ${OBJECTDIR}/_ext/760574787/WriteUART1.o ${OBJECTDIR}/_ext/760574787/WriteUART2.o ${OBJECTDIR}/_ext/760574787/getsUART1.o ${OBJECTDIR}/_ext/760574787/getsUART2.o ${OBJECTDIR}/_ext/760574787/putsUART1.o ${OBJECTDIR}/_ext/760574787/putsUART2.o ${OBJECTDIR}/_ext/1472/CalcRef.o ${OBJECTDIR}/_ext/1472/clrkpark.o ${OBJECTDIR}/_ext/1472/InvPark.o ${OBJECTDIR}/_ext/1472/pi.o ${OBJECTDIR}/_ext/1472/ReadADC0.o ${OBJECTDIR}/_ext/1472/SVGEN.o ${OBJECTDIR}/_ext/1472/trig.o ${OBJECTDIR}/_ext/1472/MeasCurr.o ${OBJECTDIR}/_ext/1472/PMSM.o ${OBJECTDIR}/_ext/1472/initdspic.o ${OBJECTDIR}/_ext/1472/smcpos.o ${OBJECTDIR}/_ext/1472/smc.o ${OBJECTDIR}/_ext/1472/RTDM.o ${OBJECTDIR}/_ext/1472/atan2CORDIC.o ${OBJECTDIR}/_ext/1472/FdWeak.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/760574787/BusyUART1.o.d ${OBJECTDIR}/_ext/760574787/BusyUART2.o.d ${OBJECTDIR}/_ext/760574787/CloseUART1.o.d ${OBJECTDIR}/_ext/760574787/CloseUART2.o.d ${OBJECTDIR}/_ext/760574787/ConfigIntUART1.o.d ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o.d ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o.d ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o.d ${OBJECTDIR}/_ext/760574787/OpenUART1.o.d ${OBJECTDIR}/_ext/760574787/OpenUART2.o.d ${OBJECTDIR}/_ext/760574787/ReadUART1.o.d ${OBJECTDIR}/_ext/760574787/ReadUART2.o.d ${OBJECTDIR}/_ext/760574787/WriteUART1.o.d ${OBJECTDIR}/_ext/760574787/WriteUART2.o.d ${OBJECTDIR}/_ext/760574787/getsUART1.o.d ${OBJECTDIR}/_ext/760574787/getsUART2.o.d ${OBJECTDIR}/_ext/760574787/putsUART1.o.d ${OBJECTDIR}/_ext/760574787/putsUART2.o.d ${OBJECTDIR}/_ext/1472/CalcRef.o.d ${OBJECTDIR}/_ext/1472/clrkpark.o.d ${OBJECTDIR}/_ext/1472/InvPark.o.d ${OBJECTDIR}/_ext/1472/pi.o.d ${OBJECTDIR}/_ext/1472/ReadADC0.o.d ${OBJECTDIR}/_ext/1472/SVGEN.o.d ${OBJECTDIR}/_ext/1472/trig.o.d ${OBJECTDIR}/_ext/1472/MeasCurr.o.d ${OBJECTDIR}/_ext/1472/PMSM.o.d ${OBJECTDIR}/_ext/1472/initdspic.o.d ${OBJECTDIR}/_ext/1472/smcpos.o.d ${OBJECTDIR}/_ext/1472/smc.o.d ${OBJECTDIR}/_ext/1472/RTDM.o.d ${OBJECTDIR}/_ext/1472/atan2CORDIC.o.d ${OBJECTDIR}/_ext/1472/FdWeak.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/760574787/BusyUART1.o ${OBJECTDIR}/_ext/760574787/BusyUART2.o ${OBJECTDIR}/_ext/760574787/BusyUART3.o ${OBJECTDIR}/_ext/760574787/BusyUART4.o ${OBJECTDIR}/_ext/760574787/CloseUART1.o ${OBJECTDIR}/_ext/760574787/CloseUART2.o ${OBJECTDIR}/_ext/760574787/CloseUART3.o ${OBJECTDIR}/_ext/760574787/CloseUART4.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART1.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o ${OBJECTDIR}/_ext/760574787/OpenUART1.o ${OBJECTDIR}/_ext/760574787/OpenUART2.o ${OBJECTDIR}/_ext/760574787/OpenUART3.o ${OBJECTDIR}/_ext/760574787/OpenUART4.o ${OBJECTDIR}/_ext/760574787/ReadUART1.o ${OBJECTDIR}/_ext/760574787/ReadUART2.o ${OBJECTDIR}/_ext/760574787/ReadUART3.o ${OBJECTDIR}/_ext/760574787/ReadUART4.o ${OBJECTDIR}/_ext/760574787/WriteUART1.o ${OBJECTDIR}/_ext/760574787/WriteUART2.o ${OBJECTDIR}/_ext/760574787/WriteUART3.o ${OBJECTDIR}/_ext/760574787/WriteUART4.o ${OBJECTDIR}/_ext/760574787/getsUART1.o ${OBJECTDIR}/_ext/760574787/getsUART2.o ${OBJECTDIR}/_ext/760574787/getsUART3.o ${OBJECTDIR}/_ext/760574787/getsUART4.o ${OBJECTDIR}/_ext/760574787/putsUART1.o ${OBJECTDIR}/_ext/760574787/putsUART2.o ${OBJECTDIR}/_ext/760574787/putsUART3.o ${OBJECTDIR}/_ext/760574787/putsUART4.o ${OBJECTDIR}/_ext/1472/CalcRef.o ${OBJECTDIR}/_ext/1472/clrkpark.o ${OBJECTDIR}/_ext/1472/InvPark.o ${OBJECTDIR}/_ext/1472/pi.o ${OBJECTDIR}/_ext/1472/ReadADC0.o ${OBJECTDIR}/_ext/1472/SVGEN.o ${OBJECTDIR}/_ext/1472/trig.o ${OBJECTDIR}/_ext/1472/MeasCurr.o ${OBJECTDIR}/_ext/1472/PMSM.o ${OBJECTDIR}/_ext/1472/initdspic.o ${OBJECTDIR}/_ext/1472/smcpos.o ${OBJECTDIR}/_ext/1472/smc.o ${OBJECTDIR}/_ext/1472/RTDM.o ${OBJECTDIR}/_ext/1472/atan2CORDIC.o ${OBJECTDIR}/_ext/1472/FdWeak.o
+OBJECTFILES=${OBJECTDIR}/_ext/760574787/BusyUART1.o ${OBJECTDIR}/_ext/760574787/BusyUART2.o ${OBJECTDIR}/_ext/760574787/CloseUART1.o ${OBJECTDIR}/_ext/760574787/CloseUART2.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART1.o ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o ${OBJECTDIR}/_ext/760574787/OpenUART1.o ${OBJECTDIR}/_ext/760574787/OpenUART2.o ${OBJECTDIR}/_ext/760574787/ReadUART1.o ${OBJECTDIR}/_ext/760574787/ReadUART2.o ${OBJECTDIR}/_ext/760574787/WriteUART1.o ${OBJECTDIR}/_ext/760574787/WriteUART2.o ${OBJECTDIR}/_ext/760574787/getsUART1.o ${OBJECTDIR}/_ext/760574787/getsUART2.o ${OBJECTDIR}/_ext/760574787/putsUART1.o ${OBJECTDIR}/_ext/760574787/putsUART2.o ${OBJECTDIR}/_ext/1472/CalcRef.o ${OBJECTDIR}/_ext/1472/clrkpark.o ${OBJECTDIR}/_ext/1472/InvPark.o ${OBJECTDIR}/_ext/1472/pi.o ${OBJECTDIR}/_ext/1472/ReadADC0.o ${OBJECTDIR}/_ext/1472/SVGEN.o ${OBJECTDIR}/_ext/1472/trig.o ${OBJECTDIR}/_ext/1472/MeasCurr.o ${OBJECTDIR}/_ext/1472/PMSM.o ${OBJECTDIR}/_ext/1472/initdspic.o ${OBJECTDIR}/_ext/1472/smcpos.o ${OBJECTDIR}/_ext/1472/smc.o ${OBJECTDIR}/_ext/1472/RTDM.o ${OBJECTDIR}/_ext/1472/atan2CORDIC.o ${OBJECTDIR}/_ext/1472/FdWeak.o
 
 # Source Files
-SOURCEFILES=../uart/BusyUART1.c ../uart/BusyUART2.c ../uart/BusyUART3.c ../uart/BusyUART4.c ../uart/CloseUART1.c ../uart/CloseUART2.c ../uart/CloseUART3.c ../uart/CloseUART4.c ../uart/ConfigIntUART1.c ../uart/ConfigIntUART2.c ../uart/ConfigIntUART3.c ../uart/ConfigIntUART4.c ../uart/DataRdyUART1.c ../uart/DataRdyUART2.c ../uart/DataRdyUART3.c ../uart/DataRdyUART4.c ../uart/OpenUART1.c ../uart/OpenUART2.c ../uart/OpenUART3.c ../uart/OpenUART4.c ../uart/ReadUART1.c ../uart/ReadUART2.c ../uart/ReadUART3.c ../uart/ReadUART4.c ../uart/WriteUART1.c ../uart/WriteUART2.c ../uart/WriteUART3.c ../uart/WriteUART4.c ../uart/getsUART1.c ../uart/getsUART2.c ../uart/getsUART3.c ../uart/getsUART4.c ../uart/putsUART1.c ../uart/putsUART2.c ../uart/putsUART3.c ../uart/putsUART4.c ../CalcRef.s ../clrkpark.s ../InvPark.s ../pi.s ../ReadADC0.s ../SVGEN.S ../trig.s ../MeasCurr.s ../PMSM.c ../initdspic.c ../smcpos.c ../smc.s ../RTDM.c ../atan2CORDIC.s ../FdWeak.c
+SOURCEFILES=../uart/BusyUART1.c ../uart/BusyUART2.c ../uart/CloseUART1.c ../uart/CloseUART2.c ../uart/ConfigIntUART1.c ../uart/ConfigIntUART2.c ../uart/DataRdyUART1.c ../uart/DataRdyUART2.c ../uart/OpenUART1.c ../uart/OpenUART2.c ../uart/ReadUART1.c ../uart/ReadUART2.c ../uart/WriteUART1.c ../uart/WriteUART2.c ../uart/getsUART1.c ../uart/getsUART2.c ../uart/putsUART1.c ../uart/putsUART2.c ../CalcRef.s ../clrkpark.s ../InvPark.s ../pi.s ../ReadADC0.s ../SVGEN.S ../trig.s ../MeasCurr.s ../PMSM.c ../initdspic.c ../smcpos.c ../smc.s ../RTDM.c ../atan2CORDIC.s ../FdWeak.c
 
 
 CFLAGS=
@@ -102,20 +102,6 @@ ${OBJECTDIR}/_ext/760574787/BusyUART2.o: ../uart/BusyUART2.c  nbproject/Makefile
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/BusyUART2.c  -o ${OBJECTDIR}/_ext/760574787/BusyUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/BusyUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/BusyUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/BusyUART3.o: ../uart/BusyUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/BusyUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/BusyUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/BusyUART3.c  -o ${OBJECTDIR}/_ext/760574787/BusyUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/BusyUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/BusyUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/BusyUART4.o: ../uart/BusyUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/BusyUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/BusyUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/BusyUART4.c  -o ${OBJECTDIR}/_ext/760574787/BusyUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/BusyUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/BusyUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/CloseUART1.o: ../uart/CloseUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART1.o.d 
@@ -129,20 +115,6 @@ ${OBJECTDIR}/_ext/760574787/CloseUART2.o: ../uart/CloseUART2.c  nbproject/Makefi
 	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/CloseUART2.c  -o ${OBJECTDIR}/_ext/760574787/CloseUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/CloseUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/CloseUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/CloseUART3.o: ../uart/CloseUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/CloseUART3.c  -o ${OBJECTDIR}/_ext/760574787/CloseUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/CloseUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/CloseUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/CloseUART4.o: ../uart/CloseUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/CloseUART4.c  -o ${OBJECTDIR}/_ext/760574787/CloseUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/CloseUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/CloseUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/760574787/ConfigIntUART1.o: ../uart/ConfigIntUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
@@ -158,20 +130,6 @@ ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o: ../uart/ConfigIntUART2.c  nbprojec
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ConfigIntUART2.c  -o ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o: ../uart/ConfigIntUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ConfigIntUART3.c  -o ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o: ../uart/ConfigIntUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ConfigIntUART4.c  -o ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o: ../uart/DataRdyUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o.d 
@@ -185,20 +143,6 @@ ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o: ../uart/DataRdyUART2.c  nbproject/Ma
 	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/DataRdyUART2.c  -o ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/DataRdyUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/DataRdyUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/DataRdyUART3.o: ../uart/DataRdyUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/DataRdyUART3.c  -o ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/DataRdyUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/DataRdyUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/DataRdyUART4.o: ../uart/DataRdyUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/DataRdyUART4.c  -o ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/DataRdyUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/DataRdyUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/760574787/OpenUART1.o: ../uart/OpenUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
@@ -214,20 +158,6 @@ ${OBJECTDIR}/_ext/760574787/OpenUART2.o: ../uart/OpenUART2.c  nbproject/Makefile
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/OpenUART2.c  -o ${OBJECTDIR}/_ext/760574787/OpenUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/OpenUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/OpenUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/OpenUART3.o: ../uart/OpenUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/OpenUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/OpenUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/OpenUART3.c  -o ${OBJECTDIR}/_ext/760574787/OpenUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/OpenUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/OpenUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/OpenUART4.o: ../uart/OpenUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/OpenUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/OpenUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/OpenUART4.c  -o ${OBJECTDIR}/_ext/760574787/OpenUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/OpenUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/OpenUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/ReadUART1.o: ../uart/ReadUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART1.o.d 
@@ -241,20 +171,6 @@ ${OBJECTDIR}/_ext/760574787/ReadUART2.o: ../uart/ReadUART2.c  nbproject/Makefile
 	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ReadUART2.c  -o ${OBJECTDIR}/_ext/760574787/ReadUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ReadUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ReadUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/ReadUART3.o: ../uart/ReadUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ReadUART3.c  -o ${OBJECTDIR}/_ext/760574787/ReadUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ReadUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ReadUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/ReadUART4.o: ../uart/ReadUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ReadUART4.c  -o ${OBJECTDIR}/_ext/760574787/ReadUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ReadUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ReadUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/760574787/WriteUART1.o: ../uart/WriteUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
@@ -270,20 +186,6 @@ ${OBJECTDIR}/_ext/760574787/WriteUART2.o: ../uart/WriteUART2.c  nbproject/Makefi
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/WriteUART2.c  -o ${OBJECTDIR}/_ext/760574787/WriteUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/WriteUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/WriteUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/WriteUART3.o: ../uart/WriteUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/WriteUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/WriteUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/WriteUART3.c  -o ${OBJECTDIR}/_ext/760574787/WriteUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/WriteUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/WriteUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/WriteUART4.o: ../uart/WriteUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/WriteUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/WriteUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/WriteUART4.c  -o ${OBJECTDIR}/_ext/760574787/WriteUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/WriteUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/WriteUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/getsUART1.o: ../uart/getsUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART1.o.d 
@@ -298,20 +200,6 @@ ${OBJECTDIR}/_ext/760574787/getsUART2.o: ../uart/getsUART2.c  nbproject/Makefile
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/getsUART2.c  -o ${OBJECTDIR}/_ext/760574787/getsUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/getsUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/getsUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/getsUART3.o: ../uart/getsUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/getsUART3.c  -o ${OBJECTDIR}/_ext/760574787/getsUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/getsUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/getsUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/getsUART4.o: ../uart/getsUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/getsUART4.c  -o ${OBJECTDIR}/_ext/760574787/getsUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/getsUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/getsUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/putsUART1.o: ../uart/putsUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART1.o.d 
@@ -325,20 +213,6 @@ ${OBJECTDIR}/_ext/760574787/putsUART2.o: ../uart/putsUART2.c  nbproject/Makefile
 	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/putsUART2.c  -o ${OBJECTDIR}/_ext/760574787/putsUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/putsUART2.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/putsUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/putsUART3.o: ../uart/putsUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/putsUART3.c  -o ${OBJECTDIR}/_ext/760574787/putsUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/putsUART3.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/putsUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/putsUART4.o: ../uart/putsUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/putsUART4.c  -o ${OBJECTDIR}/_ext/760574787/putsUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/putsUART4.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1    -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/putsUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/1472/PMSM.o: ../PMSM.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 
@@ -390,20 +264,6 @@ ${OBJECTDIR}/_ext/760574787/BusyUART2.o: ../uart/BusyUART2.c  nbproject/Makefile
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/BusyUART2.c  -o ${OBJECTDIR}/_ext/760574787/BusyUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/BusyUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/BusyUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/BusyUART3.o: ../uart/BusyUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/BusyUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/BusyUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/BusyUART3.c  -o ${OBJECTDIR}/_ext/760574787/BusyUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/BusyUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/BusyUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/BusyUART4.o: ../uart/BusyUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/BusyUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/BusyUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/BusyUART4.c  -o ${OBJECTDIR}/_ext/760574787/BusyUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/BusyUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/BusyUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/CloseUART1.o: ../uart/CloseUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART1.o.d 
@@ -417,20 +277,6 @@ ${OBJECTDIR}/_ext/760574787/CloseUART2.o: ../uart/CloseUART2.c  nbproject/Makefi
 	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/CloseUART2.c  -o ${OBJECTDIR}/_ext/760574787/CloseUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/CloseUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/CloseUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/CloseUART3.o: ../uart/CloseUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/CloseUART3.c  -o ${OBJECTDIR}/_ext/760574787/CloseUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/CloseUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/CloseUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/CloseUART4.o: ../uart/CloseUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/CloseUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/CloseUART4.c  -o ${OBJECTDIR}/_ext/760574787/CloseUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/CloseUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/CloseUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/760574787/ConfigIntUART1.o: ../uart/ConfigIntUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
@@ -446,20 +292,6 @@ ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o: ../uart/ConfigIntUART2.c  nbprojec
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ConfigIntUART2.c  -o ${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ConfigIntUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o: ../uart/ConfigIntUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ConfigIntUART3.c  -o ${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ConfigIntUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o: ../uart/ConfigIntUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ConfigIntUART4.c  -o ${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ConfigIntUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o: ../uart/DataRdyUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART1.o.d 
@@ -473,20 +305,6 @@ ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o: ../uart/DataRdyUART2.c  nbproject/Ma
 	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/DataRdyUART2.c  -o ${OBJECTDIR}/_ext/760574787/DataRdyUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/DataRdyUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/DataRdyUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/DataRdyUART3.o: ../uart/DataRdyUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/DataRdyUART3.c  -o ${OBJECTDIR}/_ext/760574787/DataRdyUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/DataRdyUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/DataRdyUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/DataRdyUART4.o: ../uart/DataRdyUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/DataRdyUART4.c  -o ${OBJECTDIR}/_ext/760574787/DataRdyUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/DataRdyUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/DataRdyUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/760574787/OpenUART1.o: ../uart/OpenUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
@@ -502,20 +320,6 @@ ${OBJECTDIR}/_ext/760574787/OpenUART2.o: ../uart/OpenUART2.c  nbproject/Makefile
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/OpenUART2.c  -o ${OBJECTDIR}/_ext/760574787/OpenUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/OpenUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/OpenUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/OpenUART3.o: ../uart/OpenUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/OpenUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/OpenUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/OpenUART3.c  -o ${OBJECTDIR}/_ext/760574787/OpenUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/OpenUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/OpenUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/OpenUART4.o: ../uart/OpenUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/OpenUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/OpenUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/OpenUART4.c  -o ${OBJECTDIR}/_ext/760574787/OpenUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/OpenUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/OpenUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/ReadUART1.o: ../uart/ReadUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART1.o.d 
@@ -529,20 +333,6 @@ ${OBJECTDIR}/_ext/760574787/ReadUART2.o: ../uart/ReadUART2.c  nbproject/Makefile
 	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ReadUART2.c  -o ${OBJECTDIR}/_ext/760574787/ReadUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ReadUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ReadUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/ReadUART3.o: ../uart/ReadUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ReadUART3.c  -o ${OBJECTDIR}/_ext/760574787/ReadUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ReadUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ReadUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/ReadUART4.o: ../uart/ReadUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/ReadUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/ReadUART4.c  -o ${OBJECTDIR}/_ext/760574787/ReadUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/ReadUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/ReadUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/760574787/WriteUART1.o: ../uart/WriteUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
@@ -558,20 +348,6 @@ ${OBJECTDIR}/_ext/760574787/WriteUART2.o: ../uart/WriteUART2.c  nbproject/Makefi
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/WriteUART2.c  -o ${OBJECTDIR}/_ext/760574787/WriteUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/WriteUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/WriteUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/WriteUART3.o: ../uart/WriteUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/WriteUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/WriteUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/WriteUART3.c  -o ${OBJECTDIR}/_ext/760574787/WriteUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/WriteUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/WriteUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/WriteUART4.o: ../uart/WriteUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/WriteUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/WriteUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/WriteUART4.c  -o ${OBJECTDIR}/_ext/760574787/WriteUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/WriteUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/WriteUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/getsUART1.o: ../uart/getsUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART1.o.d 
@@ -586,20 +362,6 @@ ${OBJECTDIR}/_ext/760574787/getsUART2.o: ../uart/getsUART2.c  nbproject/Makefile
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/getsUART2.c  -o ${OBJECTDIR}/_ext/760574787/getsUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/getsUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/getsUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/_ext/760574787/getsUART3.o: ../uart/getsUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/getsUART3.c  -o ${OBJECTDIR}/_ext/760574787/getsUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/getsUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/getsUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/getsUART4.o: ../uart/getsUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/getsUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/getsUART4.c  -o ${OBJECTDIR}/_ext/760574787/getsUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/getsUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/getsUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
 ${OBJECTDIR}/_ext/760574787/putsUART1.o: ../uart/putsUART1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
 	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART1.o.d 
@@ -613,20 +375,6 @@ ${OBJECTDIR}/_ext/760574787/putsUART2.o: ../uart/putsUART2.c  nbproject/Makefile
 	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART2.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/putsUART2.c  -o ${OBJECTDIR}/_ext/760574787/putsUART2.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/putsUART2.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/putsUART2.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/putsUART3.o: ../uart/putsUART3.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART3.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART3.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/putsUART3.c  -o ${OBJECTDIR}/_ext/760574787/putsUART3.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/putsUART3.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/putsUART3.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/_ext/760574787/putsUART4.o: ../uart/putsUART4.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/760574787" 
-	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART4.o.d 
-	@${RM} ${OBJECTDIR}/_ext/760574787/putsUART4.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  ../uart/putsUART4.c  -o ${OBJECTDIR}/_ext/760574787/putsUART4.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/_ext/760574787/putsUART4.o.d"        -g -omf=elf -DXPRJ_default=$(CND_CONF)  -no-legacy-libc  $(COMPARISON_BUILD)  -O0 -I".." -I"." -I"../include" -D__dsPIC33F__ -D__dsPIC33FJ128MC802__ -msmart-io=1 -msfr-warn=off  
-	@${FIXDEPS} "${OBJECTDIR}/_ext/760574787/putsUART4.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/_ext/1472/PMSM.o: ../PMSM.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1472" 

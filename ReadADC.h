@@ -1,4 +1,4 @@
- /**********************************************************************
+/**********************************************************************
  *                                                                     *
  *                        Software License Agreement                   *
  *                                                                     *
@@ -35,12 +35,12 @@
 //------------------  C API for ReadADC routines ---------------------
 
 typedef struct {
-    short   qK;         // 1.15 
-    short   qADValue;   // 1.15
+    short qK; // 1.15 
+    short qADValue; // 1.15
 
-    } tReadADCParm;
+} tReadADCParm;
 
-void ReadSignedADC0( tReadADCParm* pParm ); // Returns signed value -2*iK -> 2*iK
+void ReadSignedADC0(tReadADCParm* pParm); // Returns signed value -2*iK -> 2*iK
 
 #endif
 

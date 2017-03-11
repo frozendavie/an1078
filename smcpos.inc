@@ -60,31 +60,30 @@
 ;	SFRAC16  OmegaFltred;  	// Output: Filtered Rotor speed for speed PI
 ;} SMC;
 
-				.equ SMC_Valpha,0
-				.equ SMC_Ealpha,2
-				.equ SMC_EalphaFinal,4
-				.equ SMC_Zalpha,6
-				.equ SMC_Gsmopos,8
-				.equ SMC_EstIalpha,10
-				.equ SMC_Fsmopos,12
-				.equ SMC_Vbeta,14
-				.equ SMC_Ebeta,16
-				.equ SMC_EbetaFinal,18
-				.equ SMC_Zbeta,20
-				.equ SMC_EstIbeta,22
-				.equ SMC_Ialpha,24
-				.equ SMC_IalphaError,26
-				.equ SMC_Kslide,28
-				.equ SMC_MaxSMCError,30
-				.equ SMC_Ibeta,32
-				.equ SMC_IbetaError,34
-				.equ SMC_Kslf,36
-				.equ SMC_KslfFinal,38
-				.equ SMC_FiltOmCoef,40
-				.equ SMC_ThetaOffset,42
-				.equ SMC_Theta,44
-				.equ SMC_Omega,46
-				.equ SMC_OmegaFltred,48
+    .equ SMC_Valpha,0
+    .equ SMC_Ealpha,2
+    .equ SMC_EalphaFinal,4
+    .equ SMC_Zalpha,6
+    .equ SMC_Gsmopos,8
+    .equ SMC_EstIalpha,10
+    .equ SMC_Fsmopos,12
+    .equ SMC_Vbeta,14
+    .equ SMC_Ebeta,16
+    .equ SMC_EbetaFinal,18
+    .equ SMC_Zbeta,20
+    .equ SMC_EstIbeta,22
+    .equ SMC_Ialpha,24
+    .equ SMC_IalphaError,26
+    .equ SMC_Kslide,28
+    .equ SMC_MaxSMCError,30
+    .equ SMC_Ibeta,32
+    .equ SMC_IbetaError,34
+    .equ SMC_Kslf,36
+    .equ SMC_KslfFinal,38
+    .equ SMC_FiltOmCoef,40
+    .equ SMC_ThetaOffset,42
+    .equ SMC_Theta,44
+    .equ SMC_Omega,46
+    .equ SMC_OmegaFltred,48
 
-				.extern _scm1
-
+    .extern _scm1

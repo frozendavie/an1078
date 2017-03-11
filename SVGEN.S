@@ -349,7 +349,7 @@ CalcTimes:
     ;; 2*PWM*T1 as integers and use upper word of results
 
     ;; Load PWMPeriod 
-    sl.w    _SVGenParm + SVGen_iPWMPeriod, WREG	;Mul PWM * 2 to allow for full range of voltage
+    sl.w    _SVGenParm + SVGen_iPWMPeriod, WREG ;Mul PWM * 2 to allow for full range of voltage
     mul.us  w0, T1W, WorkDLoW
     mov.w   WorkDHiW, T1W
 
@@ -359,7 +359,7 @@ CalcTimes:
 
     ;; Tc = (PWM-T1-T2)/2
     ;mov.w   _SVGenParm + SVGen_iPWMPeriod, WorkW
-    mov.w   _SVGenParm + SVGen_iPWMPeriod, WREG				
+    mov.w   _SVGenParm + SVGen_iPWMPeriod, WREG
     sub.w   w0, T1W, WorkW          ;PWM-T1
     sub.w   WorkW, T2W, WorkW       ; -T2
     asr.w   WorkW, WorkW            ; /2

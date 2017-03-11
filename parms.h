@@ -1,4 +1,4 @@
- /**********************************************************************
+/**********************************************************************
  *                                                                     *
  *                        Software License Agreement                   *
  *                                                                     *
@@ -34,13 +34,11 @@
 #define Parms_H
 
 EXTERN struct {
-
-	unsigned int LockTime;
-
-	long EndSpeed;
+    
+    unsigned int LockTime;
+    long EndSpeed;
 
 } MotorParm;
-
 
 bool InitMotorParm(void);
 

@@ -45,14 +45,14 @@
 _CalcEstI:
 CalcEstI:
 
-;	// Sliding mode current observer
+;    // Sliding mode current observer
 ;
-;	//
-;	//	s->EstIalpha = s->Gsmopos * s->Valpha
-;	//				 - s->Gsmopos * s->Ealpha
-;	//				 - s->Gsmopos * s->Zalpha
-;	//				 + s->Fsmopos * s->EstIalpha
-;	//
+;    //
+;    //    s->EstIalpha = s->Gsmopos * s->Valpha
+;    //                 - s->Gsmopos * s->Ealpha
+;    //                 - s->Gsmopos * s->Zalpha
+;    //                 + s->Fsmopos * s->EstIalpha
+;    //
 
     mov     _smc1 + SMC_Gsmopos, W4
     mov     _smc1 + SMC_Valpha, W5
@@ -76,12 +76,12 @@ CalcEstI:
     sac.r   A, #0, W0
     mov     W0, _smc1 + SMC_EstIalpha
 
-;	//
-;	//	s->EstIbeta = s->Gsmopos * s->Vbeta
-;	//				- s->Gsmopos * s->Ebeta
-;	//				- s->Gsmopos * s->Zbeta
-;	//				+ s->Fsmopos * s->EstIbeta
-;	//
+;    //
+;    //    s->EstIbeta = s->Gsmopos * s->Vbeta
+;    //                - s->Gsmopos * s->Ebeta
+;    //                - s->Gsmopos * s->Zbeta
+;    //                + s->Fsmopos * s->EstIbeta
+;    //
 
     mov     _smc1 + SMC_Gsmopos, W4
     mov     _smc1 + SMC_Vbeta, W5
@@ -113,7 +113,7 @@ CalcEstI:
 _CalcIError:
 CalcIError:
 
-;	// s->IalphaError = s->EstIalpha - s->Ialpha;
+;    // s->IalphaError = s->EstIalpha - s->Ialpha;
 
     mov     _smc1 + SMC_EstIalpha, W0
     mov     _smc1 + SMC_Ialpha, W1
@@ -123,7 +123,7 @@ CalcIError:
     sac.r   A, #0, W0
     mov     W0, _smc1 + SMC_IalphaError
 
-;	// s->IbetaError = s->EstIbeta - s->Ibeta;
+;    // s->IbetaError = s->EstIbeta - s->Ibeta;
 
     mov     _smc1 + SMC_EstIbeta, W0
     mov     _smc1 + SMC_Ibeta, W1
@@ -196,8 +196,8 @@ CalcBEMF:
     sac.r   A, #0, W0
     mov     W0, _smc1 + SMC_Ealpha
 
-	;// s->Ebeta = s->Ebeta + s->Kslf * s->Zbeta
-	;//                     - s->Kslf * s->Ebeta
+    ;// s->Ebeta = s->Ebeta + s->Kslf * s->Zbeta
+    ;//                     - s->Kslf * s->Ebeta
 
     mov     _smc1 + SMC_Ebeta, W0
     lac     W0, A
@@ -215,9 +215,9 @@ CalcBEMF:
     sac.r   A, #0, W0
     mov     W0, _smc1 + SMC_Ebeta
 
-	;// New filter used to calculate Position
-	;// s->EalphaFinal = s->EalphaFinal + s->KslfFinal * s->Ealpha
-	;//                                 - s->KslfFinal * s->EalphaFinal
+    ;// New filter used to calculate Position
+    ;// s->EalphaFinal = s->EalphaFinal + s->KslfFinal * s->Ealpha
+    ;//                                 - s->KslfFinal * s->EalphaFinal
 
     mov     _smc1 + SMC_EalphaFinal, W0
     lac     W0, A
@@ -235,8 +235,8 @@ CalcBEMF:
     sac.r   A, #0, W0
     mov     W0, _smc1 + SMC_EalphaFinal
 
-	;// s->EbetaFinal = s->EbetaFinal + s->KslfFinal * s->Ebeta
-	;//                               - s->KslfFinal * s->EbetaFinal
+    ;// s->EbetaFinal = s->EbetaFinal + s->KslfFinal * s->Ebeta
+    ;//                               - s->KslfFinal * s->EbetaFinal
 
     mov     _smc1 + SMC_EbetaFinal, W0
     lac     W0, A
@@ -254,7 +254,7 @@ CalcBEMF:
     sac.r   A, #0, W0
     mov     W0, _smc1 + SMC_EbetaFinal
 
-	return
+    return
 
     .global _CalcOmegaFltred
     .global CalcOmegaFltred
@@ -262,8 +262,8 @@ CalcBEMF:
 _CalcOmegaFltred:
 CalcOmegaFltred:
 
-	;// s->OmegaFltred = s->OmegaFltred + s->FiltOmCoef * s->Omega
-	;//                                 - s->FiltOmCoef * s->OmegaFltred
+    ;// s->OmegaFltred = s->OmegaFltred + s->FiltOmCoef * s->Omega
+    ;//                                 - s->FiltOmCoef * s->OmegaFltred
 
     mov     _smc1 + SMC_OmegaFltred, W0
     mov     _smc1 + SMC_Omega, W4

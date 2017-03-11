@@ -92,7 +92,7 @@ MeasCompCurr:
     ;; CorrADC1 = ADCBUF1 - Offseta
     ;; qIa = qKa * CorrADC1
     mov.w   _ADCBuffer + 2, w0                  ; W0 = ADCBUFF1
-	sub.w   _MeasCurrParm + ADC_Offseta, WREG   ; w0 = ADC - Offset
+    sub.w   _MeasCurrParm + ADC_Offseta, WREG   ; w0 = ADC - Offset
     mov.w   w0, w5
     mov.w   _MeasCurrParm + ADC_qKa, w4
     mpy     w4 * w5, A

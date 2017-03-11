@@ -33,16 +33,12 @@
 ;;------------------  ASM30 API for MeasCurr routines ---------------------
 ; MeasCurrParm stucture:
 
-          .equ ADC_qKa,0          ; qKa - Q15
-          .equ ADC_Offseta,2
+    .equ ADC_qKa,0          ; qKa - Q15
+    .equ ADC_Offseta,2
 
-          .equ ADC_qKb,4          ; qKb - Q15
-          .equ ADC_Offsetb,6
+    .equ ADC_qKb,4          ; qKb - Q15
+    .equ ADC_Offsetb,6
 
-          .extern _MeasCurrParm
-          .extern _ADCBuffer
-
-
-
-
+    .extern _MeasCurrParm
+    .extern _ADCBuffer
 

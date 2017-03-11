@@ -107,7 +107,7 @@
 
     .section .const, psv
 
-    .align	256
+    .align 256
 SinTable: 
     .word 0,1608,3212,4808,6393,7962,9512,11039
     .word 12540,14010,15446,16846,18205,19520,20787,22005
@@ -135,15 +135,15 @@ SinTable:
 _SinCos:
 SinCos:
 
-	;; Save the current CORCON and PSVPAG register
-	mov     CORCON, w0
-	mov     PSVPAG, w1
-	push.d  w0
-	;; Set the PSV bit to enable PSV access
-	bset    CORCON, #PSV
-	;; Load the PSVPAG register to point to the sine table
-	mov     #psvpage(SinTable), w0
-	mov     w0, PSVPAG
+    ;; Save the current CORCON and PSVPAG register
+    mov     CORCON, w0
+    mov     PSVPAG, w1
+    push.d  w0
+    ;; Set the PSV bit to enable PSV access
+    bset    CORCON, #PSV
+    ;; Load the PSVPAG register to point to the sine table
+    mov     #psvpage(SinTable), w0
+    mov     w0, PSVPAG
 
     ;; Base of qAngle, qSin, qCos group in ParkParm structure
     mov.w   #_ParkParm + #Park_qAngle, ParkParmW     

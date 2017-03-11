@@ -1,4 +1,4 @@
- /**********************************************************************
+/**********************************************************************
  *                                                                     *
  *                        Software License Agreement                   *
  *                                                                     *
@@ -35,20 +35,17 @@
 //------------------  C ASVGen for SVGen routines ---------------------
 
 typedef struct {
-    short   iPWMPeriod;
+    short iPWMPeriod;
 
-    short   qVr1;
-    short   qVr2;
-    short   qVr3;
+    short qVr1;
+    short qVr2;
+    short qVr3;
 
-    } tSVGenParm;
+} tSVGenParm;
 
-void CalcRefVec( void );
-void CalcSVGen( void );
-void CorrectPhase( void );
+void CalcRefVec(void);
+void CalcSVGen(void);
+void CorrectPhase(void);
 
 tSVGenParm SVGenParm;
 #endif
-
-
-

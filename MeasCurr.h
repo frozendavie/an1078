@@ -1,4 +1,4 @@
- /**********************************************************************
+/**********************************************************************
  *                                                                     *
  *                        Software License Agreement                   *
  *                                                                     *
@@ -35,15 +35,15 @@
 //------------------  C API for MeasCurr routines ---------------------
 
 typedef struct {
-    short   qKa;        // Q15 
-    short   Offseta;
+    short qKa;      // Q15 
+    short Offseta;
 
-    short   qKb;        // Q15 
-    short   Offsetb;
-    } tMeasCurrParm;
+    short qKb;      // Q15 
+    short Offsetb;
+} tMeasCurrParm;
 
-void MeasCompCurr( void );
-void InitMeasCompCurr( short Offset_a, short Offset_b );
+void MeasCompCurr(void);
+void InitMeasCompCurr(short Offset_a, short Offset_b);
 
 tMeasCurrParm MeasCurrParm;
 #endif

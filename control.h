@@ -1,4 +1,4 @@
- /**********************************************************************
+/**********************************************************************
  *                                                                     *
  *                        Software License Agreement                   *
  *                                                                     *
@@ -35,13 +35,10 @@
 //------------------  C API for Control routine ---------------------
 
 typedef struct {
-    short   qVelRef;    // Reference velocity
-    short   qVdRef;     // Vd flux reference value
-    short   qVqRef;     // Vq torque reference value
-    } tCtrlParm;
+    short qVelRef;  // Reference velocity
+    short qVdRef;   // Vd flux reference value
+    short qVqRef;   // Vq torque reference value
+} tCtrlParm;
 
 tCtrlParm CtrlParm;
 #endif
-
-
-

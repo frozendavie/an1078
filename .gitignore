@@ -4,3 +4,4 @@
 /PMSM.X/build/default/
 /PMSM.X/dist/default/
 *.[od]
+.DS_Store

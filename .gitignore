@@ -5,3 +5,5 @@
 /PMSM.X/dist/default/
 *.[od]
 .DS_Store
+*.s#*
+*.b#*

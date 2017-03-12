@@ -77,8 +77,8 @@
 #pragma config GSS = OFF                // General Segment Code Protection (User program memory is not code-protected)
 
 // FOSCSEL
-#pragma config FNOSC = FRC              // Oscillator Mode (Internal Fast RC (FRC))
-#pragma config IESO = OFF               // Internal External Switch Over Mode (Start-up device with user-selected oscillator source)
+#pragma config FNOSC = FRC              // Oscillator Mode (Primary Oscillator (XT, HS, EC) w/ PLL)
+#pragma config IESO = OFF               // Internal External Switch Over Mode (Start-up device with FRC, then automatically switch to user-selected oscillator source when ready)
 
 // FOSC
 #pragma config POSCMD = XT              // Primary Oscillator Source (XT Oscillator Mode)
@@ -703,7 +703,7 @@ bool SetupParm(void)
     MeasCurrParm.qKb    = DQKB;   
 
     // Initial Current offsets
-    InitMeasCompCurr( ADCBuffer[1], ADCBuffer[2] ); 
+    InitMeasCompCurr( ADCBuffer[1], ADCBuffer[2] );
 
     // Target DC Bus, without sign.
     TargetDCbus = (ADCBuffer[3] >> 1) + Q15(0.5);
@@ -751,24 +751,24 @@ bool SetupParm(void)
     DMA0CONbits.CHEN = 0;
 
     // Signed fractional (DOUT = sddd dddd dd00 0000)
-    AD1CON1bits.FORM = 3;    
+    AD1CON1bits.FORM = 3;
     // Motor Control PWM interval ends sampling and starts conversion
-    AD1CON1bits.SSRC = 3;  
+    AD1CON1bits.SSRC = 3;
     // Simultaneous Sample Select bit (only applicable when CHPS = 01 or 1x)
     // Samples CH0, CH1, CH2, CH3 simultaneously (when CHPS = 1x)
     // Samples CH0 and CH1 simultaneously (when CHPS = 01)
-    AD1CON1bits.SIMSAM = 1;  
+    AD1CON1bits.SIMSAM = 1;
     // Sampling begins immediately after last conversion completes. 
     // SAMP bit is auto set.
     AD1CON1bits.ASAM = 1;  
 
     AD1CON2 = 0;
     // Samples CH0, CH1, CH2, CH3 simultaneously (when CHPS = 1x)
-    AD1CON2bits.CHPS = 2;  
+    AD1CON2bits.CHPS = 2;
 
     AD1CON3 = 0;
     // A/D Conversion Clock Select bits = 8 * Tcy
-    AD1CON3bits.ADCS = 15;  
+    AD1CON3bits.ADCS = 15;
 
     /* ADCHS: ADC Input Channel Select Register */
     AD1CHS0 = 0;

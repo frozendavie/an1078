@@ -139,7 +139,7 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                        0x800                   0            0x2c  (44)
 .bss                         0x82c                   0            0xc8  (200)
 .data                        0x8f4                   0            0x20  (32)
-_0x1d2b33c58c3c796          0x47f8                   0             0x8  (8)
+_0x272b33c58c3c909          0x47f8                   0             0x8  (8)
 
                  Total data memory used (bytes):          0x11c  (284) 1%
 
@@ -2048,9 +2048,9 @@ __c30_signature
  __c30_signature
                   0x000bfb          0x6 /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
 
-_0x1d2b33c58c3c796
+_0x272b33c58c3c909
                     0x47f8          0x8
- _0x1d2b33c58c3c796
+ _0x272b33c58c3c909
                     0x47f8          0x8 build/default/production/_ext/1472/PMSM.o
                     0x47f8                  _ADCBuffer
 

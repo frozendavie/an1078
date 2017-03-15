@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -17172,17 +17172,17 @@ Source: www.kingbright.com</description>
 <clearance class="2" value="0.3048"/>
 </class>
 <class number="3" name="+12V" width="0.4064" drill="0.4064">
-<clearance class="0" value="0.4064"/>
-<clearance class="1" value="0.4064"/>
-<clearance class="2" value="0.4064"/>
-<clearance class="3" value="0.4064"/>
+<clearance class="0" value="0.3048"/>
+<clearance class="1" value="0.3048"/>
+<clearance class="2" value="0.3048"/>
+<clearance class="3" value="0.3048"/>
 </class>
 <class number="4" name="agnd" width="0.4064" drill="0.4064">
-<clearance class="0" value="0.4064"/>
-<clearance class="1" value="0.4064"/>
-<clearance class="2" value="0.4064"/>
-<clearance class="3" value="0.4064"/>
-<clearance class="4" value="0.4064"/>
+<clearance class="0" value="0.3048"/>
+<clearance class="1" value="0.3048"/>
+<clearance class="2" value="0.3048"/>
+<clearance class="3" value="0.3048"/>
+<clearance class="4" value="0.3048"/>
 </class>
 <class number="5" name="motor" width="0.508" drill="0.508">
 <clearance class="0" value="0.508"/>
@@ -17412,8 +17412,8 @@ Source: www.kingbright.com</description>
 <attribute name="VALUE" x="127" y="35.56" size="1.778" layer="96"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="X1" gate="-1" x="132.08" y="152.4"/>
-<instance part="X1" gate="-2" x="132.08" y="147.32"/>
+<instance part="X1" gate="-1" x="134.62" y="147.32"/>
+<instance part="X1" gate="-2" x="134.62" y="152.4"/>
 <instance part="U7" gate="A" x="182.88" y="149.86" smashed="yes">
 <attribute name="NAME" x="170.1546" y="157.4038" size="2.0828" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="160.1724" y="142.0368" size="2.0828" layer="96" ratio="10" rot="SR0"/>
@@ -17995,10 +17995,10 @@ Source: www.kingbright.com</description>
 <junction x="83.82" y="43.18"/>
 </segment>
 <segment>
-<pinref part="X1" gate="-2" pin="KL"/>
 <pinref part="AGND5" gate="VR1" pin="AGND"/>
-<wire x1="137.16" y1="147.32" x2="142.24" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="147.32" x2="142.24" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-1" pin="KL"/>
+<wire x1="142.24" y1="147.32" x2="139.7" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
@@ -18092,9 +18092,7 @@ Source: www.kingbright.com</description>
 </net>
 <net name="N$1" class="1">
 <segment>
-<pinref part="X1" gate="-1" pin="KL"/>
 <pinref part="U7" gate="A" pin="VIN"/>
-<wire x1="137.16" y1="152.4" x2="149.86" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="152.4" x2="165.1" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="152.4" x2="149.86" y2="147.32" width="0.1524" layer="91"/>
@@ -18107,6 +18105,8 @@ Source: www.kingbright.com</description>
 <pinref part="L1" gate="G$1" pin="2"/>
 <wire x1="172.72" y1="162.56" x2="149.86" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="162.56" x2="149.86" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="X1" gate="-2" pin="KL"/>
+<wire x1="149.86" y1="152.4" x2="139.7" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">

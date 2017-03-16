@@ -17159,38 +17159,47 @@ Source: www.kingbright.com</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0.3048">
-<clearance class="0" value="0.3048"/>
+<class number="0" name="default" width="0.254" drill="0.3048">
+<clearance class="0" value="0.254"/>
 </class>
-<class number="1" name="VccIn" width="0.508" drill="0.508">
-<clearance class="0" value="0.3048"/>
-<clearance class="1" value="0.3048"/>
+<class number="1" name="VccIn" width="0.4064" drill="0.3048">
+<clearance class="0" value="0.254"/>
+<clearance class="1" value="0.254"/>
 </class>
-<class number="2" name="gnd" width="0.508" drill="0.508">
-<clearance class="0" value="0.3048"/>
-<clearance class="1" value="0.3048"/>
-<clearance class="2" value="0.3048"/>
+<class number="2" name="gnd" width="0.3048" drill="0.3048">
+<clearance class="0" value="0.254"/>
+<clearance class="1" value="0.254"/>
+<clearance class="2" value="0.254"/>
 </class>
-<class number="3" name="+12V" width="0.4064" drill="0.4064">
-<clearance class="0" value="0.3048"/>
-<clearance class="1" value="0.3048"/>
-<clearance class="2" value="0.3048"/>
-<clearance class="3" value="0.3048"/>
+<class number="3" name="+12V" width="0.4064" drill="0.3048">
+<clearance class="0" value="0.254"/>
+<clearance class="1" value="0.254"/>
+<clearance class="2" value="0.254"/>
+<clearance class="3" value="0.254"/>
 </class>
-<class number="4" name="agnd" width="0.4064" drill="0.4064">
-<clearance class="0" value="0.3048"/>
-<clearance class="1" value="0.3048"/>
-<clearance class="2" value="0.3048"/>
-<clearance class="3" value="0.3048"/>
-<clearance class="4" value="0.3048"/>
+<class number="4" name="agnd" width="0.3048" drill="0.3048">
+<clearance class="0" value="0.254"/>
+<clearance class="1" value="0.254"/>
+<clearance class="2" value="0.254"/>
+<clearance class="3" value="0.254"/>
+<clearance class="4" value="0.254"/>
 </class>
-<class number="5" name="motor" width="0.508" drill="0.508">
+<class number="5" name="motor" width="0.508" drill="0">
 <clearance class="0" value="0.508"/>
 <clearance class="1" value="0.508"/>
 <clearance class="2" value="0.508"/>
 <clearance class="3" value="0.508"/>
 <clearance class="4" value="0.508"/>
 <clearance class="5" value="0.508"/>
+</class>
+<class number="6" name="AVDD" width="0.4064" drill="0.3048">
+<clearance class="0" value="0.254"/>
+<clearance class="1" value="0.254"/>
+<clearance class="2" value="0.254"/>
+<clearance class="3" value="0.254"/>
+<clearance class="4" value="0.254"/>
+<clearance class="5" value="0.254"/>
+<clearance class="6" value="0.254"/>
 </class>
 </classes>
 <parts>
@@ -18157,7 +18166,7 @@ Source: www.kingbright.com</description>
 <pinref part="SV1" gate="G$1" pin="3"/>
 </segment>
 </net>
-<net name="+3V3" class="0">
+<net name="+3V3" class="1">
 <segment>
 <label x="238.76" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="238.76" y1="53.34" x2="241.3" y2="53.34" width="0.1524" layer="91"/>
@@ -18650,7 +18659,7 @@ Source: www.kingbright.com</description>
 <wire x1="200.66" y1="144.78" x2="200.66" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+3V3" class="0">
+<net name="+3V3" class="1">
 <segment>
 <pinref part="R21" gate="1" pin="E"/>
 <pinref part="+3V32" gate="G$1" pin="+3V3"/>

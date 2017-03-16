@@ -17162,7 +17162,7 @@ Source: www.kingbright.com</description>
 <class number="0" name="default" width="0.254" drill="0.3048">
 <clearance class="0" value="0.254"/>
 </class>
-<class number="1" name="VccIn" width="0.4064" drill="0.3048">
+<class number="1" name="VccIn" width="0.4064" drill="0.4064">
 <clearance class="0" value="0.254"/>
 <clearance class="1" value="0.254"/>
 </class>
@@ -17171,7 +17171,7 @@ Source: www.kingbright.com</description>
 <clearance class="1" value="0.254"/>
 <clearance class="2" value="0.254"/>
 </class>
-<class number="3" name="+12V" width="0.4064" drill="0.3048">
+<class number="3" name="+12V" width="0.4064" drill="0.4064">
 <clearance class="0" value="0.254"/>
 <clearance class="1" value="0.254"/>
 <clearance class="2" value="0.254"/>
@@ -17192,7 +17192,7 @@ Source: www.kingbright.com</description>
 <clearance class="4" value="0.508"/>
 <clearance class="5" value="0.508"/>
 </class>
-<class number="6" name="AVDD" width="0.4064" drill="0.3048">
+<class number="6" name="AVDD" width="0.4064" drill="0.4064">
 <clearance class="0" value="0.254"/>
 <clearance class="1" value="0.254"/>
 <clearance class="2" value="0.254"/>
@@ -18287,7 +18287,7 @@ Source: www.kingbright.com</description>
 <wire x1="185.42" y1="109.22" x2="185.42" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="AVDD" class="0">
+<net name="AVDD" class="6">
 <segment>
 <pinref part="R14" gate="G$1" pin="2"/>
 <pinref part="C9" gate="G$1" pin="1"/>
@@ -18924,7 +18924,7 @@ Source: www.kingbright.com</description>
 <wire x1="53.34" y1="25.4" x2="53.34" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="AVDD" class="0">
+<net name="AVDD" class="6">
 <segment>
 <pinref part="VDD3" gate="G$1" pin="VDD"/>
 <pinref part="U8" gate="G5" pin="VCC"/>

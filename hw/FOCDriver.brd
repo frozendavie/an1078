@@ -154,7 +154,7 @@
 <hole x="3.175" y="55.88" drill="3.5"/>
 <text x="71.755" y="43.4975" size="1.778" layer="21" ratio="20">+</text>
 <text x="71.755" y="38.4175" size="1.778" layer="21" ratio="20">-</text>
-<text x="73.66" y="47.625" size="0.8128" layer="21" ratio="20">12 ~ 24V</text>
+<text x="73.66" y="47.625" size="0.8128" layer="21" ratio="20">5 ~ 28V</text>
 <text x="69.85" y="18.7325" size="1.778" layer="21">M2</text>
 <text x="69.85" y="13.6525" size="1.778" layer="21">M3</text>
 <text x="5.3975" y="30.7975" size="0.8128" layer="21" ratio="20">IBUS</text>

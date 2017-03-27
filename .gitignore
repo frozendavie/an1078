@@ -12,3 +12,5 @@
 *.pro
 *~renumsch.scr
 *.txt
+*.raw
+*.log

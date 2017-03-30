@@ -19683,11 +19683,13 @@ Grid 5.00 mm&lt;p&gt;
 <class number="5" name="5V" width="0.508" drill="0.4064">
 <clearance class="5" value="0.3048"/>
 </class>
+<class number="6" name="MOTOR" width="1.016" drill="0">
+</class>
 </classes>
 <parts>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
-<part name="LED1" library="led" deviceset="LED" device="SML0805" value="ORANGE"/>
+<part name="5V" library="led" deviceset="LED" device="SML0805" value="ORANGE"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K"/>
@@ -19781,12 +19783,12 @@ Grid 5.00 mm&lt;p&gt;
 <part name="LED5" library="led" deviceset="LED" device="SML0805" value="GREEN"/>
 <part name="LED6" library="led" deviceset="LED" device="SML0805" value="GREEN"/>
 <part name="LED7" library="led" deviceset="LED" device="SML0805" value="GREEN"/>
-<part name="R46" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="220"/>
-<part name="R49" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="220"/>
-<part name="R50" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="220"/>
-<part name="R51" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="220"/>
-<part name="R52" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="220"/>
-<part name="R53" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="220"/>
+<part name="R46" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="330"/>
+<part name="R49" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="330"/>
+<part name="R50" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="330"/>
+<part name="R51" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="330"/>
+<part name="R52" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="330"/>
+<part name="R53" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="330"/>
 <part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="SUPPLY6" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
 <part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="5V" device=""/>
@@ -19815,30 +19817,30 @@ Grid 5.00 mm&lt;p&gt;
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND14" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="GND23" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND22" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
-<part name="GND21" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
-<part name="GND18" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
+<part name="GND19" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND15" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND9" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND13" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="GND19" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="GND20" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="GND21" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="J8" library="SparkFun-Connectors" deviceset="CONN_06" device="SILK_FEMALE_PTH"/>
 <part name="GND5" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND11" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND10" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
+<part name="GND18" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="GND17" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
-<part name="GND16" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J4" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J6" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J3" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J5" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
-<part name="J9" library="SparkFun-Connectors" deviceset="CONN_04" device=""/>
+<part name="J10" library="SparkFun-Connectors" deviceset="CONN_04" device=""/>
 <part name="P5" library="SparkFun-PowerSymbols" deviceset="VDDA" device=""/>
 <part name="X2" library="con-wago-500" deviceset="W237-103" device=""/>
 <part name="U8" library="LMV321SQ3T2G" deviceset="LMV321SQ3T2G" device=""/>
@@ -19851,9 +19853,9 @@ Grid 5.00 mm&lt;p&gt;
 <part name="P6" library="SparkFun-PowerSymbols" deviceset="VDDA" device=""/>
 <part name="G10" library="SparkFun-PowerSymbols" deviceset="AGND" device=""/>
 <part name="C28" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="0.1uF"/>
-<part name="J10" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
-<part name="GND23" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
-<part name="J11" library="SparkFun-Connectors" deviceset="CONN_05" device=""/>
+<part name="J7" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
+<part name="GND16" library="SparkFun-PowerSymbols" deviceset="DGND" device=""/>
+<part name="J9" library="SparkFun-Connectors" deviceset="CONN_05" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19913,7 +19915,7 @@ Grid 5.00 mm&lt;p&gt;
 <instance part="C14" gate="G$1" x="231.14" y="157.48"/>
 <instance part="U3" gate="G$1" x="78.74" y="66.04"/>
 <instance part="F1" gate="G$1" x="30.48" y="66.04"/>
-<instance part="LED1" gate="G$1" x="119.38" y="48.26"/>
+<instance part="5V" gate="G$1" x="119.38" y="48.26"/>
 <instance part="R12" gate="G$1" x="119.38" y="58.42" rot="R90"/>
 <instance part="R15" gate="G$1" x="142.24" y="66.04"/>
 <instance part="R16" gate="G$1" x="142.24" y="43.18"/>
@@ -19938,21 +19940,21 @@ Grid 5.00 mm&lt;p&gt;
 <instance part="GND8" gate="G$1" x="88.9" y="119.38"/>
 <instance part="GND14" gate="G$1" x="167.64" y="119.38"/>
 <instance part="GND3" gate="1" x="40.64" y="35.56"/>
-<instance part="GND18" gate="G$1" x="213.36" y="55.88"/>
+<instance part="GND19" gate="G$1" x="213.36" y="55.88"/>
 <instance part="GND15" gate="G$1" x="180.34" y="93.98"/>
 <instance part="GND9" gate="G$1" x="101.6" y="93.98"/>
 <instance part="GND2" gate="G$1" x="25.4" y="93.98"/>
 <instance part="GND6" gate="1" x="76.2" y="147.32"/>
 <instance part="GND13" gate="1" x="152.4" y="147.32"/>
-<instance part="GND19" gate="1" x="231.14" y="147.32"/>
-<instance part="GND20" gate="1" x="231.14" y="81.28"/>
+<instance part="GND20" gate="1" x="231.14" y="147.32"/>
+<instance part="GND21" gate="1" x="231.14" y="81.28"/>
 <instance part="J8" gate="G$1" x="226.06" y="38.1" rot="R180"/>
 <instance part="GND5" gate="G$1" x="50.8" y="93.98"/>
 <instance part="GND4" gate="G$1" x="50.8" y="119.38"/>
 <instance part="GND11" gate="G$1" x="127" y="93.98"/>
 <instance part="GND10" gate="G$1" x="127" y="119.38"/>
-<instance part="GND17" gate="G$1" x="205.74" y="93.98"/>
-<instance part="GND16" gate="G$1" x="205.74" y="119.38"/>
+<instance part="GND18" gate="G$1" x="205.74" y="93.98"/>
+<instance part="GND17" gate="G$1" x="205.74" y="119.38"/>
 <instance part="J2" gate="G$1" x="30.48" y="124.46" rot="R270"/>
 <instance part="J4" gate="G$1" x="106.68" y="124.46" rot="R270"/>
 <instance part="J6" gate="G$1" x="185.42" y="124.46" rot="R270"/>
@@ -19962,9 +19964,9 @@ Grid 5.00 mm&lt;p&gt;
 <instance part="X2" gate="-1" x="193.04" y="43.18" rot="R180"/>
 <instance part="X2" gate="-2" x="193.04" y="48.26" rot="R180"/>
 <instance part="X2" gate="-3" x="193.04" y="53.34" rot="R180"/>
-<instance part="J10" gate="G$1" x="195.58" y="68.58" rot="R180"/>
-<instance part="GND23" gate="G$1" x="182.88" y="60.96"/>
-<instance part="J11" gate="G$1" x="228.6" y="68.58" rot="R180"/>
+<instance part="J7" gate="G$1" x="195.58" y="68.58" rot="R180"/>
+<instance part="GND16" gate="G$1" x="182.88" y="60.96"/>
+<instance part="J9" gate="G$1" x="228.6" y="68.58" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -19989,7 +19991,7 @@ Grid 5.00 mm&lt;p&gt;
 <wire x1="167.64" y1="127" x2="170.18" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="5V" gate="G$1" pin="C"/>
 <pinref part="C8" gate="G$1" pin="-"/>
 <wire x1="78.74" y1="43.18" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
 <junction x="78.74" y="43.18"/>
@@ -20020,10 +20022,10 @@ Grid 5.00 mm&lt;p&gt;
 <pinref part="GND12" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="GND18" gate="G$1" pin="GND"/>
+<pinref part="GND19" gate="G$1" pin="GND"/>
 <wire x1="213.36" y1="58.42" x2="213.36" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="63.5" x2="220.98" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="J11" gate="G$1" pin="5"/>
+<pinref part="J9" gate="G$1" pin="5"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
@@ -20063,16 +20065,16 @@ Grid 5.00 mm&lt;p&gt;
 <segment>
 <pinref part="R21" gate="G$1" pin="1"/>
 <wire x1="205.74" y1="121.92" x2="205.74" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="GND16" gate="G$1" pin="GND"/>
+<pinref part="GND17" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="Q6" gate="G$1" pin="E"/>
 <wire x1="205.74" y1="96.52" x2="205.74" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="GND17" gate="G$1" pin="GND"/>
+<pinref part="GND18" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="J10" gate="G$1" pin="2"/>
-<pinref part="GND23" gate="G$1" pin="GND"/>
+<pinref part="J7" gate="G$1" pin="2"/>
+<pinref part="GND16" gate="G$1" pin="GND"/>
 <wire x1="187.96" y1="66.04" x2="182.88" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="66.04" x2="182.88" y2="63.5" width="0.1524" layer="91"/>
 </segment>
@@ -20347,34 +20349,34 @@ Grid 5.00 mm&lt;p&gt;
 <segment>
 <label x="215.9" y="73.66" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="215.9" y1="73.66" x2="220.98" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="J11" gate="G$1" pin="1"/>
+<pinref part="J9" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="IMOTORA" class="0">
 <segment>
 <label x="215.9" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="215.9" y1="68.58" x2="220.98" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="J11" gate="G$1" pin="3"/>
+<pinref part="J9" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="POT" class="0">
 <segment>
 <label x="215.9" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 <wire x1="215.9" y1="66.04" x2="220.98" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="J11" gate="G$1" pin="4"/>
+<pinref part="J9" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="IMOTORBUS" class="0">
 <segment>
 <wire x1="220.98" y1="71.12" x2="215.9" y2="71.12" width="0.1524" layer="91"/>
 <label x="215.9" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="J11" gate="G$1" pin="2"/>
+<pinref part="J9" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="LEDJP1" class="0">
+<net name="LEDON" class="0">
 <segment>
 <label x="182.88" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="J10" gate="G$1" pin="1"/>
+<pinref part="J7" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="68.58" x2="187.96" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -20552,7 +20554,7 @@ Grid 5.00 mm&lt;p&gt;
 </net>
 <net name="N$31" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="5V" gate="G$1" pin="A"/>
 <wire x1="119.38" y1="50.8" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="1"/>
 </segment>
@@ -20708,7 +20710,7 @@ Grid 5.00 mm&lt;p&gt;
 <wire x1="152.4" y1="149.86" x2="152.4" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND19" gate="1" pin="GND"/>
+<pinref part="GND20" gate="1" pin="GND"/>
 <pinref part="C14" gate="G$1" pin="-"/>
 <wire x1="231.14" y1="149.86" x2="231.14" y2="152.4" width="0.1524" layer="91"/>
 </segment>
@@ -20719,7 +20721,7 @@ Grid 5.00 mm&lt;p&gt;
 <label x="233.68" y="88.9" size="1.778" layer="95" xref="yes"/>
 <wire x1="233.68" y1="88.9" x2="231.14" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="R22" gate="G$1" pin="2"/>
-<pinref part="GND20" gate="1" pin="GND"/>
+<pinref part="GND21" gate="1" pin="GND"/>
 </segment>
 </net>
 </nets>
@@ -20798,9 +20800,9 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 <instance part="G7" gate="G$1" x="124.46" y="38.1"/>
 <instance part="G9" gate="G$1" x="198.12" y="60.96"/>
 <instance part="G8" gate="G$1" x="190.5" y="60.96"/>
-<instance part="GND22" gate="G$1" x="241.3" y="116.84"/>
-<instance part="GND21" gate="G$1" x="55.88" y="12.7"/>
-<instance part="J9" gate="G$1" x="177.8" y="91.44" rot="R180"/>
+<instance part="GND23" gate="G$1" x="241.3" y="116.84"/>
+<instance part="GND22" gate="G$1" x="55.88" y="12.7"/>
+<instance part="J10" gate="G$1" x="177.8" y="91.44" rot="R180"/>
 <instance part="P5" gate="G$1" x="157.48" y="86.36" rot="R90"/>
 <instance part="U8" gate="A" x="91.44" y="149.86"/>
 <instance part="U9" gate="A" x="91.44" y="104.14"/>
@@ -20819,14 +20821,14 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 <net name="DGND" class="2">
 <segment>
 <pinref part="R24" gate="G$1" pin="A"/>
-<pinref part="GND21" gate="G$1" pin="GND"/>
+<pinref part="GND22" gate="G$1" pin="GND"/>
 <wire x1="53.34" y1="17.78" x2="55.88" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="17.78" x2="55.88" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="241.3" y1="119.38" x2="241.3" y2="127" width="0.1524" layer="91"/>
 <label x="241.3" y="127" size="1.27" layer="95" rot="R90" xref="yes"/>
-<pinref part="GND22" gate="G$1" pin="GND"/>
+<pinref part="GND23" gate="G$1" pin="GND"/>
 </segment>
 </net>
 <net name="IMOTORB" class="0">
@@ -21266,7 +21268,7 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 <pinref part="R53" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="LEDJP1" class="0">
+<net name="LEDON" class="0">
 <segment>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="LED3" gate="G$1" pin="C"/>
@@ -21356,7 +21358,7 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 </segment>
 <segment>
 <pinref part="P5" gate="G$1" pin="VDDA"/>
-<pinref part="J9" gate="G$1" pin="4"/>
+<pinref part="J10" gate="G$1" pin="4"/>
 <wire x1="157.48" y1="86.36" x2="172.72" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -21393,7 +21395,7 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 </net>
 <net name="PWRDIV" class="0">
 <segment>
-<pinref part="J9" gate="G$1" pin="3"/>
+<pinref part="J10" gate="G$1" pin="3"/>
 <wire x1="172.72" y1="88.9" x2="170.18" y2="88.9" width="0.1524" layer="91"/>
 <label x="170.18" y="88.9" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -21405,8 +21407,8 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 </net>
 <net name="3V3FROMMCU" class="0">
 <segment>
-<pinref part="J9" gate="G$1" pin="2"/>
-<pinref part="J9" gate="G$1" pin="1"/>
+<pinref part="J10" gate="G$1" pin="2"/>
+<pinref part="J10" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="91.44" x2="172.72" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="93.98" x2="170.18" y2="93.98" width="0.1524" layer="91"/>
 <junction x="172.72" y="93.98"/>

@@ -185,6 +185,7 @@
 <text x="26.3525" y="5.3975" size="0.8128" layer="21" ratio="20">GND</text>
 <text x="33.655" y="50.165" size="0.762" layer="21">J1-J6 MUST SHORT
 WHEN 3.3V MCU POWERD</text>
+<text x="49.53" y="13.335" size="3.81" layer="21">AN1078</text>
 </plain>
 <libraries>
 <library name="resistor">

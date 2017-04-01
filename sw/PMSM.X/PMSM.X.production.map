@@ -86,6 +86,8 @@ c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
                               c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o) (__data_init_standard)
 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt_start_mode_normal.eo)
                               (__crt_start_mode_normal)
+c:/microchip/xc16/v1.31/bin/bin/../../lib\libc-elf.a(memset.eo)
+                              build/default/production/_ext/1472/RTDM.o (_memset)
 
 
 Selected CodeGuard Options:
@@ -115,14 +117,15 @@ Program Memory  [Origin = 0x200, Length = 0x15600]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0x4be           0x71d  (1821)
-.text                        0x6be                0x3e            0x5d  (93)
-.const                       0x700               0x100           0x180  (384)
-.text                        0x800               0xa76           0xfb1  (4017)
-.dinit                      0x1276                0x36            0x51  (81)
-.text                       0x12ac                0xa8            0xfc  (252)
+.text                        0x200               0x4cc           0x732  (1842)
+.text                        0x6cc                0x28            0x3c  (60)
+.const                       0x700               0x120           0x1b0  (432)
+.text                        0x820               0xdd8          0x14c4  (5316)
+.dinit                      0x15f8                0x66            0x99  (153)
+.text                       0x165e                0x94            0xde  (222)
+.text                       0x16f2                0x80            0xc0  (192)
 
-                 Total program memory used (bytes):         0x19f8  (6648) 5%
+                 Total program memory used (bytes):         0x2019  (8217) 6%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0xfc]
@@ -130,18 +133,20 @@ Ivt Memory  [Origin = 0x4, Length = 0xfc]
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .ivt._DMA0Interrupt           0x1c                 0x2             0x3  (3)
+.ivt._U1RXInterrupt           0x2a                 0x2             0x3  (3)
 
 
 Data Memory  [Origin = 0x800, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x2c  (44)
-.bss                         0x82c                   0            0xc8  (200)
-.data                        0x8f4                   0            0x20  (32)
-_04E8CA8058de1579           0x47f8                   0             0x8  (8)
+.nbss                        0x800                   0            0x42  (66)
+.ndata                       0x842                   0            0x12  (18)
+.bss                         0x854                   0           0x408  (1032)
+.data                        0xc5c                   0            0x28  (40)
+_04E7548058df477f           0x47f8                   0             0x8  (8)
 
-                 Total data memory used (bytes):          0x11c  (284) 1%
+                 Total data memory used (bytes):          0x48c  (1164) 7%
 
 
 Dynamic Memory Usage
@@ -149,62 +154,114 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x914                              0x3ee4  (16100)
+stack                        0xc84                              0x3b74  (15220)
 
-                 Maximum dynamic memory (bytes):         0x3ee4  (16100)
+                 Maximum dynamic memory (bytes):         0x3b74  (15220)
 
 
 External Symbols in Data Memory (by address):
 
                     0x0800                  _SVGenParm
                     0x0808                  _MeasCurrParm
-                    0x0810                  _Startup_Ramp
-                    0x0814                  _Startup_Lock
-                    0x0816                  _uGF
-                    0x0818                  _ReadADCParm
-                    0x081c                  _iADCisrCnt
-                    0x081e                  _PrevTheta
-                    0x0820                  _AccumTheta
-                    0x0822                  _AccumThetaCnt
-                    0x0824                  _qVdSquared
-                    0x0826                  _DCbus
-                    0x0828                  _TargetDCbus
-                    0x082a                  _Theta_error
-                    0x082c                  _MotorParm
-                    0x0832                  _CtrlParm
-                    0x0838                  _ParkParm
-                    0x0858                  _smc1
-                    0x088a                  _PIParmD
-                    0x089e                  _PIParmQ
-                    0x08b2                  _PIParmW
-                    0x08c6                  _FdWeakParm
+                    0x0810                  _DMCIFlags
+                    0x0812                  _SnapCount
+                    0x0814                  _SnapShotDelayCnt
+                    0x0816                  _Startup_Ramp
+                    0x081a                  _Startup_Lock
+                    0x081c                  _uGF
+                    0x081e                  _ReadADCParm
+                    0x0822                  _iADCisrCnt
+                    0x0824                  _PrevTheta
+                    0x0826                  _AccumTheta
+                    0x0828                  _AccumThetaCnt
+                    0x082a                  _qVdSquared
+                    0x082c                  _DCbus
+                    0x082e                  _TargetDCbus
+                    0x0830                  _Theta_error
+                    0x0832                  _RTDMRxBufferStartMsgPointer
+                    0x0834                  _RTDMRxBufferEndMsgPointer
+                    0x0836                  _RTDMcrcTemp
+                    0x0838                  _RTDMcrcTempH
+                    0x083a                  _RTDMcrcTempL
+                    0x083c                  _RTDMFlags
+                    0x083e                  _RTDM_UART_MODE_VALUE
+                    0x0840                  _RTDM_UART_STA_VALUE
+                    0x0842                  _PtrRecBuffer1
+                    0x0844                  _PtrRecBuffer2
+                    0x0846                  _PtrRecBuffer3
+                    0x0848                  _PtrRecBuffer4
+                    0x084a                  _RecBuffUpperLimit
+                    0x084c                  _SnapShotDelay
+                    0x084e                  _RTDMRxBufferLoLimit
+                    0x0850                  _RTDMRxBufferHiLimit
+                    0x0852                  _RTDMRxBufferIndex
+                    0x0854                  _MotorParm
+                    0x085a                  _CtrlParm
+                    0x0860                  _ParkParm
+                    0x0880                  _RecorderBuffer1
+                    0x0948                  _RecorderBuffer2
+                    0x0a10                  _RecorderBuffer3
+                    0x0ad8                  _RecorderBuffer4
+                    0x0ba0                  _smc1
+                    0x0bd2                  _PIParmD
+                    0x0be6                  _PIParmQ
+                    0x0bfa                  _PIParmW
+                    0x0c0e                  _FdWeakParm
+                    0x0c3c                  _RTDMRxBuffer
+                    0x0c7c                  _RTDMErrorFrame
                     0x47f8                  _ADCBuffer
 
 External Symbols in Data Memory (by name):
 
                     0x47f8                  _ADCBuffer
-                    0x0820                  _AccumTheta
-                    0x0822                  _AccumThetaCnt
-                    0x0832                  _CtrlParm
-                    0x0826                  _DCbus
-                    0x08c6                  _FdWeakParm
+                    0x0826                  _AccumTheta
+                    0x0828                  _AccumThetaCnt
+                    0x085a                  _CtrlParm
+                    0x082c                  _DCbus
+                    0x0810                  _DMCIFlags
+                    0x0c0e                  _FdWeakParm
                     0x0808                  _MeasCurrParm
-                    0x082c                  _MotorParm
-                    0x088a                  _PIParmD
-                    0x089e                  _PIParmQ
-                    0x08b2                  _PIParmW
-                    0x0838                  _ParkParm
-                    0x081e                  _PrevTheta
-                    0x0818                  _ReadADCParm
+                    0x0854                  _MotorParm
+                    0x0bd2                  _PIParmD
+                    0x0be6                  _PIParmQ
+                    0x0bfa                  _PIParmW
+                    0x0860                  _ParkParm
+                    0x0824                  _PrevTheta
+                    0x0842                  _PtrRecBuffer1
+                    0x0844                  _PtrRecBuffer2
+                    0x0846                  _PtrRecBuffer3
+                    0x0848                  _PtrRecBuffer4
+                    0x0c7c                  _RTDMErrorFrame
+                    0x083c                  _RTDMFlags
+                    0x0c3c                  _RTDMRxBuffer
+                    0x0834                  _RTDMRxBufferEndMsgPointer
+                    0x0850                  _RTDMRxBufferHiLimit
+                    0x0852                  _RTDMRxBufferIndex
+                    0x084e                  _RTDMRxBufferLoLimit
+                    0x0832                  _RTDMRxBufferStartMsgPointer
+                    0x083e                  _RTDM_UART_MODE_VALUE
+                    0x0840                  _RTDM_UART_STA_VALUE
+                    0x0836                  _RTDMcrcTemp
+                    0x0838                  _RTDMcrcTempH
+                    0x083a                  _RTDMcrcTempL
+                    0x081e                  _ReadADCParm
+                    0x084a                  _RecBuffUpperLimit
+                    0x0880                  _RecorderBuffer1
+                    0x0948                  _RecorderBuffer2
+                    0x0a10                  _RecorderBuffer3
+                    0x0ad8                  _RecorderBuffer4
                     0x0800                  _SVGenParm
-                    0x0814                  _Startup_Lock
-                    0x0810                  _Startup_Ramp
-                    0x0828                  _TargetDCbus
-                    0x082a                  _Theta_error
-                    0x081c                  _iADCisrCnt
-                    0x0824                  _qVdSquared
-                    0x0858                  _smc1
-                    0x0816                  _uGF
+                    0x0812                  _SnapCount
+                    0x084c                  _SnapShotDelay
+                    0x0814                  _SnapShotDelayCnt
+                    0x081a                  _Startup_Lock
+                    0x0816                  _Startup_Ramp
+                    0x082e                  _TargetDCbus
+                    0x0830                  _Theta_error
+                    0x0822                  _iADCisrCnt
+                    0x082a                  _qVdSquared
+                    0x0ba0                  _smc1
+                    0x081c                  _uGF
 
 External Symbols in Program Memory (by address):
 
@@ -233,140 +290,160 @@ External Symbols in Program Memory (by address):
                   0x0005c8                  _putsUART2
                   0x000622                  __Q15abs
                   0x00062c                  __Q15sqrt
-                  0x0006be                  _InitPI
-                  0x0006be                  InitPI
-                  0x0006c2                  _CalcPI
-                  0x0006c2                  CalcPI
-                  0x000800                  _main
-                  0x00094c                  _DoControl
-                  0x000ad0                  __DMA0Interrupt
-                  0x000b0a                  _SetupParm
-                  0x000bc8                  _CalculateParkAngle
-                  0x000c58                  _SetupControlParameters
-                  0x000cac                  _DebounceDelay
-                  0x000ccc                  _VoltRippleComp
-                  0x000d0c                  _SetupDMA
-                  0x000d34                  _SMC_Position_Estimation
-                  0x000f30                  _SMCInit
-                  0x000f56                  _CalcEstI
-                  0x000f56                  CalcEstI
-                  0x000f9c                  CalcIError
-                  0x000f9c                  _CalcIError
-                  0x000fba                  _CalcZalpha
-                  0x000fba                  CalcZalpha
-                  0x000fcc                  _CalcZbeta
-                  0x000fcc                  CalcZbeta
-                  0x000fde                  CalcBEMF
-                  0x000fde                  _CalcBEMF
-                  0x001040                  CalcOmegaFltred
-                  0x001040                  _CalcOmegaFltred
-                  0x00105a                  FracMpy
-                  0x00105a                  _FracMpy
-                  0x00106c                  FracDiv
-                  0x00106c                  _FracDiv
-                  0x001078                  _FieldWeakening
-                  0x0010dc                  _FWInit
-                  0x001126                  _CalcSVGen
-                  0x001126                  CalcSVGen
-                  0x0011b2                  _atan2CORDIC
-                  0x001220                  SinCos
-                  0x001220                  _SinCos
-                  0x0012ac                  _ClarkePark
-                  0x0012ac                  ClarkePark
-                  0x0012d4                  MeasCompCurr
-                  0x0012d4                  _MeasCompCurr
-                  0x0012f2                  InitMeasCompCurr
-                  0x0012f2                  _InitMeasCompCurr
-                  0x0012f8                  _CalcRefVec
-                  0x0012f8                  CalcRefVec
-                  0x001314                  InvPark
-                  0x001314                  _InvPark
-                  0x00132c                  _ReadSignedADC0
-                  0x00132c                  ReadSignedADC0
-                  0x001342                  _SetupPorts
+                  0x0006be                  _memset
+                  0x0006cc                  ClarkePark
+                  0x0006cc                  _ClarkePark
+                  0x000800                  _RTDMTxdata
+                  0x000805                  _RTDMSanityCheckOK
+                  0x00080f                  _RTDMWriteMemoryOK
+                  0x000817                  _RTDMErrorIllegalFunction
+                  0x000820                  _main
+                  0x000972                  _DoControl
+                  0x000af6                  __DMA0Interrupt
+                  0x000b94                  _SetupParm
+                  0x000c52                  _CalculateParkAngle
+                  0x000ce2                  _SetupControlParameters
+                  0x000d36                  _DebounceDelay
+                  0x000d56                  _VoltRippleComp
+                  0x000d96                  _SetupDMA
+                  0x000dbe                  _RTDM_Start
+                  0x000dec                  _CloseRTDM
+                  0x000dfa                  _RTDM_ProcessMsgs
+                  0x001034                  __U1RXInterrupt
+                  0x00109e                  _RTDM_CumulativeCrc16
+                  0x00110c                  _SMC_Position_Estimation
+                  0x001308                  _SMCInit
+                  0x00132e                  CalcEstI
+                  0x00132e                  _CalcEstI
+                  0x001374                  CalcIError
+                  0x001374                  _CalcIError
+                  0x001392                  CalcZalpha
+                  0x001392                  _CalcZalpha
+                  0x0013a4                  CalcZbeta
+                  0x0013a4                  _CalcZbeta
+                  0x0013b6                  _CalcBEMF
+                  0x0013b6                  CalcBEMF
+                  0x001418                  _CalcOmegaFltred
+                  0x001418                  CalcOmegaFltred
+                  0x001432                  FracMpy
+                  0x001432                  _FracMpy
+                  0x001444                  FracDiv
+                  0x001444                  _FracDiv
+                  0x001450                  _FieldWeakening
+                  0x0014b4                  _FWInit
+                  0x0014fe                  CalcSVGen
+                  0x0014fe                  _CalcSVGen
+                  0x00158a                  _atan2CORDIC
+                  0x00165e                  SinCos
+                  0x00165e                  _SinCos
+                  0x0016b4                  _InitPI
+                  0x0016b4                  InitPI
+                  0x0016b8                  _CalcPI
+                  0x0016b8                  CalcPI
+                  0x0016f2                  _MeasCompCurr
+                  0x0016f2                  MeasCompCurr
+                  0x001710                  _InitMeasCompCurr
+                  0x001710                  InitMeasCompCurr
+                  0x001716                  CalcRefVec
+                  0x001716                  _CalcRefVec
+                  0x001732                  InvPark
+                  0x001732                  _InvPark
+                  0x00174a                  _ReadSignedADC0
+                  0x00174a                  ReadSignedADC0
+                  0x001760                  _SetupPorts
                   0xf80000                  __FBS.sec
                   0xf80002                  __FSS.sec
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x000fde                  CalcBEMF
-                  0x000f56                  CalcEstI
-                  0x000f9c                  CalcIError
-                  0x001040                  CalcOmegaFltred
-                  0x0006c2                  CalcPI
-                  0x0012f8                  CalcRefVec
-                  0x001126                  CalcSVGen
-                  0x000fba                  CalcZalpha
-                  0x000fcc                  CalcZbeta
-                  0x0012ac                  ClarkePark
-                  0x00106c                  FracDiv
-                  0x00105a                  FracMpy
-                  0x0012f2                  InitMeasCompCurr
-                  0x0006be                  InitPI
-                  0x001314                  InvPark
-                  0x0012d4                  MeasCompCurr
-                  0x00132c                  ReadSignedADC0
-                  0x001220                  SinCos
+                  0x0013b6                  CalcBEMF
+                  0x00132e                  CalcEstI
+                  0x001374                  CalcIError
+                  0x001418                  CalcOmegaFltred
+                  0x0016b8                  CalcPI
+                  0x001716                  CalcRefVec
+                  0x0014fe                  CalcSVGen
+                  0x001392                  CalcZalpha
+                  0x0013a4                  CalcZbeta
+                  0x0006cc                  ClarkePark
+                  0x001444                  FracDiv
+                  0x001432                  FracMpy
+                  0x001710                  InitMeasCompCurr
+                  0x0016b4                  InitPI
+                  0x001732                  InvPark
+                  0x0016f2                  MeasCompCurr
+                  0x00174a                  ReadSignedADC0
+                  0x00165e                  SinCos
                   0x0002cc                  _BusyUART1
                   0x0002e2                  _BusyUART2
-                  0x000fde                  _CalcBEMF
-                  0x000f56                  _CalcEstI
-                  0x000f9c                  _CalcIError
-                  0x001040                  _CalcOmegaFltred
-                  0x0006c2                  _CalcPI
-                  0x0012f8                  _CalcRefVec
-                  0x001126                  _CalcSVGen
-                  0x000fba                  _CalcZalpha
-                  0x000fcc                  _CalcZbeta
-                  0x000bc8                  _CalculateParkAngle
-                  0x0012ac                  _ClarkePark
+                  0x0013b6                  _CalcBEMF
+                  0x00132e                  _CalcEstI
+                  0x001374                  _CalcIError
+                  0x001418                  _CalcOmegaFltred
+                  0x0016b8                  _CalcPI
+                  0x001716                  _CalcRefVec
+                  0x0014fe                  _CalcSVGen
+                  0x001392                  _CalcZalpha
+                  0x0013a4                  _CalcZbeta
+                  0x000c52                  _CalculateParkAngle
+                  0x0006cc                  _ClarkePark
+                  0x000dec                  _CloseRTDM
                   0x0002f8                  _CloseUART1
                   0x000308                  _CloseUART2
                   0x000318                  _ConfigIntUART1
                   0x000386                  _ConfigIntUART2
                   0x0003f6                  _DataRdyUART1
                   0x000402                  _DataRdyUART2
-                  0x000cac                  _DebounceDelay
-                  0x00094c                  _DoControl
-                  0x0010dc                  _FWInit
-                  0x001078                  _FieldWeakening
-                  0x00106c                  _FracDiv
-                  0x00105a                  _FracMpy
-                  0x0012f2                  _InitMeasCompCurr
-                  0x0006be                  _InitPI
-                  0x001314                  _InvPark
-                  0x0012d4                  _MeasCompCurr
+                  0x000d36                  _DebounceDelay
+                  0x000972                  _DoControl
+                  0x0014b4                  _FWInit
+                  0x001450                  _FieldWeakening
+                  0x001444                  _FracDiv
+                  0x001432                  _FracMpy
+                  0x001710                  _InitMeasCompCurr
+                  0x0016b4                  _InitPI
+                  0x001732                  _InvPark
+                  0x0016f2                  _MeasCompCurr
                   0x00040e                  _OpenUART1
                   0x000426                  _OpenUART2
-                  0x00132c                  _ReadSignedADC0
+                  0x000817                  _RTDMErrorIllegalFunction
+                  0x000805                  _RTDMSanityCheckOK
+                  0x000800                  _RTDMTxdata
+                  0x00080f                  _RTDMWriteMemoryOK
+                  0x00109e                  _RTDM_CumulativeCrc16
+                  0x000dfa                  _RTDM_ProcessMsgs
+                  0x000dbe                  _RTDM_Start
+                  0x00174a                  _ReadSignedADC0
                   0x00043e                  _ReadUART1
                   0x000456                  _ReadUART2
-                  0x000f30                  _SMCInit
-                  0x000d34                  _SMC_Position_Estimation
-                  0x000c58                  _SetupControlParameters
-                  0x000d0c                  _SetupDMA
-                  0x000b0a                  _SetupParm
-                  0x001342                  _SetupPorts
-                  0x001220                  _SinCos
-                  0x000ccc                  _VoltRippleComp
+                  0x001308                  _SMCInit
+                  0x00110c                  _SMC_Position_Estimation
+                  0x000ce2                  _SetupControlParameters
+                  0x000d96                  _SetupDMA
+                  0x000b94                  _SetupParm
+                  0x001760                  _SetupPorts
+                  0x00165e                  _SinCos
+                  0x000d56                  _VoltRippleComp
                   0x00046e                  _WriteUART1
                   0x00048a                  _WriteUART2
-                  0x000ad0                  __DMA0Interrupt
+                  0x000af6                  __DMA0Interrupt
                   0x0002c8                  __DefaultInterrupt
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
                   0xf80002                  __FSS.sec
                   0x000622                  __Q15abs
                   0x00062c                  __Q15sqrt
+                  0x001034                  __U1RXInterrupt
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0011b2                  _atan2CORDIC
+                  0x00158a                  _atan2CORDIC
                   0x0004a6                  _getsUART1
                   0x00050a                  _getsUART2
-                  0x000800                  _main
+                  0x000820                  _main
+                  0x0006be                  _memset
                   0x00056e                  _putsUART1
                   0x0005c8                  _putsUART2
 
@@ -459,7 +536,7 @@ LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0x4be
+.text             0x000200        0x4cc
  *(.init)
  .init            0x000200         0x4c c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
                   0x000200                  __resetPRI
@@ -521,6 +598,8 @@ LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                   0x0006bc          0x2 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt_start_mode_normal.eo)
                   0x0006bc                  __crt_start_mode
                   0x0006bc                  __crt_start_mode_normal
+ .libc.memset     0x0006be          0xe c:/microchip/xc16/v1.31/bin/bin/../../lib\libc-elf.a(memset.eo)
+                  0x0006be                  _memset
 
 usercode
  *(usercode)
@@ -570,7 +649,7 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x70ab
+.debug_info       0x000000       0x794e
  *(.debug_info)
  .debug_info      0x000000        0x285 build/default/production/_ext/760574787/BusyUART1.o
  .debug_info      0x000285        0x285 build/default/production/_ext/760574787/BusyUART2.o
@@ -598,16 +677,16 @@ __FUID3
  .debug_info      0x004170         0x74 build/default/production/_ext/1472/SVGEN.o
  .debug_info      0x0041e4         0x73 build/default/production/_ext/1472/trig.o
  .debug_info      0x004257         0x77 build/default/production/_ext/1472/MeasCurr.o
- .debug_info      0x0042ce       0x23d2 build/default/production/_ext/1472/PMSM.o
- .debug_info      0x0066a0        0x15e build/default/production/_ext/1472/initdspic.o
- .debug_info      0x0067fe        0x509 build/default/production/_ext/1472/smcpos.o
- .debug_info      0x006d07         0x72 build/default/production/_ext/1472/smc.o
- .debug_info      0x006d79         0xad build/default/production/_ext/1472/RTDM.o
- .debug_info      0x006e26         0x7a build/default/production/_ext/1472/atan2CORDIC.o
- .debug_info      0x006ea0        0x20b build/default/production/_ext/1472/FdWeak.o
+ .debug_info      0x0042ce       0x25bc build/default/production/_ext/1472/PMSM.o
+ .debug_info      0x00688a        0x15e build/default/production/_ext/1472/initdspic.o
+ .debug_info      0x0069e8        0x509 build/default/production/_ext/1472/smcpos.o
+ .debug_info      0x006ef1         0x72 build/default/production/_ext/1472/smc.o
+ .debug_info      0x006f63        0x766 build/default/production/_ext/1472/RTDM.o
+ .debug_info      0x0076c9         0x7a build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_info      0x007743        0x20b build/default/production/_ext/1472/FdWeak.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000       0x11e3
+.debug_abbrev     0x000000       0x1342
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0xa9 build/default/production/_ext/760574787/BusyUART1.o
  .debug_abbrev    0x0000a9         0xa9 build/default/production/_ext/760574787/BusyUART2.o
@@ -635,15 +714,15 @@ __FUID3
  .debug_abbrev    0x000d0e         0x14 build/default/production/_ext/1472/SVGEN.o
  .debug_abbrev    0x000d22         0x14 build/default/production/_ext/1472/trig.o
  .debug_abbrev    0x000d36         0x14 build/default/production/_ext/1472/MeasCurr.o
- .debug_abbrev    0x000d4a        0x254 build/default/production/_ext/1472/PMSM.o
- .debug_abbrev    0x000f9e         0x4c build/default/production/_ext/1472/initdspic.o
- .debug_abbrev    0x000fea         0xf9 build/default/production/_ext/1472/smcpos.o
- .debug_abbrev    0x0010e3         0x14 build/default/production/_ext/1472/smc.o
- .debug_abbrev    0x0010f7         0x1f build/default/production/_ext/1472/RTDM.o
- .debug_abbrev    0x001116         0x14 build/default/production/_ext/1472/atan2CORDIC.o
- .debug_abbrev    0x00112a         0xb9 build/default/production/_ext/1472/FdWeak.o
+ .debug_abbrev    0x000d4a        0x26c build/default/production/_ext/1472/PMSM.o
+ .debug_abbrev    0x000fb6         0x4c build/default/production/_ext/1472/initdspic.o
+ .debug_abbrev    0x001002         0xf9 build/default/production/_ext/1472/smcpos.o
+ .debug_abbrev    0x0010fb         0x14 build/default/production/_ext/1472/smc.o
+ .debug_abbrev    0x00110f        0x166 build/default/production/_ext/1472/RTDM.o
+ .debug_abbrev    0x001275         0x14 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_abbrev    0x001289         0xb9 build/default/production/_ext/1472/FdWeak.o
 
-.debug_line       0x000000       0x1293
+.debug_line       0x000000       0x139d
  *(.debug_line)
  .debug_line      0x000000         0x8e build/default/production/_ext/760574787/BusyUART1.o
  .debug_line      0x00008e         0x8e build/default/production/_ext/760574787/BusyUART2.o
@@ -671,15 +750,15 @@ __FUID3
  .debug_line      0x000be2         0x7f build/default/production/_ext/1472/SVGEN.o
  .debug_line      0x000c61         0x61 build/default/production/_ext/1472/trig.o
  .debug_line      0x000cc2         0x4c build/default/production/_ext/1472/MeasCurr.o
- .debug_line      0x000d0e        0x233 build/default/production/_ext/1472/PMSM.o
- .debug_line      0x000f41         0x8c build/default/production/_ext/1472/initdspic.o
- .debug_line      0x000fcd         0xf1 build/default/production/_ext/1472/smcpos.o
- .debug_line      0x0010be         0xd1 build/default/production/_ext/1472/smc.o
- .debug_line      0x00118f         0x1a build/default/production/_ext/1472/RTDM.o
- .debug_line      0x0011a9         0x73 build/default/production/_ext/1472/atan2CORDIC.o
- .debug_line      0x00121c         0x77 build/default/production/_ext/1472/FdWeak.o
+ .debug_line      0x000d0e        0x243 build/default/production/_ext/1472/PMSM.o
+ .debug_line      0x000f51         0x8c build/default/production/_ext/1472/initdspic.o
+ .debug_line      0x000fdd         0xf1 build/default/production/_ext/1472/smcpos.o
+ .debug_line      0x0010ce         0xd1 build/default/production/_ext/1472/smc.o
+ .debug_line      0x00119f        0x114 build/default/production/_ext/1472/RTDM.o
+ .debug_line      0x0012b3         0x73 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_line      0x001326         0x77 build/default/production/_ext/1472/FdWeak.o
 
-.debug_frame      0x000000        0x562
+.debug_frame      0x000000        0x62e
  *(.debug_frame)
  .debug_frame     0x000000         0x30 build/default/production/_ext/760574787/BusyUART1.o
  .debug_frame     0x000030         0x30 build/default/production/_ext/760574787/BusyUART2.o
@@ -702,9 +781,10 @@ __FUID3
  .debug_frame     0x000360        0x134 build/default/production/_ext/1472/PMSM.o
  .debug_frame     0x000494         0x30 build/default/production/_ext/1472/initdspic.o
  .debug_frame     0x0004c4         0x4c build/default/production/_ext/1472/smcpos.o
- .debug_frame     0x000510         0x52 build/default/production/_ext/1472/FdWeak.o
+ .debug_frame     0x000510         0xcc build/default/production/_ext/1472/RTDM.o
+ .debug_frame     0x0005dc         0x52 build/default/production/_ext/1472/FdWeak.o
 
-.debug_str        0x000000        0x2ba
+.debug_str        0x000000        0x489
  *(.debug_str)
  .debug_str       0x000000          0xa build/default/production/_ext/760574787/BusyUART1.o
  .debug_str       0x00000a          0xa build/default/production/_ext/760574787/BusyUART2.o
@@ -722,9 +802,10 @@ __FUID3
  .debug_str       0x0000d8          0xb build/default/production/_ext/760574787/getsUART2.o
  .debug_str       0x0000e3         0x15 build/default/production/_ext/760574787/putsUART1.o
  .debug_str       0x0000f8         0x15 build/default/production/_ext/760574787/putsUART2.o
- .debug_str       0x00010d        0x174 build/default/production/_ext/1472/PMSM.o
- .debug_str       0x000281         0x2e build/default/production/_ext/1472/smcpos.o
- .debug_str       0x0002af          0xb build/default/production/_ext/1472/FdWeak.o
+ .debug_str       0x00010d        0x227 build/default/production/_ext/1472/PMSM.o
+ .debug_str       0x000334         0x2e build/default/production/_ext/1472/smcpos.o
+ .debug_str       0x000362        0x11c build/default/production/_ext/1472/RTDM.o
+ .debug_str       0x00047e          0xb build/default/production/_ext/1472/FdWeak.o
 
 .debug_loc
  *(.debug_loc)
@@ -733,7 +814,7 @@ __FUID3
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x4cf
+                  0x000000        0x7a1
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x20 build/default/production/_ext/760574787/BusyUART1.o
@@ -772,18 +853,20 @@ __FUID3
  .debug_pubnames
                   0x000234         0x20 build/default/production/_ext/760574787/putsUART2.o
  .debug_pubnames
-                  0x000254        0x1e1 build/default/production/_ext/1472/PMSM.o
+                  0x000254        0x2d2 build/default/production/_ext/1472/PMSM.o
  .debug_pubnames
-                  0x000435         0x21 build/default/production/_ext/1472/initdspic.o
+                  0x000526         0x21 build/default/production/_ext/1472/initdspic.o
  .debug_pubnames
-                  0x000456         0x3a build/default/production/_ext/1472/smcpos.o
+                  0x000547         0x3a build/default/production/_ext/1472/smcpos.o
  .debug_pubnames
-                  0x000490         0x3f build/default/production/_ext/1472/FdWeak.o
+                  0x000581        0x1e1 build/default/production/_ext/1472/RTDM.o
+ .debug_pubnames
+                  0x000762         0x3f build/default/production/_ext/1472/FdWeak.o
 
 .debug_ranges
  *(.debug_ranges)
 
-.debug_aranges    0x000000        0x390
+.debug_aranges    0x000000        0x3a8
  *(.debug_aranges)
  .debug_aranges
                   0x000000         0x20 build/default/production/_ext/760574787/BusyUART1.o
@@ -846,9 +929,11 @@ __FUID3
  .debug_aranges
                   0x000348         0x18 build/default/production/_ext/1472/smc.o
  .debug_aranges
-                  0x000360         0x18 build/default/production/_ext/1472/atan2CORDIC.o
+                  0x000360         0x18 build/default/production/_ext/1472/RTDM.o
  .debug_aranges
-                  0x000378         0x18 build/default/production/_ext/1472/FdWeak.o
+                  0x000378         0x18 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_aranges
+                  0x000390         0x18 build/default/production/_ext/1472/FdWeak.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -1943,148 +2028,183 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x000390        0x7cf
+                  0x0003a8        0x808
  .debug_pubtypes
-                  0x000390         0x31 build/default/production/_ext/760574787/BusyUART1.o
+                  0x0003a8         0x31 build/default/production/_ext/760574787/BusyUART1.o
  .debug_pubtypes
-                  0x0003c1         0x31 build/default/production/_ext/760574787/BusyUART2.o
+                  0x0003d9         0x31 build/default/production/_ext/760574787/BusyUART2.o
  .debug_pubtypes
-                  0x0003f2         0x6d build/default/production/_ext/760574787/CloseUART1.o
+                  0x00040a         0x6d build/default/production/_ext/760574787/CloseUART1.o
  .debug_pubtypes
-                  0x00045f         0x6d build/default/production/_ext/760574787/CloseUART2.o
+                  0x000477         0x6d build/default/production/_ext/760574787/CloseUART2.o
  .debug_pubtypes
-                  0x0004cc         0x86 build/default/production/_ext/760574787/ConfigIntUART1.o
+                  0x0004e4         0x86 build/default/production/_ext/760574787/ConfigIntUART1.o
  .debug_pubtypes
-                  0x000552         0x69 build/default/production/_ext/760574787/ConfigIntUART2.o
+                  0x00056a         0x69 build/default/production/_ext/760574787/ConfigIntUART2.o
  .debug_pubtypes
-                  0x0005bb         0x31 build/default/production/_ext/760574787/DataRdyUART1.o
+                  0x0005d3         0x31 build/default/production/_ext/760574787/DataRdyUART1.o
  .debug_pubtypes
-                  0x0005ec         0x31 build/default/production/_ext/760574787/DataRdyUART2.o
+                  0x000604         0x31 build/default/production/_ext/760574787/DataRdyUART2.o
  .debug_pubtypes
-                  0x00061d         0x12 build/default/production/_ext/760574787/OpenUART1.o
+                  0x000635         0x12 build/default/production/_ext/760574787/OpenUART1.o
  .debug_pubtypes
-                  0x00062f         0x12 build/default/production/_ext/760574787/OpenUART2.o
+                  0x000647         0x12 build/default/production/_ext/760574787/OpenUART2.o
  .debug_pubtypes
-                  0x000641         0x33 build/default/production/_ext/760574787/ReadUART1.o
+                  0x000659         0x33 build/default/production/_ext/760574787/ReadUART1.o
  .debug_pubtypes
-                  0x000674         0x33 build/default/production/_ext/760574787/ReadUART2.o
+                  0x00068c         0x33 build/default/production/_ext/760574787/ReadUART2.o
  .debug_pubtypes
-                  0x0006a7         0x33 build/default/production/_ext/760574787/WriteUART1.o
+                  0x0006bf         0x33 build/default/production/_ext/760574787/WriteUART1.o
  .debug_pubtypes
-                  0x0006da         0x33 build/default/production/_ext/760574787/WriteUART2.o
+                  0x0006f2         0x33 build/default/production/_ext/760574787/WriteUART2.o
  .debug_pubtypes
-                  0x00070d         0x33 build/default/production/_ext/760574787/getsUART1.o
+                  0x000725         0x33 build/default/production/_ext/760574787/getsUART1.o
  .debug_pubtypes
-                  0x000740         0x33 build/default/production/_ext/760574787/getsUART2.o
+                  0x000758         0x33 build/default/production/_ext/760574787/getsUART2.o
  .debug_pubtypes
-                  0x000773         0x52 build/default/production/_ext/760574787/putsUART1.o
+                  0x00078b         0x52 build/default/production/_ext/760574787/putsUART1.o
  .debug_pubtypes
-                  0x0007c5         0x52 build/default/production/_ext/760574787/putsUART2.o
+                  0x0007dd         0x52 build/default/production/_ext/760574787/putsUART2.o
  .debug_pubtypes
-                  0x000817        0x2a6 build/default/production/_ext/1472/PMSM.o
+                  0x00082f        0x2c2 build/default/production/_ext/1472/PMSM.o
  .debug_pubtypes
-                  0x000abd         0x12 build/default/production/_ext/1472/initdspic.o
+                  0x000af1         0x12 build/default/production/_ext/1472/initdspic.o
  .debug_pubtypes
-                  0x000acf         0x50 build/default/production/_ext/1472/smcpos.o
+                  0x000b03         0x50 build/default/production/_ext/1472/smcpos.o
  .debug_pubtypes
-                  0x000b1f         0x12 build/default/production/_ext/1472/RTDM.o
+                  0x000b53         0x2f build/default/production/_ext/1472/RTDM.o
  .debug_pubtypes
-                  0x000b31         0x2e build/default/production/_ext/1472/FdWeak.o
+                  0x000b82         0x2e build/default/production/_ext/1472/FdWeak.o
 
 __c30_signature
-                  0x000b5f         0xa2
+                  0x000bb0         0xa8
  __c30_signature
-                  0x000b5f          0x6 build/default/production/_ext/760574787/BusyUART1.o
+                  0x000bb0          0x6 build/default/production/_ext/760574787/BusyUART1.o
  __c30_signature
-                  0x000b65          0x6 build/default/production/_ext/760574787/BusyUART2.o
+                  0x000bb6          0x6 build/default/production/_ext/760574787/BusyUART2.o
  __c30_signature
-                  0x000b6b          0x6 build/default/production/_ext/760574787/CloseUART1.o
+                  0x000bbc          0x6 build/default/production/_ext/760574787/CloseUART1.o
  __c30_signature
-                  0x000b71          0x6 build/default/production/_ext/760574787/CloseUART2.o
+                  0x000bc2          0x6 build/default/production/_ext/760574787/CloseUART2.o
  __c30_signature
-                  0x000b77          0x6 build/default/production/_ext/760574787/ConfigIntUART1.o
+                  0x000bc8          0x6 build/default/production/_ext/760574787/ConfigIntUART1.o
  __c30_signature
-                  0x000b7d          0x6 build/default/production/_ext/760574787/ConfigIntUART2.o
+                  0x000bce          0x6 build/default/production/_ext/760574787/ConfigIntUART2.o
  __c30_signature
-                  0x000b83          0x6 build/default/production/_ext/760574787/DataRdyUART1.o
+                  0x000bd4          0x6 build/default/production/_ext/760574787/DataRdyUART1.o
  __c30_signature
-                  0x000b89          0x6 build/default/production/_ext/760574787/DataRdyUART2.o
+                  0x000bda          0x6 build/default/production/_ext/760574787/DataRdyUART2.o
  __c30_signature
-                  0x000b8f          0x6 build/default/production/_ext/760574787/OpenUART1.o
+                  0x000be0          0x6 build/default/production/_ext/760574787/OpenUART1.o
  __c30_signature
-                  0x000b95          0x6 build/default/production/_ext/760574787/OpenUART2.o
+                  0x000be6          0x6 build/default/production/_ext/760574787/OpenUART2.o
  __c30_signature
-                  0x000b9b          0x6 build/default/production/_ext/760574787/ReadUART1.o
+                  0x000bec          0x6 build/default/production/_ext/760574787/ReadUART1.o
  __c30_signature
-                  0x000ba1          0x6 build/default/production/_ext/760574787/ReadUART2.o
+                  0x000bf2          0x6 build/default/production/_ext/760574787/ReadUART2.o
  __c30_signature
-                  0x000ba7          0x6 build/default/production/_ext/760574787/WriteUART1.o
+                  0x000bf8          0x6 build/default/production/_ext/760574787/WriteUART1.o
  __c30_signature
-                  0x000bad          0x6 build/default/production/_ext/760574787/WriteUART2.o
+                  0x000bfe          0x6 build/default/production/_ext/760574787/WriteUART2.o
  __c30_signature
-                  0x000bb3          0x6 build/default/production/_ext/760574787/getsUART1.o
+                  0x000c04          0x6 build/default/production/_ext/760574787/getsUART1.o
  __c30_signature
-                  0x000bb9          0x6 build/default/production/_ext/760574787/getsUART2.o
+                  0x000c0a          0x6 build/default/production/_ext/760574787/getsUART2.o
  __c30_signature
-                  0x000bbf          0x6 build/default/production/_ext/760574787/putsUART1.o
+                  0x000c10          0x6 build/default/production/_ext/760574787/putsUART1.o
  __c30_signature
-                  0x000bc5          0x6 build/default/production/_ext/760574787/putsUART2.o
+                  0x000c16          0x6 build/default/production/_ext/760574787/putsUART2.o
  __c30_signature
-                  0x000bcb          0x6 build/default/production/_ext/1472/PMSM.o
+                  0x000c1c          0x6 build/default/production/_ext/1472/PMSM.o
  __c30_signature
-                  0x000bd1          0x6 build/default/production/_ext/1472/initdspic.o
+                  0x000c22          0x6 build/default/production/_ext/1472/initdspic.o
  __c30_signature
-                  0x000bd7          0x6 build/default/production/_ext/1472/smcpos.o
+                  0x000c28          0x6 build/default/production/_ext/1472/smcpos.o
  __c30_signature
-                  0x000bdd          0x6 build/default/production/_ext/1472/RTDM.o
+                  0x000c2e          0x6 build/default/production/_ext/1472/RTDM.o
  __c30_signature
-                  0x000be3          0x6 build/default/production/_ext/1472/FdWeak.o
+                  0x000c34          0x6 build/default/production/_ext/1472/FdWeak.o
  __c30_signature
-                  0x000be9          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Abs_1_15.eo)
+                  0x000c3a          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Abs_1_15.eo)
  __c30_signature
-                  0x000bef          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Sqrt_1_15.eo)
+                  0x000c40          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Sqrt_1_15.eo)
  __c30_signature
-                  0x000bf5          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+                  0x000c46          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x000bfb          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
+                  0x000c4c          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
+ __c30_signature
+                  0x000c52          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libc-elf.a(memset.eo)
 
-_04E8CA8058de1579
+_04E7548058df477f
                     0x47f8          0x8
- _04E8CA8058de1579
+ _04E7548058df477f
                     0x47f8          0x8 build/default/production/_ext/1472/PMSM.o
                     0x47f8                  _ADCBuffer
 
-.nbss               0x0800         0x2c
- .nbss              0x0800         0x2c build/default/production/_ext/1472/PMSM.o
+.nbss               0x0800         0x42
+ .nbss              0x0800         0x32 build/default/production/_ext/1472/PMSM.o
                     0x0800                  _SVGenParm
                     0x0808                  _MeasCurrParm
-                    0x0810                  _Startup_Ramp
-                    0x0814                  _Startup_Lock
-                    0x0816                  _uGF
-                    0x0818                  _ReadADCParm
-                    0x081c                  _iADCisrCnt
-                    0x081e                  _PrevTheta
-                    0x0820                  _AccumTheta
-                    0x0822                  _AccumThetaCnt
-                    0x0824                  _qVdSquared
-                    0x0826                  _DCbus
-                    0x0828                  _TargetDCbus
-                    0x082a                  _Theta_error
+                    0x0810                  _DMCIFlags
+                    0x0812                  _SnapCount
+                    0x0814                  _SnapShotDelayCnt
+                    0x0816                  _Startup_Ramp
+                    0x081a                  _Startup_Lock
+                    0x081c                  _uGF
+                    0x081e                  _ReadADCParm
+                    0x0822                  _iADCisrCnt
+                    0x0824                  _PrevTheta
+                    0x0826                  _AccumTheta
+                    0x0828                  _AccumThetaCnt
+                    0x082a                  _qVdSquared
+                    0x082c                  _DCbus
+                    0x082e                  _TargetDCbus
+                    0x0830                  _Theta_error
+ .nbss              0x0832         0x10 build/default/production/_ext/1472/RTDM.o
+                    0x0832                  _RTDMRxBufferStartMsgPointer
+                    0x0834                  _RTDMRxBufferEndMsgPointer
+                    0x0836                  _RTDMcrcTemp
+                    0x0838                  _RTDMcrcTempH
+                    0x083a                  _RTDMcrcTempL
+                    0x083c                  _RTDMFlags
+                    0x083e                  _RTDM_UART_MODE_VALUE
+                    0x0840                  _RTDM_UART_STA_VALUE
 
-.bss                0x082c         0xc8
- .bss               0x082c         0x9a build/default/production/_ext/1472/PMSM.o
-                    0x082c                  _MotorParm
-                    0x0832                  _CtrlParm
-                    0x0838                  _ParkParm
-                    0x0858                  _smc1
-                    0x088a                  _PIParmD
-                    0x089e                  _PIParmQ
-                    0x08b2                  _PIParmW
- .bss               0x08c6         0x2e build/default/production/_ext/1472/FdWeak.o
-                    0x08c6                  _FdWeakParm
+.ndata              0x0842         0x12
+ .ndata             0x0842          0xc build/default/production/_ext/1472/PMSM.o
+                    0x0842                  _PtrRecBuffer1
+                    0x0844                  _PtrRecBuffer2
+                    0x0846                  _PtrRecBuffer3
+                    0x0848                  _PtrRecBuffer4
+                    0x084a                  _RecBuffUpperLimit
+                    0x084c                  _SnapShotDelay
+ .ndata             0x084e          0x6 build/default/production/_ext/1472/RTDM.o
+                    0x084e                  _RTDMRxBufferLoLimit
+                    0x0850                  _RTDMRxBufferHiLimit
+                    0x0852                  _RTDMRxBufferIndex
 
-.data               0x08f4         0x20
- .data              0x08f4         0x20 build/default/production/_ext/1472/atan2CORDIC.o
+.bss                0x0854        0x408
+ .bss               0x0854        0x3ba build/default/production/_ext/1472/PMSM.o
+                    0x0854                  _MotorParm
+                    0x085a                  _CtrlParm
+                    0x0860                  _ParkParm
+                    0x0880                  _RecorderBuffer1
+                    0x0948                  _RecorderBuffer2
+                    0x0a10                  _RecorderBuffer3
+                    0x0ad8                  _RecorderBuffer4
+                    0x0ba0                  _smc1
+                    0x0bd2                  _PIParmD
+                    0x0be6                  _PIParmQ
+                    0x0bfa                  _PIParmW
+ .bss               0x0c0e         0x2e build/default/production/_ext/1472/FdWeak.o
+                    0x0c0e                  _FdWeakParm
+ .bss               0x0c3c         0x20 build/default/production/_ext/1472/RTDM.o
+                    0x0c3c                  _RTDMRxBuffer
+
+.data               0x0c5c         0x28
+ .data              0x0c5c         0x20 build/default/production/_ext/1472/atan2CORDIC.o
+ .data              0x0c7c          0x8 build/default/production/_ext/1472/RTDM.o
+                    0x0c7c                  _RTDMErrorFrame
 
 .config_JTAGEN    0xf8000e          0x2
  .config_JTAGEN
@@ -2109,79 +2229,97 @@ _04E8CA8058de1579
  .ivt._DMA0Interrupt
                   0x00001c          0x2 build/default/production/_ext/1472/PMSM.o
 
-.const              0x8700        0x100 load address 0x000700  
+.ivt._U1RXInterrupt
+                  0x00002a          0x2
+ .ivt._U1RXInterrupt
+                  0x00002a          0x2 build/default/production/_ext/1472/RTDM.o
+
+.const              0x8700        0x120 load address 0x000700  
  .const             0x8700        0x100 build/default/production/_ext/1472/trig.o
+ .const             0x8800         0x20 build/default/production/_ext/1472/RTDM.o
+                    0x8800                  _RTDMTxdata
+                    0x8805                  _RTDMSanityCheckOK
+                    0x880f                  _RTDMWriteMemoryOK
+                    0x8817                  _RTDMErrorIllegalFunction
 
-.text             0x000800        0xa76
- .text            0x000800        0x534 build/default/production/_ext/1472/PMSM.o
-                  0x000800                  _main
-                  0x00094c                  _DoControl
-                  0x000ad0                  __DMA0Interrupt
-                  0x000b0a                  _SetupParm
-                  0x000bc8                  _CalculateParkAngle
-                  0x000c58                  _SetupControlParameters
-                  0x000cac                  _DebounceDelay
-                  0x000ccc                  _VoltRippleComp
-                  0x000d0c                  _SetupDMA
- .text            0x000d34        0x222 build/default/production/_ext/1472/smcpos.o
-                  0x000d34                  _SMC_Position_Estimation
-                  0x000f30                  _SMCInit
- .text            0x000f56        0x122 build/default/production/_ext/1472/smc.o
-                  0x000f56                  CalcEstI
-                  0x000f56                  _CalcEstI
-                  0x000f9c                  _CalcIError
-                  0x000f9c                  CalcIError
-                  0x000fba                  CalcZalpha
-                  0x000fba                  _CalcZalpha
-                  0x000fcc                  CalcZbeta
-                  0x000fcc                  _CalcZbeta
-                  0x000fde                  _CalcBEMF
-                  0x000fde                  CalcBEMF
-                  0x001040                  _CalcOmegaFltred
-                  0x001040                  CalcOmegaFltred
-                  0x00105a                  FracMpy
-                  0x00105a                  _FracMpy
-                  0x00106c                  FracDiv
-                  0x00106c                  _FracDiv
- .text            0x001078         0xae build/default/production/_ext/1472/FdWeak.o
-                  0x001078                  _FieldWeakening
-                  0x0010dc                  _FWInit
- .text            0x001126         0x8c build/default/production/_ext/1472/SVGEN.o
-                  0x001126                  _CalcSVGen
-                  0x001126                  CalcSVGen
- .text            0x0011b2         0x6e build/default/production/_ext/1472/atan2CORDIC.o
-                  0x0011b2                  _atan2CORDIC
- .text            0x001220         0x56 build/default/production/_ext/1472/trig.o
-                  0x001220                  SinCos
-                  0x001220                  _SinCos
+.text             0x000820        0xdd8
+ .text            0x000820        0x59e build/default/production/_ext/1472/PMSM.o
+                  0x000820                  _main
+                  0x000972                  _DoControl
+                  0x000af6                  __DMA0Interrupt
+                  0x000b94                  _SetupParm
+                  0x000c52                  _CalculateParkAngle
+                  0x000ce2                  _SetupControlParameters
+                  0x000d36                  _DebounceDelay
+                  0x000d56                  _VoltRippleComp
+                  0x000d96                  _SetupDMA
+ .text            0x000dbe        0x34e build/default/production/_ext/1472/RTDM.o
+                  0x000dbe                  _RTDM_Start
+                  0x000dec                  _CloseRTDM
+                  0x000dfa                  _RTDM_ProcessMsgs
+                  0x001034                  __U1RXInterrupt
+                  0x00109e                  _RTDM_CumulativeCrc16
+ .text            0x00110c        0x222 build/default/production/_ext/1472/smcpos.o
+                  0x00110c                  _SMC_Position_Estimation
+                  0x001308                  _SMCInit
+ .text            0x00132e        0x122 build/default/production/_ext/1472/smc.o
+                  0x00132e                  CalcEstI
+                  0x00132e                  _CalcEstI
+                  0x001374                  _CalcIError
+                  0x001374                  CalcIError
+                  0x001392                  CalcZalpha
+                  0x001392                  _CalcZalpha
+                  0x0013a4                  CalcZbeta
+                  0x0013a4                  _CalcZbeta
+                  0x0013b6                  _CalcBEMF
+                  0x0013b6                  CalcBEMF
+                  0x001418                  _CalcOmegaFltred
+                  0x001418                  CalcOmegaFltred
+                  0x001432                  FracMpy
+                  0x001432                  _FracMpy
+                  0x001444                  FracDiv
+                  0x001444                  _FracDiv
+ .text            0x001450         0xae build/default/production/_ext/1472/FdWeak.o
+                  0x001450                  _FieldWeakening
+                  0x0014b4                  _FWInit
+ .text            0x0014fe         0x8c build/default/production/_ext/1472/SVGEN.o
+                  0x0014fe                  _CalcSVGen
+                  0x0014fe                  CalcSVGen
+ .text            0x00158a         0x6e build/default/production/_ext/1472/atan2CORDIC.o
+                  0x00158a                  _atan2CORDIC
 
-.text             0x0006be         0x3e
- .text            0x0006be         0x3e build/default/production/_ext/1472/pi.o
-                  0x0006be                  _InitPI
-                  0x0006be                  InitPI
-                  0x0006c2                  _CalcPI
-                  0x0006c2                  CalcPI
+.dinit            0x0015f8         0x66
+ .dinit           0x0015f8         0x66 data_init
 
-.dinit            0x001276         0x36
- .dinit           0x001276         0x36 data_init
+.text             0x00165e         0x94
+ .text            0x00165e         0x56 build/default/production/_ext/1472/trig.o
+                  0x00165e                  SinCos
+                  0x00165e                  _SinCos
+ .text            0x0016b4         0x3e build/default/production/_ext/1472/pi.o
+                  0x0016b4                  _InitPI
+                  0x0016b4                  InitPI
+                  0x0016b8                  _CalcPI
+                  0x0016b8                  CalcPI
 
-.text             0x0012ac         0xa8
- .text            0x0012ac         0x28 build/default/production/_ext/1472/clrkpark.o
-                  0x0012ac                  _ClarkePark
-                  0x0012ac                  ClarkePark
- .text            0x0012d4         0x24 build/default/production/_ext/1472/MeasCurr.o
-                  0x0012d4                  MeasCompCurr
-                  0x0012d4                  _MeasCompCurr
-                  0x0012f2                  InitMeasCompCurr
-                  0x0012f2                  _InitMeasCompCurr
- .text            0x0012f8         0x1c build/default/production/_ext/1472/CalcRef.o
-                  0x0012f8                  CalcRefVec
-                  0x0012f8                  _CalcRefVec
- .text            0x001314         0x18 build/default/production/_ext/1472/InvPark.o
-                  0x001314                  InvPark
-                  0x001314                  _InvPark
- .text            0x00132c         0x16 build/default/production/_ext/1472/ReadADC0.o
-                  0x00132c                  _ReadSignedADC0
-                  0x00132c                  ReadSignedADC0
- .text            0x001342         0x12 build/default/production/_ext/1472/initdspic.o
-                  0x001342                  _SetupPorts
+.text             0x0006cc         0x28
+ .text            0x0006cc         0x28 build/default/production/_ext/1472/clrkpark.o
+                  0x0006cc                  _ClarkePark
+                  0x0006cc                  ClarkePark
+
+.text             0x0016f2         0x80
+ .text            0x0016f2         0x24 build/default/production/_ext/1472/MeasCurr.o
+                  0x0016f2                  MeasCompCurr
+                  0x0016f2                  _MeasCompCurr
+                  0x001710                  InitMeasCompCurr
+                  0x001710                  _InitMeasCompCurr
+ .text            0x001716         0x1c build/default/production/_ext/1472/CalcRef.o
+                  0x001716                  CalcRefVec
+                  0x001716                  _CalcRefVec
+ .text            0x001732         0x18 build/default/production/_ext/1472/InvPark.o
+                  0x001732                  InvPark
+                  0x001732                  _InvPark
+ .text            0x00174a         0x16 build/default/production/_ext/1472/ReadADC0.o
+                  0x00174a                  _ReadSignedADC0
+                  0x00174a                  ReadSignedADC0
+ .text            0x001760         0x12 build/default/production/_ext/1472/initdspic.o
+                  0x001760                  _SetupPorts

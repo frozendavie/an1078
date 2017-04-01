@@ -3,10 +3,33 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/ldc/Develop/an1078/PMSM.c</file>
-            <file>file:/Users/ldc/Develop/an1078/RTDM.c</file>
-            <file>file:/Users/ldc/Develop/an1078/smcpos.c</file>
-            <file>file:/Users/ldc/Develop/an1078/UserParms.h</file>
+            <file>file:/D:/devkits/an1078/sw/clrkpark.s</file>
+            <file>file:/D:/devkits/an1078/sw/general.h</file>
+            <file>file:/D:/devkits/an1078/sw/PMSM.c</file>
+            <file>file:/D:/devkits/an1078/sw/uart.h</file>
+            <file>file:/D:/devkits/an1078/sw/RTDM.h</file>
+            <file>file:/D:/devkits/an1078/sw/svgen.h</file>
+            <file>file:/D:/devkits/an1078/sw/RTDM.c</file>
+            <file>file:/D:/devkits/an1078/sw/smcpos.inc</file>
+            <file>file:/D:/devkits/an1078/sw/general.inc</file>
+            <file>file:/D:/devkits/an1078/sw/CalcRef.s</file>
+            <file>file:/D:/devkits/an1078/sw/UserParms.h</file>
+            <file>file:/D:/devkits/an1078/sw/control.h</file>
+            <file>file:/D:/devkits/an1078/sw/park.h</file>
+            <file>file:/D:/devkits/an1078/sw/RTDMUSER.h</file>
+            <file>file:/D:/devkits/an1078/sw/pi.s</file>
+            <file>file:/D:/devkits/an1078/sw/SVGen.inc</file>
+            <file>file:/D:/devkits/an1078/sw/MeasCurr.s</file>
+            <file>file:/D:/devkits/an1078/sw/initdspic.c</file>
+            <file>file:/D:/devkits/an1078/sw/atan2CORDIC.s</file>
+            <file>file:/D:/devkits/an1078/sw/FdWeak.h</file>
+            <file>file:/D:/devkits/an1078/sw/ReadADC.h</file>
+            <file>file:/D:/devkits/an1078/sw/InvPark.s</file>
+            <file>file:/D:/devkits/an1078/sw/trig.s</file>
+            <file>file:/D:/devkits/an1078/sw/MeasCurr.h</file>
+            <file>file:/D:/devkits/an1078/sw/smcpos.h</file>
+            <file>file:/D:/devkits/an1078/sw/Control.inc</file>
+            <file>file:/D:/devkits/an1078/sw/FdWeak.c</file>
         </group>
     </open-files>
 </project-private>

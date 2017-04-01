@@ -19718,8 +19718,8 @@ Grid 5.00 mm&lt;p&gt;
 <part name="C15" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="56pF"/>
 <part name="C16" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="56pF"/>
 <part name="C17" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="56pF"/>
-<part name="R47" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="10K 1%"/>
-<part name="R48" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="10K 1%"/>
+<part name="R47" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="20K 1%"/>
+<part name="R48" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="20K 1%"/>
 <part name="R25" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K 1%"/>
 <part name="R26" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K 1%"/>
 <part name="R31" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K 1%"/>
@@ -19732,16 +19732,16 @@ Grid 5.00 mm&lt;p&gt;
 <part name="R30" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K 1%"/>
 <part name="R35" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K 1%"/>
 <part name="R36" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K 1%"/>
-<part name="R37" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="10K 1%"/>
-<part name="R40" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="10K 1%"/>
-<part name="R38" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="10K 1%"/>
-<part name="R41" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="10K 1%"/>
-<part name="R39" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="10K 1%"/>
-<part name="R42" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="10K 1%"/>
+<part name="R37" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="20K 1%"/>
+<part name="R40" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="20K 1%"/>
+<part name="R38" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="20K 1%"/>
+<part name="R41" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="20K 1%"/>
+<part name="R39" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="20K 1%"/>
+<part name="R42" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="20K 1%"/>
 <part name="C27" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="0.1uF"/>
-<part name="C22" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="100pF"/>
-<part name="C23" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="100pF"/>
-<part name="C21" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="100pF"/>
+<part name="C22" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="56pF"/>
+<part name="C23" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="56pF"/>
+<part name="C21" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0805-25V-10%" value="56pF"/>
 <part name="C3" library="rcl" deviceset="CPOL-US" device="E2.5-7" value="47uF/50V"/>
 <part name="X1" library="con-wago-508" deviceset="W237-02P" device=""/>
 <part name="R24" library="pot" deviceset="TRIM_US-" device="CT6" value="10K"/>
@@ -20728,9 +20728,9 @@ Grid 5.00 mm&lt;p&gt;
 </sheet>
 <sheet>
 <plain>
-<text x="15.24" y="81.28" size="1.778" layer="97">Gain: I * 0.025 * 10k / 1k = 0.25 V/A
+<text x="15.24" y="81.28" size="1.778" layer="97">Gain: I * 0.025 * 20k / (1k+1k) = 0.25 V/A
 FS Current = 2.5V(1.65V) / 0.25V/A = +/-10A(+/-6.6A)
-F = 1/ 2 * Pi * 10k * 100pF</text>
+F = 1/ 2 * Pi * 20k * 56pF</text>
 <text x="175.26" y="50.8" size="1.778" layer="97">VREF: 5V(3.3) * 10k / 20k = 2.5V(1.65V)
 F = 1/ 2 * Pi * 10k||10k * 100nF</text>
 <text x="40.64" y="22.86" size="1.778" layer="97" rot="R90">0~3.2V</text>

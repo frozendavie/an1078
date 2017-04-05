@@ -19689,7 +19689,7 @@ Grid 5.00 mm&lt;p&gt;
 <parts>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
-<part name="5V" library="led" deviceset="LED" device="SML0805" value="ORANGE"/>
+<part name="LED1" library="led" deviceset="LED" device="SML0805" value="ORANGE"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K"/>
 <part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805" value="1K"/>
@@ -19915,7 +19915,7 @@ Grid 5.00 mm&lt;p&gt;
 <instance part="C14" gate="G$1" x="231.14" y="157.48"/>
 <instance part="U3" gate="G$1" x="78.74" y="66.04"/>
 <instance part="F1" gate="G$1" x="30.48" y="66.04"/>
-<instance part="5V" gate="G$1" x="119.38" y="48.26"/>
+<instance part="LED1" gate="G$1" x="119.38" y="48.26"/>
 <instance part="R12" gate="G$1" x="119.38" y="58.42" rot="R90"/>
 <instance part="R15" gate="G$1" x="142.24" y="66.04"/>
 <instance part="R16" gate="G$1" x="142.24" y="43.18"/>
@@ -19991,7 +19991,7 @@ Grid 5.00 mm&lt;p&gt;
 <wire x1="167.64" y1="127" x2="170.18" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="5V" gate="G$1" pin="C"/>
+<pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="C8" gate="G$1" pin="-"/>
 <wire x1="78.74" y1="43.18" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
 <junction x="78.74" y="43.18"/>
@@ -20554,7 +20554,7 @@ Grid 5.00 mm&lt;p&gt;
 </net>
 <net name="N$31" class="0">
 <segment>
-<pinref part="5V" gate="G$1" pin="A"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="119.38" y1="50.8" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="1"/>
 </segment>

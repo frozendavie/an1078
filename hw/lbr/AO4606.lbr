@@ -205,12 +205,12 @@
 <devices>
 <device name="" package="SO08">
 <connects>
-<connect gate="A" pin="D" pad="7 8"/>
-<connect gate="A" pin="G" pad="2"/>
-<connect gate="A" pin="S" pad="1"/>
-<connect gate="B" pin="D" pad="5 6"/>
-<connect gate="B" pin="G" pad="4"/>
-<connect gate="B" pin="S" pad="3"/>
+<connect gate="A" pin="D" pad="5 6"/>
+<connect gate="A" pin="G" pad="4"/>
+<connect gate="A" pin="S" pad="3"/>
+<connect gate="B" pin="D" pad="7 8" route="any"/>
+<connect gate="B" pin="G" pad="2"/>
+<connect gate="B" pin="S" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>

@@ -24151,21 +24151,22 @@ Grid 5.00 mm&lt;p&gt;
 <clearance class="2" value="0.3048"/>
 </class>
 <class number="3" name="+12V" width="0.6096" drill="0.508">
-<clearance class="3" value="0.3048"/>
+<clearance class="3" value="0.508"/>
 </class>
 <class number="4" name="agnd" width="0.6096" drill="0.508">
-<clearance class="4" value="0.3048"/>
+<clearance class="4" value="0.508"/>
 </class>
 <class number="5" name="5V" width="0.3048" drill="0.254">
 <clearance class="5" value="0.3048"/>
 </class>
 <class number="6" name="MOTOR" width="1.016" drill="0">
+<clearance class="6" value="0.6096"/>
 </class>
 </classes>
 <parts>
 <part name="FRAME1" library="frames" deviceset="A4L-LOC" device=""/>
 <part name="FRAME2" library="frames" deviceset="A4L-LOC" device=""/>
-<part name="LED1" library="led" deviceset="LED" device="SML0805" value="ORANGE"/>
+<part name="5VPWR" library="led" deviceset="LED" device="SML0805" value="ORANGE"/>
 <part name="R9" library="resistor" deviceset="R-US_" device="R2512" value="0.025R 2W 1%"/>
 <part name="R18" library="resistor" deviceset="R-US_" device="R2512" value="0.025R 2W 1%"/>
 <part name="R28" library="resistor" deviceset="R-US_" device="R2512" value="0.025R 2W 1%"/>
@@ -24240,7 +24241,7 @@ Grid 5.00 mm&lt;p&gt;
 <part name="J1" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J3" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
 <part name="J5" library="SparkFun-Connectors" deviceset="CONN_02" device=""/>
-<part name="J14" library="SparkFun-Connectors" deviceset="CONN_04" device=""/>
+<part name="J10" library="SparkFun-Connectors" deviceset="CONN_04" device=""/>
 <part name="P5" library="SparkFun-PowerSymbols" deviceset="VDDA" device=""/>
 <part name="X2" library="con-wago-500" deviceset="W237-103" device=""/>
 <part name="P4" library="SparkFun-PowerSymbols" deviceset="VDDA" device=""/>
@@ -24340,10 +24341,10 @@ Grid 5.00 mm&lt;p&gt;
 <part name="U9" library="LMV321IDBVRG4" deviceset="LMV321IDBVRG4" device=""/>
 <part name="U10" library="LMV321IDBVRG4" deviceset="LMV321IDBVRG4" device=""/>
 <part name="U11" library="LMV321IDBVRG4" deviceset="LMV321IDBVRG4" device=""/>
-<part name="J10" library="SparkFun-Connectors" deviceset="CONN_01" device="PTH_NO_SILK_YES_STOP"/>
 <part name="J11" library="SparkFun-Connectors" deviceset="CONN_01" device="PTH_NO_SILK_YES_STOP"/>
 <part name="J12" library="SparkFun-Connectors" deviceset="CONN_01" device="PTH_NO_SILK_YES_STOP"/>
 <part name="J13" library="SparkFun-Connectors" deviceset="CONN_01" device="PTH_NO_SILK_YES_STOP"/>
+<part name="J14" library="SparkFun-Connectors" deviceset="CONN_01" device="PTH_NO_SILK_YES_STOP"/>
 </parts>
 <sheets>
 <sheet>
@@ -24376,7 +24377,7 @@ Grid 5.00 mm&lt;p&gt;
 <instance part="C14" gate="G$1" x="233.68" y="160.02"/>
 <instance part="U3" gate="G$1" x="78.74" y="66.04"/>
 <instance part="F1" gate="G$1" x="30.48" y="66.04"/>
-<instance part="LED1" gate="G$1" x="119.38" y="48.26"/>
+<instance part="5VPWR" gate="G$1" x="119.38" y="48.26"/>
 <instance part="SUPPLY5" gate="G$1" x="109.22" y="68.58"/>
 <instance part="SUPPLY6" gate="G$1" x="134.62" y="68.58"/>
 <instance part="SUPPLY1" gate="G$1" x="27.94" y="129.54"/>
@@ -24530,7 +24531,7 @@ Grid 5.00 mm&lt;p&gt;
 <junction x="167.64" y="124.46"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="C"/>
+<pinref part="5VPWR" gate="G$1" pin="C"/>
 <pinref part="C8" gate="G$1" pin="-"/>
 <wire x1="78.74" y1="43.18" x2="78.74" y2="58.42" width="0.1524" layer="91"/>
 <junction x="78.74" y="43.18"/>
@@ -25115,7 +25116,7 @@ Grid 5.00 mm&lt;p&gt;
 </net>
 <net name="N$31" class="0">
 <segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="5VPWR" gate="G$1" pin="A"/>
 <wire x1="119.38" y1="50.8" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="R15" gate="G$1" pin="1"/>
 </segment>
@@ -25289,16 +25290,19 @@ Grid 5.00 mm&lt;p&gt;
 </sheet>
 <sheet>
 <plain>
-<text x="15.24" y="81.28" size="1.778" layer="97">Gain: I * 0.025 * 20k / (1k+1k) = 0.25 V/A
-FS Current = 2.5V(1.65V) / 0.25V/A = +/-10A(+/-6.6A)
+<text x="15.24" y="78.74" size="1.778" layer="97">K: 20k / (1k+1k)
+Gain: -I * 0.025 * K
+FS Current = 2.5V(1.65V) / Gain = +/-10A(+/-6.6A)
+U = 2.5V(1.65V) + Gain
 F = 1/ 2 * Pi * 20k * 56pF</text>
-<text x="175.26" y="50.8" size="1.778" layer="97">VREF: 5V(3.3) * 10k / 20k = 2.5V(1.65V)
-F = 1/ 2 * Pi * 10k||10k * 100nF</text>
+<text x="175.26" y="50.8" size="1.778" layer="97">VREF: 5V(3.3V) * 20k / 40k = 2.5V(1.65V)
+F = 1/ 2 * Pi * 20k||20k * 100nF</text>
 <text x="40.64" y="22.86" size="1.778" layer="97" rot="R90">0~3.2V</text>
 <text x="226.06" y="121.92" size="1.27" layer="97">PWM LED ON/OFF</text>
 <text x="127" y="27.94" size="1.778" layer="97">3.3V MCU: CONN Pin 2&amp;3，Pin 1 3.3V come from MCU，VREF = 3.3/2 = 1.65
 5.0V MCU: CONN Pin 3&amp;4，VREF = 5.0/2 = 2.50
 CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
+<text x="152.4" y="144.78" size="1.778" layer="97">Test Points</text>
 </plain>
 <instances>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
@@ -25321,8 +25325,8 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 <instance part="G8" gate="G$1" x="190.5" y="60.96"/>
 <instance part="GND24" gate="G$1" x="241.3" y="116.84"/>
 <instance part="GND22" gate="G$1" x="55.88" y="12.7"/>
-<instance part="J14" gate="G$1" x="177.8" y="91.44" rot="R180"/>
-<instance part="P5" gate="G$1" x="157.48" y="86.36" rot="R90"/>
+<instance part="J10" gate="G$1" x="149.86" y="20.32" rot="R180"/>
+<instance part="P5" gate="G$1" x="129.54" y="15.24" rot="R90"/>
 <instance part="P4" gate="G$1" x="91.44" y="68.58"/>
 <instance part="G4" gate="G$1" x="91.44" y="45.72"/>
 <instance part="P6" gate="G$1" x="210.82" y="93.98"/>
@@ -25377,10 +25381,10 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 <instance part="U11" gate="A" x="210.82" y="83.82"/>
 <instance part="SUPPLY11" gate="G$1" x="165.1" y="137.922"/>
 <instance part="GND23" gate="G$1" x="165.1" y="122.682"/>
-<instance part="J10" gate="G$1" x="154.94" y="135.382"/>
-<instance part="J11" gate="G$1" x="154.94" y="127.762"/>
-<instance part="J12" gate="G$1" x="175.26" y="135.382" rot="R180"/>
-<instance part="J13" gate="G$1" x="175.26" y="127.762" rot="R180"/>
+<instance part="J11" gate="G$1" x="154.94" y="135.382"/>
+<instance part="J12" gate="G$1" x="154.94" y="127.762"/>
+<instance part="J13" gate="G$1" x="175.26" y="135.382" rot="R180"/>
+<instance part="J14" gate="G$1" x="175.26" y="127.762" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -25399,8 +25403,8 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 </segment>
 <segment>
 <pinref part="GND23" gate="G$1" pin="GND"/>
-<pinref part="J13" gate="G$1" pin="1"/>
-<pinref part="J11" gate="G$1" pin="1"/>
+<pinref part="J14" gate="G$1" pin="1"/>
+<pinref part="J12" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="127.762" x2="165.1" y2="127.762" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="127.762" x2="167.64" y2="127.762" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="125.222" x2="165.1" y2="127.762" width="0.1524" layer="91"/>
@@ -25925,9 +25929,9 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 <segment>
 <pinref part="SUPPLY11" gate="G$1" pin="5V"/>
 <wire x1="165.1" y1="137.922" x2="165.1" y2="135.382" width="0.1524" layer="91"/>
-<pinref part="J10" gate="G$1" pin="1"/>
+<pinref part="J11" gate="G$1" pin="1"/>
 <wire x1="162.56" y1="135.382" x2="165.1" y2="135.382" width="0.1524" layer="91"/>
-<pinref part="J12" gate="G$1" pin="1"/>
+<pinref part="J13" gate="G$1" pin="1"/>
 <wire x1="167.64" y1="135.382" x2="165.1" y2="135.382" width="0.1524" layer="91"/>
 <junction x="165.1" y="135.382"/>
 </segment>
@@ -25943,8 +25947,8 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 </segment>
 <segment>
 <pinref part="P5" gate="G$1" pin="VDDA"/>
-<pinref part="J14" gate="G$1" pin="4"/>
-<wire x1="157.48" y1="86.36" x2="172.72" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="J10" gate="G$1" pin="4"/>
+<wire x1="129.54" y1="15.24" x2="144.78" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P3" gate="G$1" pin="VDDA"/>
@@ -25980,9 +25984,9 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 </net>
 <net name="PWRDIV" class="0">
 <segment>
-<pinref part="J14" gate="G$1" pin="3"/>
-<wire x1="172.72" y1="88.9" x2="170.18" y2="88.9" width="0.1524" layer="91"/>
-<label x="170.18" y="88.9" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="J10" gate="G$1" pin="3"/>
+<wire x1="144.78" y1="17.78" x2="142.24" y2="17.78" width="0.1524" layer="91"/>
+<label x="142.24" y="17.78" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="190.5" y1="93.98" x2="190.5" y2="96.52" width="0.1524" layer="91"/>
@@ -25992,12 +25996,12 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 </net>
 <net name="3V3FROMMCU" class="0">
 <segment>
-<pinref part="J14" gate="G$1" pin="2"/>
-<pinref part="J14" gate="G$1" pin="1"/>
-<wire x1="172.72" y1="91.44" x2="172.72" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="93.98" x2="170.18" y2="93.98" width="0.1524" layer="91"/>
-<junction x="172.72" y="93.98"/>
-<label x="170.18" y="93.98" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="J10" gate="G$1" pin="2"/>
+<pinref part="J10" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="20.32" x2="144.78" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="22.86" x2="142.24" y2="22.86" width="0.1524" layer="91"/>
+<junction x="144.78" y="22.86"/>
+<label x="142.24" y="22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -26052,7 +26056,7 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 <approved hash="104,2,210.82,91.44,U11,VCC,VDDA,,,"/>
 <approved hash="113,1,130.071,89.431,FRAME1,,,,,"/>
 <approved hash="113,2,130.071,89.431,FRAME2,,,,,"/>
-<approved hash="113,1,18.2734,43.18,X1,,,,,"/>
+<approved hash="113,1,18.9949,43.18,X1,,,,,"/>
 <approved hash="113,1,224.197,35.4923,J8,,,,,"/>
 <approved hash="113,1,35.6277,114.977,J2,,,,,"/>
 <approved hash="113,1,111.828,114.977,J4,,,,,"/>
@@ -26060,14 +26064,14 @@ CAUTION:DO NOT EXCEED TARGET MCU VOLTAGE!</text>
 <approved hash="113,1,33.0877,158.157,J1,,,,,"/>
 <approved hash="113,1,109.288,158.157,J3,,,,,"/>
 <approved hash="113,1,188.028,158.157,J5,,,,,"/>
-<approved hash="113,2,175.937,88.8323,J14,,,,,"/>
-<approved hash="113,1,191.912,43.18,X2,,,,,"/>
+<approved hash="113,2,147.997,17.7123,J10,,,,,"/>
+<approved hash="113,1,191.19,43.18,X2,,,,,"/>
 <approved hash="113,1,191.177,65.9723,J7,,,,,"/>
 <approved hash="113,1,224.197,67.2423,J9,,,,,"/>
-<approved hash="113,2,159.343,136.72,J10,,,,,"/>
-<approved hash="113,2,159.343,129.1,J11,,,,,"/>
-<approved hash="113,2,170.857,134.044,J12,,,,,"/>
-<approved hash="113,2,170.857,126.424,J13,,,,,"/>
+<approved hash="113,2,159.343,136.72,J11,,,,,"/>
+<approved hash="113,2,159.343,129.1,J12,,,,,"/>
+<approved hash="113,2,170.857,134.044,J13,,,,,"/>
+<approved hash="113,2,170.857,126.424,J14,,,,,"/>
 </errors>
 </schematic>
 </drawing>

@@ -27,7 +27,7 @@
  *                                                                     *
  *    Tools used:     MPLAB IDE -> 8.14                                *
  *                    C30 -> 3.10                                      *
- *    Linker File:    p33FJ256MC710.gld                                 *
+ *    Linker File:    p33FJ256MC710.gld                                *
  *                                                                     *
  ***********************************************************************
  *      Code Description                                               *
@@ -97,7 +97,7 @@
 #pragma config ALTI2C = OFF             // Alternate I2C  pins (I2C mapped to SDA1/SCL1 pins)
 #pragma config LPOL = ON                // Motor Control PWM Low Side Polarity bit (PWM module low side output pins have active-high output polarity)
 #pragma config HPOL = ON                // Motor Control PWM High Side Polarity bit (PWM module high side output pins have active-high output polarity)
-#pragma config PWMPIN = ON              // Motor Control PWM Module Pin Mode bit (PWM module pins controlled by PORT register at device Reset)
+#pragma config PWMPIN = OFF             // Motor Control PWM Module Pin Mode bit (PWM module pins controlled by PWM module at device Reset)
 
 // FICD
 #pragma config ICS = PGD1               // Comm Channel Select (Communicate on PGC1/EMUC1 and PGD1/EMUD1)

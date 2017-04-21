@@ -118,7 +118,7 @@
 
 //************** Real Time Data Monitor, RTDM *******************
 
-#define RTDM		// This definition enabled Real Time Data Monitor, UART interrupts
+#undef RTDM		// This definition enabled Real Time Data Monitor, UART interrupts
 					// to handle RTDM protocol, and array declarations for buffering
 					// information in real time
 #ifdef RTDM

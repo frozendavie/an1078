@@ -4,8 +4,6 @@
 sw/lpc54102/periph_blinky/
 sw/lpc54102/periph_pinint/
 sw/lpc54102/periph_gint/
-sw/lpc54102/periph_adc/
-sw/lpc54102/periph_sct_pwm/
 /PMSM.X/build/default/
 /PMSM.X/dist/default/
 *.[aod]

@@ -20,3 +20,4 @@ sw/lpc54102/periph_adc/
 *.raw
 *.log
 *.lcr
+*.launch

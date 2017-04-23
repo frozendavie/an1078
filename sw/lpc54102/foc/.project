@@ -3,9 +3,9 @@
 	<name>foc</name>
 	<comment></comment>
 	<projects>
+		<project>CMSIS_DSPLIB_SRC</project>
 		<project>lpc_board_lpcxpresso_54102</project>
 		<project>lpc_chip_5410x</project>
-		<project>CMSIS_DSPLIB_CM4</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

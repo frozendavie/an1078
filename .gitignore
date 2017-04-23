@@ -3,7 +3,7 @@
 /dist
 /PMSM.X/build/default/
 /PMSM.X/dist/default/
-*.[od]
+*.[aod]
 .DS_Store
 *.s#*
 *.b#*

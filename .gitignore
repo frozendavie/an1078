@@ -1,11 +1,11 @@
 /build
 /debug
 /dist
-/periph_adc
-/periph_sct_pwm
-/periph_gint
-/periph_blinky
-/periph_pinint
+/periph_adc/
+/periph_sct_pwm/
+/periph_gint/
+/periph_blinky/
+/periph_pinint/
 /PMSM.X/build/default/
 /PMSM.X/dist/default/
 *.[aod]

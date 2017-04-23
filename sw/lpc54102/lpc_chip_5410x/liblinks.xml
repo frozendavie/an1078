@@ -1,0 +1,32 @@
+<!-- liblinks.xml
+
+     Code Red Technologies "Smart update wizard" script file
+     When executed on a particular application project, will
+     add appropriate links to the specified library project.
+
+     Note that this script assumes that the application project
+     contains the standard 'Debug' and 'Release' build 
+     configurations.
+-->
+
+<project name="" update="true">
+	<setting id="all.compiler.inc">
+		<value>${workspace_loc:/lpc_chip_5410x/inc}</value>
+        </setting>
+    <setting id="assembler.inc">
+		<value>${workspace_loc:/lpc_chip_5410x/inc}</value>
+    </setting>
+	<setting id="linker.libs">
+		<value>lpc_chip_5410x</value>
+	</setting>
+	<setting id="linker.paths" buildType="Debug">
+		<value>${workspace_loc:/lpc_chip_5410x/Debug}</value>
+	</setting>
+	<setting id="linker.paths" buildType="Release">
+		<value>${workspace_loc:/lpc_chip_5410x/Release}</value>
+	</setting>
+	<requires msg="Library project `lpc_chip_5410x` not found">
+		<value>lpc_chip_5410x</value>
+	</requires>
+</project>
+

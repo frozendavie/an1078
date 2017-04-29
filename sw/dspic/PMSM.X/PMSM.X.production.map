@@ -1,20 +1,20 @@
 Microchip Technology Inc, v1.31 (A)
 
 Tool Name:
-  c:\microchip\xc16\v1.31\bin\bin\..\bin/elf-ld.exe
+  /Applications/microchip/xc16/v1.31/bin/bin/../bin/elf-ld
 
 Command:
   -p33FJ128MC802 \
   -o \
   dist/default/production/PMSM.X.production.elf \
-  -Lc:/microchip/xc16/v1.31/bin/bin/.. \
-  -Lc:/microchip/xc16/v1.31/bin/bin/../../lib \
-  -Lc:/microchip/xc16/v1.31/bin/bin/../../support/PIC24E/gld \
-  -Lc:/microchip/xc16/v1.31/bin/bin/../../support/PIC24F/gld \
-  -Lc:/microchip/xc16/v1.31/bin/bin/../../support/PIC24H/gld \
-  -Lc:/microchip/xc16/v1.31/bin/bin/../../support/dsPIC30F/gld \
-  -Lc:/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33E/gld \
-  -Lc:/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33F/gld \
+  -L/Applications/microchip/xc16/v1.31/bin/bin/.. \
+  -L/Applications/microchip/xc16/v1.31/bin/bin/../../lib \
+  -L/Applications/microchip/xc16/v1.31/bin/bin/../../support/PIC24E/gld \
+  -L/Applications/microchip/xc16/v1.31/bin/bin/../../support/PIC24F/gld \
+  -L/Applications/microchip/xc16/v1.31/bin/bin/../../support/PIC24H/gld \
+  -L/Applications/microchip/xc16/v1.31/bin/bin/../../support/dsPIC30F/gld \
+  -L/Applications/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33E/gld \
+  -L/Applications/microchip/xc16/v1.31/bin/bin/../../support/dsPIC33F/gld \
   build/default/production/_ext/760574787/BusyUART1.o \
   build/default/production/_ext/760574787/BusyUART2.o \
   build/default/production/_ext/760574787/CloseUART1.o \
@@ -76,15 +76,15 @@ Command:
 Optional library libp33FJ128MC802.a not found
 Archive member included because of file (symbol)
 
-c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Abs_1_15.eo)
+/Applications/microchip/xc16/v1.31/bin/bin/../../lib/libq-elf.a(PIC_Abs_1_15.eo)
                               build/default/production/_ext/1472/PMSM.o (__Q15abs)
-c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Sqrt_1_15.eo)
+/Applications/microchip/xc16/v1.31/bin/bin/../../lib/libq-elf.a(PIC_Sqrt_1_15.eo)
                               build/default/production/_ext/1472/PMSM.o (__Q15sqrt)
-c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+/Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
                               (__resetPRI)
-c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
-                              c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o) (__data_init_standard)
-c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt_start_mode_normal.eo)
+/Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
+                              /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o) (__data_init_standard)
+/Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(crt_start_mode_normal.eo)
                               (__crt_start_mode_normal)
 
 
@@ -139,7 +139,7 @@ section                    address      alignment gaps    total length  (dec)
 .nbss                        0x800                   0            0x2c  (44)
 .bss                         0x82c                   0            0xc8  (200)
 .data                        0x8f4                   0            0x20  (32)
-_04DD9A8058feafae           0x47f8                   0             0x8  (8)
+_0x482b33c59046fde          0x47f8                   0             0x8  (8)
 
                  Total data memory used (bytes):          0x11c  (284) 1%
 
@@ -210,8 +210,8 @@ External Symbols in Program Memory (by address):
 
                   0x000200                  __resetPRI
                   0x00023c                  __psv_init
-                  0x000252                  __data_init_standard
                   0x000252                  __data_init
+                  0x000252                  __data_init_standard
                   0x0002c8                  __DefaultInterrupt
                   0x0002cc                  _BusyUART1
                   0x0002e2                  _BusyUART2
@@ -233,8 +233,8 @@ External Symbols in Program Memory (by address):
                   0x0005c8                  _putsUART2
                   0x000622                  __Q15abs
                   0x00062c                  __Q15sqrt
-                  0x0006be                  _InitPI
                   0x0006be                  InitPI
+                  0x0006be                  _InitPI
                   0x0006c2                  _CalcPI
                   0x0006c2                  CalcPI
                   0x000800                  _main
@@ -250,18 +250,18 @@ External Symbols in Program Memory (by address):
                   0x000f30                  _SMCInit
                   0x000f56                  _CalcEstI
                   0x000f56                  CalcEstI
-                  0x000f9c                  CalcIError
                   0x000f9c                  _CalcIError
+                  0x000f9c                  CalcIError
                   0x000fba                  _CalcZalpha
                   0x000fba                  CalcZalpha
-                  0x000fcc                  _CalcZbeta
                   0x000fcc                  CalcZbeta
-                  0x000fde                  CalcBEMF
+                  0x000fcc                  _CalcZbeta
                   0x000fde                  _CalcBEMF
-                  0x001040                  CalcOmegaFltred
+                  0x000fde                  CalcBEMF
                   0x001040                  _CalcOmegaFltred
-                  0x00105a                  FracMpy
+                  0x001040                  CalcOmegaFltred
                   0x00105a                  _FracMpy
+                  0x00105a                  FracMpy
                   0x00106c                  FracDiv
                   0x00106c                  _FracDiv
                   0x001078                  _FieldWeakening
@@ -269,20 +269,20 @@ External Symbols in Program Memory (by address):
                   0x001126                  _CalcSVGen
                   0x001126                  CalcSVGen
                   0x0011b2                  _atan2CORDIC
-                  0x001220                  SinCos
                   0x001220                  _SinCos
+                  0x001220                  SinCos
                   0x0012ac                  _ClarkePark
                   0x0012ac                  ClarkePark
-                  0x0012d4                  MeasCompCurr
                   0x0012d4                  _MeasCompCurr
-                  0x0012f2                  InitMeasCompCurr
+                  0x0012d4                  MeasCompCurr
                   0x0012f2                  _InitMeasCompCurr
+                  0x0012f2                  InitMeasCompCurr
                   0x0012f8                  _CalcRefVec
                   0x0012f8                  CalcRefVec
-                  0x001314                  InvPark
                   0x001314                  _InvPark
-                  0x00132c                  _ReadSignedADC0
+                  0x001314                  InvPark
                   0x00132c                  ReadSignedADC0
+                  0x00132c                  _ReadSignedADC0
                   0x001342                  _SetupPorts
                   0xf80000                  __FBS.sec
                   0xf80002                  __FSS.sec
@@ -430,7 +430,7 @@ LOAD build/default/production/_ext/1472/atan2CORDIC.o
 LOAD build/default/production/_ext/1472/FdWeak.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p33FJ128MC802
-LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
+LOAD /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libfx-elf.a
                     0xf80000                  __FBS = 0xf80000
                     0xf80002                  __FSS = 0xf80002
                     0xf80004                  __FGS = 0xf80004
@@ -461,13 +461,13 @@ LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
 
 .text             0x000200        0x4be
  *(.init)
- .init            0x000200         0x4c c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
-                  0x000200                  __resetPRI
+ .init            0x000200         0x4c /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
                   0x000200                  __reset
+                  0x000200                  __resetPRI
                   0x00023c                  __psv_init
- .init            0x00024c         0x7c c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
-                  0x000252                  __data_init_standard
+ .init            0x00024c         0x7c /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
                   0x000252                  __data_init
+                  0x000252                  __data_init_standard
  *(.user_init)
  *(.handle)
  *(.isr*)
@@ -513,14 +513,14 @@ LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                   0x00056e                  _putsUART1
  .libperi         0x0005c8         0x5a build/default/production/_ext/760574787/putsUART2.o
                   0x0005c8                  _putsUART2
- .libq            0x000622          0xa c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Abs_1_15.eo)
+ .libq            0x000622          0xa /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libq-elf.a(PIC_Abs_1_15.eo)
                   0x000622                  __Q15abs
- .libq            0x00062c         0x90 c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Sqrt_1_15.eo)
+ .libq            0x00062c         0x90 /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libq-elf.a(PIC_Sqrt_1_15.eo)
                   0x00062c                  __Q15sqrt
  .libpic30_crt_start_mode
-                  0x0006bc          0x2 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt_start_mode_normal.eo)
-                  0x0006bc                  __crt_start_mode
+                  0x0006bc          0x2 /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(crt_start_mode_normal.eo)
                   0x0006bc                  __crt_start_mode_normal
+                  0x0006bc                  __crt_start_mode
 
 usercode
  *(usercode)
@@ -570,41 +570,41 @@ __FUID3
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x7171
+.debug_info       0x000000       0x7279
  *(.debug_info)
- .debug_info      0x000000        0x28b build/default/production/_ext/760574787/BusyUART1.o
- .debug_info      0x00028b        0x28b build/default/production/_ext/760574787/BusyUART2.o
- .debug_info      0x000516        0x567 build/default/production/_ext/760574787/CloseUART1.o
- .debug_info      0x000a7d        0x5f1 build/default/production/_ext/760574787/CloseUART2.o
- .debug_info      0x00106e        0x714 build/default/production/_ext/760574787/ConfigIntUART1.o
- .debug_info      0x001782        0x621 build/default/production/_ext/760574787/ConfigIntUART2.o
- .debug_info      0x001da3        0x291 build/default/production/_ext/760574787/DataRdyUART1.o
- .debug_info      0x002034        0x291 build/default/production/_ext/760574787/DataRdyUART2.o
- .debug_info      0x0022c5        0x158 build/default/production/_ext/760574787/OpenUART1.o
- .debug_info      0x00241d        0x158 build/default/production/_ext/760574787/OpenUART2.o
- .debug_info      0x002575        0x2a0 build/default/production/_ext/760574787/ReadUART1.o
- .debug_info      0x002815        0x2a0 build/default/production/_ext/760574787/ReadUART2.o
- .debug_info      0x002ab5        0x2b2 build/default/production/_ext/760574787/WriteUART1.o
- .debug_info      0x002d67        0x2b2 build/default/production/_ext/760574787/WriteUART2.o
- .debug_info      0x003019        0x31d build/default/production/_ext/760574787/getsUART1.o
- .debug_info      0x003336        0x31d build/default/production/_ext/760574787/getsUART2.o
- .debug_info      0x003653        0x49f build/default/production/_ext/760574787/putsUART1.o
- .debug_info      0x003af2        0x49f build/default/production/_ext/760574787/putsUART2.o
- .debug_info      0x003f91         0x7c build/default/production/_ext/1472/CalcRef.o
- .debug_info      0x00400d         0x7d build/default/production/_ext/1472/clrkpark.o
- .debug_info      0x00408a         0x7c build/default/production/_ext/1472/InvPark.o
- .debug_info      0x004106         0x77 build/default/production/_ext/1472/pi.o
- .debug_info      0x00417d         0x7d build/default/production/_ext/1472/ReadADC0.o
- .debug_info      0x0041fa         0x7a build/default/production/_ext/1472/SVGEN.o
- .debug_info      0x004274         0x79 build/default/production/_ext/1472/trig.o
- .debug_info      0x0042ed         0x7d build/default/production/_ext/1472/MeasCurr.o
- .debug_info      0x00436a       0x23d8 build/default/production/_ext/1472/PMSM.o
- .debug_info      0x006742        0x164 build/default/production/_ext/1472/initdspic.o
- .debug_info      0x0068a6        0x50f build/default/production/_ext/1472/smcpos.o
- .debug_info      0x006db5         0x78 build/default/production/_ext/1472/smc.o
- .debug_info      0x006e2d         0xb3 build/default/production/_ext/1472/RTDM.o
- .debug_info      0x006ee0         0x80 build/default/production/_ext/1472/atan2CORDIC.o
- .debug_info      0x006f60        0x211 build/default/production/_ext/1472/FdWeak.o
+ .debug_info      0x000000        0x293 build/default/production/_ext/760574787/BusyUART1.o
+ .debug_info      0x000293        0x293 build/default/production/_ext/760574787/BusyUART2.o
+ .debug_info      0x000526        0x56f build/default/production/_ext/760574787/CloseUART1.o
+ .debug_info      0x000a95        0x5f9 build/default/production/_ext/760574787/CloseUART2.o
+ .debug_info      0x00108e        0x71c build/default/production/_ext/760574787/ConfigIntUART1.o
+ .debug_info      0x0017aa        0x629 build/default/production/_ext/760574787/ConfigIntUART2.o
+ .debug_info      0x001dd3        0x299 build/default/production/_ext/760574787/DataRdyUART1.o
+ .debug_info      0x00206c        0x299 build/default/production/_ext/760574787/DataRdyUART2.o
+ .debug_info      0x002305        0x160 build/default/production/_ext/760574787/OpenUART1.o
+ .debug_info      0x002465        0x160 build/default/production/_ext/760574787/OpenUART2.o
+ .debug_info      0x0025c5        0x2a8 build/default/production/_ext/760574787/ReadUART1.o
+ .debug_info      0x00286d        0x2a8 build/default/production/_ext/760574787/ReadUART2.o
+ .debug_info      0x002b15        0x2ba build/default/production/_ext/760574787/WriteUART1.o
+ .debug_info      0x002dcf        0x2ba build/default/production/_ext/760574787/WriteUART2.o
+ .debug_info      0x003089        0x325 build/default/production/_ext/760574787/getsUART1.o
+ .debug_info      0x0033ae        0x325 build/default/production/_ext/760574787/getsUART2.o
+ .debug_info      0x0036d3        0x4a7 build/default/production/_ext/760574787/putsUART1.o
+ .debug_info      0x003b7a        0x4a7 build/default/production/_ext/760574787/putsUART2.o
+ .debug_info      0x004021         0x84 build/default/production/_ext/1472/CalcRef.o
+ .debug_info      0x0040a5         0x85 build/default/production/_ext/1472/clrkpark.o
+ .debug_info      0x00412a         0x84 build/default/production/_ext/1472/InvPark.o
+ .debug_info      0x0041ae         0x7f build/default/production/_ext/1472/pi.o
+ .debug_info      0x00422d         0x85 build/default/production/_ext/1472/ReadADC0.o
+ .debug_info      0x0042b2         0x82 build/default/production/_ext/1472/SVGEN.o
+ .debug_info      0x004334         0x81 build/default/production/_ext/1472/trig.o
+ .debug_info      0x0043b5         0x85 build/default/production/_ext/1472/MeasCurr.o
+ .debug_info      0x00443a       0x23e0 build/default/production/_ext/1472/PMSM.o
+ .debug_info      0x00681a        0x16c build/default/production/_ext/1472/initdspic.o
+ .debug_info      0x006986        0x517 build/default/production/_ext/1472/smcpos.o
+ .debug_info      0x006e9d         0x80 build/default/production/_ext/1472/smc.o
+ .debug_info      0x006f1d         0xbb build/default/production/_ext/1472/RTDM.o
+ .debug_info      0x006fd8         0x88 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_info      0x007060        0x219 build/default/production/_ext/1472/FdWeak.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000       0x11e3
@@ -643,41 +643,41 @@ __FUID3
  .debug_abbrev    0x001116         0x14 build/default/production/_ext/1472/atan2CORDIC.o
  .debug_abbrev    0x00112a         0xb9 build/default/production/_ext/1472/FdWeak.o
 
-.debug_line       0x000000       0x1293
+.debug_line       0x000000       0x1353
  *(.debug_line)
- .debug_line      0x000000         0x8e build/default/production/_ext/760574787/BusyUART1.o
- .debug_line      0x00008e         0x8e build/default/production/_ext/760574787/BusyUART2.o
- .debug_line      0x00011c         0x93 build/default/production/_ext/760574787/CloseUART1.o
- .debug_line      0x0001af         0x93 build/default/production/_ext/760574787/CloseUART2.o
- .debug_line      0x000242         0x9c build/default/production/_ext/760574787/ConfigIntUART1.o
- .debug_line      0x0002de         0x9c build/default/production/_ext/760574787/ConfigIntUART2.o
- .debug_line      0x00037a         0x91 build/default/production/_ext/760574787/DataRdyUART1.o
- .debug_line      0x00040b         0x91 build/default/production/_ext/760574787/DataRdyUART2.o
- .debug_line      0x00049c         0x90 build/default/production/_ext/760574787/OpenUART1.o
- .debug_line      0x00052c         0x90 build/default/production/_ext/760574787/OpenUART2.o
- .debug_line      0x0005bc         0x90 build/default/production/_ext/760574787/ReadUART1.o
- .debug_line      0x00064c         0x90 build/default/production/_ext/760574787/ReadUART2.o
- .debug_line      0x0006dc         0x91 build/default/production/_ext/760574787/WriteUART1.o
- .debug_line      0x00076d         0x91 build/default/production/_ext/760574787/WriteUART2.o
- .debug_line      0x0007fe         0x9f build/default/production/_ext/760574787/getsUART1.o
- .debug_line      0x00089d         0x9f build/default/production/_ext/760574787/getsUART2.o
- .debug_line      0x00093c         0x98 build/default/production/_ext/760574787/putsUART1.o
- .debug_line      0x0009d4         0x98 build/default/production/_ext/760574787/putsUART2.o
- .debug_line      0x000a6c         0x47 build/default/production/_ext/1472/CalcRef.o
- .debug_line      0x000ab3         0x4e build/default/production/_ext/1472/clrkpark.o
- .debug_line      0x000b01         0x45 build/default/production/_ext/1472/InvPark.o
- .debug_line      0x000b46         0x57 build/default/production/_ext/1472/pi.o
- .debug_line      0x000b9d         0x45 build/default/production/_ext/1472/ReadADC0.o
- .debug_line      0x000be2         0x7f build/default/production/_ext/1472/SVGEN.o
- .debug_line      0x000c61         0x61 build/default/production/_ext/1472/trig.o
- .debug_line      0x000cc2         0x4c build/default/production/_ext/1472/MeasCurr.o
- .debug_line      0x000d0e        0x233 build/default/production/_ext/1472/PMSM.o
- .debug_line      0x000f41         0x8c build/default/production/_ext/1472/initdspic.o
- .debug_line      0x000fcd         0xf1 build/default/production/_ext/1472/smcpos.o
- .debug_line      0x0010be         0xd1 build/default/production/_ext/1472/smc.o
- .debug_line      0x00118f         0x1a build/default/production/_ext/1472/RTDM.o
- .debug_line      0x0011a9         0x73 build/default/production/_ext/1472/atan2CORDIC.o
- .debug_line      0x00121c         0x77 build/default/production/_ext/1472/FdWeak.o
+ .debug_line      0x000000         0x99 build/default/production/_ext/760574787/BusyUART1.o
+ .debug_line      0x000099         0x99 build/default/production/_ext/760574787/BusyUART2.o
+ .debug_line      0x000132         0x9e build/default/production/_ext/760574787/CloseUART1.o
+ .debug_line      0x0001d0         0x9e build/default/production/_ext/760574787/CloseUART2.o
+ .debug_line      0x00026e         0xa7 build/default/production/_ext/760574787/ConfigIntUART1.o
+ .debug_line      0x000315         0xa7 build/default/production/_ext/760574787/ConfigIntUART2.o
+ .debug_line      0x0003bc         0x9c build/default/production/_ext/760574787/DataRdyUART1.o
+ .debug_line      0x000458         0x9c build/default/production/_ext/760574787/DataRdyUART2.o
+ .debug_line      0x0004f4         0x9b build/default/production/_ext/760574787/OpenUART1.o
+ .debug_line      0x00058f         0x9b build/default/production/_ext/760574787/OpenUART2.o
+ .debug_line      0x00062a         0x9b build/default/production/_ext/760574787/ReadUART1.o
+ .debug_line      0x0006c5         0x9b build/default/production/_ext/760574787/ReadUART2.o
+ .debug_line      0x000760         0x9c build/default/production/_ext/760574787/WriteUART1.o
+ .debug_line      0x0007fc         0x9c build/default/production/_ext/760574787/WriteUART2.o
+ .debug_line      0x000898         0xaa build/default/production/_ext/760574787/getsUART1.o
+ .debug_line      0x000942         0xaa build/default/production/_ext/760574787/getsUART2.o
+ .debug_line      0x0009ec         0xa3 build/default/production/_ext/760574787/putsUART1.o
+ .debug_line      0x000a8f         0xa3 build/default/production/_ext/760574787/putsUART2.o
+ .debug_line      0x000b32         0x47 build/default/production/_ext/1472/CalcRef.o
+ .debug_line      0x000b79         0x4e build/default/production/_ext/1472/clrkpark.o
+ .debug_line      0x000bc7         0x45 build/default/production/_ext/1472/InvPark.o
+ .debug_line      0x000c0c         0x57 build/default/production/_ext/1472/pi.o
+ .debug_line      0x000c63         0x45 build/default/production/_ext/1472/ReadADC0.o
+ .debug_line      0x000ca8         0x7f build/default/production/_ext/1472/SVGEN.o
+ .debug_line      0x000d27         0x61 build/default/production/_ext/1472/trig.o
+ .debug_line      0x000d88         0x4c build/default/production/_ext/1472/MeasCurr.o
+ .debug_line      0x000dd4        0x223 build/default/production/_ext/1472/PMSM.o
+ .debug_line      0x000ff7         0x97 build/default/production/_ext/1472/initdspic.o
+ .debug_line      0x00108e         0xf6 build/default/production/_ext/1472/smcpos.o
+ .debug_line      0x001184         0xd1 build/default/production/_ext/1472/smc.o
+ .debug_line      0x001255         0x1a build/default/production/_ext/1472/RTDM.o
+ .debug_line      0x00126f         0x73 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_line      0x0012e2         0x71 build/default/production/_ext/1472/FdWeak.o
 
 .debug_frame      0x000000        0x562
  *(.debug_frame)
@@ -1929,11 +1929,11 @@ __FUID3
                     0x0220                  _UART1 = 0x220
                     0x0230                  UART2 = 0x230
                     0x0230                  _UART2 = 0x230
-LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a
+LOAD /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libq-elf.a
 START GROUP
-LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a
-LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libm-elf.a
-LOAD c:/microchip/xc16/v1.31/bin/bin/../../lib\libc-elf.a
+LOAD /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a
+LOAD /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libm-elf.a
+LOAD /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libc-elf.a
 END GROUP
 OUTPUT(dist/default/production/PMSM.X.production.elf elf32-pic30)
 LOAD FGS
@@ -2040,17 +2040,17 @@ __c30_signature
  __c30_signature
                   0x000be3          0x6 build/default/production/_ext/1472/FdWeak.o
  __c30_signature
-                  0x000be9          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Abs_1_15.eo)
+                  0x000be9          0x6 /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libq-elf.a(PIC_Abs_1_15.eo)
  __c30_signature
-                  0x000bef          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libq-elf.a(PIC_Sqrt_1_15.eo)
+                  0x000bef          0x6 /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libq-elf.a(PIC_Sqrt_1_15.eo)
  __c30_signature
-                  0x000bf5          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(crt0_standard.o)
+                  0x000bf5          0x6 /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(crt0_standard.o)
  __c30_signature
-                  0x000bfb          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libpic30-elf.a(data_init_standard.o)
+                  0x000bfb          0x6 /Applications/microchip/xc16/v1.31/bin/bin/../../lib/libpic30-elf.a(data_init_standard.o)
 
-_04DD9A8058feafae
+_0x482b33c59046fde
                     0x47f8          0x8
- _04DD9A8058feafae
+ _0x482b33c59046fde
                     0x47f8          0x8 build/default/production/_ext/1472/PMSM.o
                     0x47f8                  _ADCBuffer
 
@@ -2127,12 +2127,12 @@ _04DD9A8058feafae
                   0x000d34                  _SMC_Position_Estimation
                   0x000f30                  _SMCInit
  .text            0x000f56        0x122 build/default/production/_ext/1472/smc.o
-                  0x000f56                  CalcEstI
                   0x000f56                  _CalcEstI
+                  0x000f56                  CalcEstI
                   0x000f9c                  _CalcIError
                   0x000f9c                  CalcIError
-                  0x000fba                  CalcZalpha
                   0x000fba                  _CalcZalpha
+                  0x000fba                  CalcZalpha
                   0x000fcc                  CalcZbeta
                   0x000fcc                  _CalcZbeta
                   0x000fde                  _CalcBEMF
@@ -2141,47 +2141,47 @@ _04DD9A8058feafae
                   0x001040                  CalcOmegaFltred
                   0x00105a                  FracMpy
                   0x00105a                  _FracMpy
-                  0x00106c                  FracDiv
                   0x00106c                  _FracDiv
+                  0x00106c                  FracDiv
  .text            0x001078         0xae build/default/production/_ext/1472/FdWeak.o
                   0x001078                  _FieldWeakening
                   0x0010dc                  _FWInit
  .text            0x001126         0x8c build/default/production/_ext/1472/SVGEN.o
-                  0x001126                  _CalcSVGen
                   0x001126                  CalcSVGen
+                  0x001126                  _CalcSVGen
  .text            0x0011b2         0x6e build/default/production/_ext/1472/atan2CORDIC.o
                   0x0011b2                  _atan2CORDIC
  .text            0x001220         0x56 build/default/production/_ext/1472/trig.o
-                  0x001220                  SinCos
                   0x001220                  _SinCos
+                  0x001220                  SinCos
 
 .text             0x0006be         0x3e
  .text            0x0006be         0x3e build/default/production/_ext/1472/pi.o
-                  0x0006be                  _InitPI
                   0x0006be                  InitPI
-                  0x0006c2                  _CalcPI
+                  0x0006be                  _InitPI
                   0x0006c2                  CalcPI
+                  0x0006c2                  _CalcPI
 
 .dinit            0x001276         0x36
  .dinit           0x001276         0x36 data_init
 
 .text             0x0012ac         0xa8
  .text            0x0012ac         0x28 build/default/production/_ext/1472/clrkpark.o
-                  0x0012ac                  _ClarkePark
                   0x0012ac                  ClarkePark
+                  0x0012ac                  _ClarkePark
  .text            0x0012d4         0x24 build/default/production/_ext/1472/MeasCurr.o
-                  0x0012d4                  MeasCompCurr
                   0x0012d4                  _MeasCompCurr
-                  0x0012f2                  InitMeasCompCurr
+                  0x0012d4                  MeasCompCurr
                   0x0012f2                  _InitMeasCompCurr
+                  0x0012f2                  InitMeasCompCurr
  .text            0x0012f8         0x1c build/default/production/_ext/1472/CalcRef.o
-                  0x0012f8                  CalcRefVec
                   0x0012f8                  _CalcRefVec
+                  0x0012f8                  CalcRefVec
  .text            0x001314         0x18 build/default/production/_ext/1472/InvPark.o
-                  0x001314                  InvPark
                   0x001314                  _InvPark
+                  0x001314                  InvPark
  .text            0x00132c         0x16 build/default/production/_ext/1472/ReadADC0.o
-                  0x00132c                  _ReadSignedADC0
                   0x00132c                  ReadSignedADC0
+                  0x00132c                  _ReadSignedADC0
  .text            0x001342         0x12 build/default/production/_ext/1472/initdspic.o
                   0x001342                  _SetupPorts

@@ -85,7 +85,7 @@
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
         <languageToolchainVersion>1.31</languageToolchainVersion>
-        <platform>3</platform>
+        <platform>4</platform>
       </toolsSet>
       <compileType>
         <linkerTool>
@@ -201,6 +201,7 @@
         <property key="linker-stack" value="true"/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="&quot;PMSM.X.${IMAGE_TYPE}.map&quot;"/>
+        <property key="no-ivt" value="false"/>
         <property key="oXC16ld-extra-opts" value=""/>
         <property key="oXC16ld-fill-upper" value="0"/>
         <property key="oXC16ld-force-link" value="false"/>

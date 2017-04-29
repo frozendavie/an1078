@@ -77,13 +77,13 @@
 #pragma config GSS = OFF                // General Segment Code Protection (User program memory is not code-protected)
 
 // FOSCSEL
-#pragma config FNOSC = FRC              // Oscillator Mode (Internal Fast RC (FRC) w/ PLL)
+#pragma config FNOSC = PRIPLL           // Oscillator Mode (Primary Oscillator (XT, HS, EC) w/ PLL)
 #pragma config IESO = OFF               // Internal External Switch Over Mode (Start-up device with user-selected oscillator source)
 
 // FOSC
-#pragma config POSCMD = XT              // Primary Oscillator Source (Primary Oscillator Disabled)
+#pragma config POSCMD = XT              // Primary Oscillator Source (XT Oscillator Mode)
 #pragma config OSCIOFNC = ON            // OSC2 Pin Function (OSC2 pin has digital I/O function)
-#pragma config IOL1WAY = ON             // Peripheral Pin Select Configuration (Allow Multiple Re-configurations)
+#pragma config IOL1WAY = ON             // Peripheral Pin Select Configuration (Allow Only One Re-configuration)
 #pragma config FCKSM = CSECMD           // Clock Switching and Monitor (Clock switching is enabled, Fail-Safe Clock Monitor is disabled)
 
 // FWDT
@@ -100,7 +100,7 @@
 #pragma config PWMPIN = ON              // Motor Control PWM Module Pin Mode bit (PWM module pins controlled by PORT register at device Reset)
 
 // FICD
-#pragma config ICS = PGD1               // Comm Channel Select (Communicate on PGC1/EMUC1 and PGD1/EMUD1)
+#pragma config ICS = PGD3               // Comm Channel Select (Communicate on PGC3/EMUC3 and PGD3/EMUD3)
 #pragma config JTAGEN = OFF             // JTAG Port Enable (JTAG is Disabled)
 
 // #pragma config statements should precede project file includes.

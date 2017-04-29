@@ -54,8 +54,8 @@ typedef unsigned char  bool;
 #define REFINAMPS(Amperes_Value)	\
 		(Q15((Amperes_Value)*(DQKA/32768.0)*RSHUNT*DIFFAMPGAIN/(VDD/2)))
 
-#define pinButton1	!PORTBbits.RB6 //SW1 - BTN_1
-#define pinButton2	!PORTBbits.RB7 //SW2 - BTN_2
+#define pinButton1	PORTAbits.RA4 //SW1 - BTN_1
+#define pinButton2	PORTBbits.RB7 //SW2 - BTN_2
 
 // Main functions prototypes
 void SetupPorts( void );

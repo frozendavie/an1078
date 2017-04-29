@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Users/ldc/Develop/an1078/sw/dspic/initdspic.c</file>
             <file>file:/Users/ldc/Develop/an1078/sw/dspic/PMSM.c</file>
+            <file>file:/Users/ldc/Develop/an1078/sw/dspic/smcpos.c</file>
+            <file>file:/Users/ldc/Develop/an1078/sw/dspic/general.h</file>
+            <file>file:/Users/ldc/Develop/an1078/sw/dspic/pi.s</file>
             <file>file:/Users/ldc/Develop/an1078/sw/dspic/FdWeak.c</file>
         </group>
     </open-files>

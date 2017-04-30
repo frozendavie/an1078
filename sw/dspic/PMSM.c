@@ -772,8 +772,8 @@ bool SetupParm(void)
 
     /* ADCHS: ADC Input Channel Select Register */
     AD1CHS0 = 0;
-    // CH0 is AN8 for POT
-    AD1CHS0bits.CH0SA = 8;
+    // CH0 is AN3 for POT
+    AD1CHS0bits.CH0SA = 3;
     // CH1 positive input is AN0, CH2 positive input is AN1, CH3 positive input is AN2
     AD1CHS123bits.CH123SA = 0;
 

@@ -111,8 +111,8 @@
 
 //************** Hardware Parameters ****************
 
-#define RSHUNT			0.005	// Value in Ohms of shunt resistors used.
-#define DIFFAMPGAIN		75		// Gain of differential amplifier.
+#define RSHUNT			0.025	// Value in Ohms of shunt resistors used.
+#define DIFFAMPGAIN		10		// Gain of differential amplifier.
 #define VDD				3.3		// VDD voltage, only used to convert torque
 								// reference from Amps to internal variables
 

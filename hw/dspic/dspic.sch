@@ -10905,7 +10905,7 @@ part number 2062-2P from STA</description>
 <junction x="20.32" y="53.34"/>
 </segment>
 </net>
-<net name="IMOTORB" class="0">
+<net name="IMOTORA" class="0">
 <segment>
 <wire x1="43.18" y1="68.58" x2="38.1" y2="68.58" width="0.1524" layer="91"/>
 <label x="38.1" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -10917,7 +10917,7 @@ part number 2062-2P from STA</description>
 <label x="165.1" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="IMOTORBUS" class="0">
+<net name="IMOTORB" class="0">
 <segment>
 <wire x1="43.18" y1="66.04" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
 <label x="38.1" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -10929,7 +10929,7 @@ part number 2062-2P from STA</description>
 <label x="165.1" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="IMOTORA" class="0">
+<net name="IMOTORBUS" class="0">
 <segment>
 <pinref part="SV3" gate="G$1" pin="3"/>
 <wire x1="175.26" y1="17.78" x2="165.1" y2="17.78" width="0.1524" layer="91"/>

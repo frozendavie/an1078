@@ -25290,9 +25290,9 @@ Grid 5.00 mm&lt;p&gt;
 </sheet>
 <sheet>
 <plain>
-<text x="15.24" y="78.74" size="1.778" layer="97">K: 20k / (1k+1k)
-Gain: -I * 0.025 * K
-FS Current = 2.5V(1.65V) / Gain = +/-10A(+/-6.6A)
+<text x="15.24" y="76.2" size="1.778" layer="97">K: 20k / (1k+1k) = 10
+Gain: -I * 0.025 * K = -0.25 V/A
+FS Current = 2.5V(1.65V) / Gain = -/+10A(-/+6.6A)
 U = 2.5V(1.65V) + Gain
 F = 1/ 2 * Pi * 20k * 56pF</text>
 <text x="175.26" y="50.8" size="1.778" layer="97">VREF: 5V(3.3V) * 20k / 40k = 2.5V(1.65V)

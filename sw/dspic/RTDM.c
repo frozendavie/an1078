@@ -111,7 +111,7 @@ int RTDM_Start()
     /********************** UART CONFIGURATIION ***************************/
     /* Turn off UART1 module */
     CloseUART1();
-    /* Configure UART2 receive and transmit interrupt */
+    /* Configure UART1 receive and transmit interrupt */
     ConfigIntUART1(UART_RX_INT_EN & (UART_RX_INT_PR0 + RTDM_UART_PRIORITY) & UART_TX_INT_DIS & UART_TX_INT_PR2);
     /* Configure UART1 module to transmit 8 bit data with one stopbit.  */
     RTDM_UART_MODE_VALUE = UART_EN & UART_IDLE_CON & UART_IrDA_DISABLE &
@@ -119,13 +119,9 @@ int RTDM_Start()
         UART_DIS_LOOPBACK & UART_DIS_ABAUD & UART_UXRX_IDLE_ONE &
         UART_BRGH_SIXTEEN & UART_NO_PAR_8BIT & UART_1STOPBIT;
 
-
-
-
     RTDM_UART_STA_VALUE = UART_INT_TX_BUF_EMPTY & UART_IrDA_POL_INV_ZERO &
         UART_SYNC_BREAK_DISABLED & UART_TX_ENABLE & UART_INT_RX_CHAR &
         UART_ADR_DETECT_DIS & UART_RX_OVERRUN_CLEAR;
-
 
     OpenUART1(RTDM_UART_MODE_VALUE, RTDM_UART_STA_VALUE, RTDM_BRG);
 

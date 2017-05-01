@@ -83,7 +83,7 @@
 // FOSC
 #pragma config POSCMD = XT              // Primary Oscillator Source (XT Oscillator Mode)
 #pragma config OSCIOFNC = ON            // OSC2 Pin Function (OSC2 pin has digital I/O function)
-#pragma config IOL1WAY = ON             // Peripheral Pin Select Configuration (Allow Only One Re-configuration)
+#pragma config IOL1WAY = OFF            // Peripheral Pin Select Configuration (Allow Multiple Re-configurations)
 #pragma config FCKSM = CSECMD           // Clock Switching and Monitor (Clock switching is enabled, Fail-Safe Clock Monitor is disabled)
 
 // FWDT
@@ -239,7 +239,7 @@ int main ( void )
     while(OSCCONbits.COSC != 0b011) { }
     // Wait for PLL to lock
     while(OSCCONbits.LOCK != 1) { }
-
+    
 #ifdef RTDM
     RTDM_Start();  // Configure the UART module used by RTDM
                    // it also initializes the RTDM variables

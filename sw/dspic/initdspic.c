@@ -48,6 +48,16 @@ void SetupPorts( void )
     // ============= Port B ==============
     LATB  = 0x0000;
     TRISB = 0xFFFF;
+    
+    #ifdef RTDM
+	//Assigning the TX and RX pins to ports RP7 & RP9 to the dsPIC33FJ32MC204
+	__builtin_write_OSCCONL(OSCCON & (~(1<<6))); // clear bit 6 
+	_U1RXR = 8;             // Make Pin RP8 U1RX
+	_RP9R = _RPOUT_U1TX;    // Make Pin RP9 U1TX
+	__builtin_write_OSCCONL(OSCCON | (1<<6)); 	 // Set bit 6 
+        
+    TRISBbits.TRISB9 = 0;
+	#endif
 
     return;
 }

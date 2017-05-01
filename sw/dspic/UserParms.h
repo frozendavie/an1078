@@ -38,7 +38,7 @@
 #define LOCKTIMEINSEC  0.25		// Initial rotor lock time in seconds
 								// Make sure LOCKTIMEINSEC*(1.0/LOOPTIMEINSEC)
 								// is less than 65535.
-#define OPENLOOPTIMEINSEC 2.0	// Open loop time in seconds. This is the time that
+#define OPENLOOPTIMEINSEC 5.0	// Open loop time in seconds. This is the time that
 								// will take from stand still to closed loop.
 #define INITIALTORQUE	1.0		// Initial Torque demand in Amps.
 								// Enter initial torque demand in Amps using REFINAMPS() 
@@ -83,7 +83,15 @@
 								// speed loop faster by reducing SpeedLoopTime.
 								// Maximum position of POT will set a reference of 
 								// FIELDWEAKSPEEDRPM.
-
+/*
+// Values used to test Shinano Kenshi Motor "LA052-040E" at 24VDC input. Motor datasheet at www.shinano.com
+#define POLEPAIRS      			2
+#define PHASERES				((float)0.60)	// Phase resistance in Ohms.
+#define PHASEIND				((float)0.0022)// Phase inductance in Henrys.
+#define NOMINALSPEEDINRPM 		2700
+#define MINSPEEDINRPM			500
+#define FIELDWEAKSPEEDRPM 		5300
+*/
 //************** Oscillator Parameters **************
 
 #define PLLIN		8000000		// External Crystal or Clock Frequency (Hz)
@@ -118,7 +126,7 @@
 
 //************** Real Time Data Monitor, RTDM *******************
 
-#undef RTDM		// This definition enabled Real Time Data Monitor, UART interrupts
+#define RTDM		// This definition enabled Real Time Data Monitor, UART interrupts
 					// to handle RTDM protocol, and array declarations for buffering
 					// information in real time
 #ifdef RTDM

@@ -85,7 +85,6 @@
 	 #error The value loaded to the BRG register produces a baud rate error higher than 2%
  #endif
 
-
 /**********************  RTDM FUNCTIONS **************************/
 int RTDM_ProcessMsgs();
 int RTDM_Close();

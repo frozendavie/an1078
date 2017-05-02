@@ -32,7 +32,7 @@
 <SequenceLength>1</SequenceLength>
 <ComboFieldGroupName/>
 <IsTrue>false</IsTrue>
-<VarValueString>0.0000</VarValueString>
+<VarValueString>0.0100</VarValueString>
 <SelectedArrayPath><Item name="root"/><Item name="PIParmQ"/><Item name="qKp"/></SelectedArrayPath>
 <FractionalData>null</FractionalData>
 <FractionalIncrement>null</FractionalIncrement>
@@ -63,10 +63,10 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>PIParmQ.qKp</SelectedSymbol>
 <SelectedArray/>
-<Address>0xC3A</Address>
+<Address>0xBF2</Address>
  <FirstIndex>0</FirstIndex>
-<LastIndex>1</LastIndex>
-<SampleCount>2</SampleCount>
+<LastIndex>-1</LastIndex>
+<SampleCount>0</SampleCount>
 <IAddress>false</IAddress>
 <eVarType>eDynamic</eVarType>
 <eTabType>SLIDER</eTabType>
@@ -122,7 +122,7 @@
 <SequenceLength>1</SequenceLength>
 <ComboFieldGroupName/>
 <IsTrue>false</IsTrue>
-<VarValueString>0.0000</VarValueString>
+<VarValueString>0.9950</VarValueString>
 <SelectedArrayPath><Item name="root"/><Item name="PIParmQ"/><Item name="qKi"/></SelectedArrayPath>
 <FractionalData>null</FractionalData>
 <FractionalIncrement>null</FractionalIncrement>
@@ -153,10 +153,10 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>PIParmQ.qKi</SelectedSymbol>
 <SelectedArray/>
-<Address>0xC3C</Address>
+<Address>0xBF4</Address>
  <FirstIndex>0</FirstIndex>
-<LastIndex>1</LastIndex>
-<SampleCount>2</SampleCount>
+<LastIndex>-1</LastIndex>
+<SampleCount>0</SampleCount>
 <IAddress>false</IAddress>
 <eVarType>eDynamic</eVarType>
 <eTabType>SLIDER</eTabType>
@@ -212,7 +212,7 @@
 <SequenceLength>1</SequenceLength>
 <ComboFieldGroupName/>
 <IsTrue>false</IsTrue>
-<VarValueString>0.0000</VarValueString>
+<VarValueString>0.9900</VarValueString>
 <SelectedArrayPath><Item name="root"/><Item name="PIParmD"/><Item name="qKp"/></SelectedArrayPath>
 <FractionalData>null</FractionalData>
 <FractionalIncrement>null</FractionalIncrement>
@@ -243,10 +243,10 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>PIParmD.qKp</SelectedSymbol>
 <SelectedArray/>
-<Address>0xC26</Address>
+<Address>0xBDE</Address>
  <FirstIndex>0</FirstIndex>
-<LastIndex>1</LastIndex>
-<SampleCount>2</SampleCount>
+<LastIndex>-1</LastIndex>
+<SampleCount>0</SampleCount>
 <IAddress>false</IAddress>
 <eVarType>eDynamic</eVarType>
 <eTabType>SLIDER</eTabType>
@@ -302,7 +302,7 @@
 <SequenceLength>1</SequenceLength>
 <ComboFieldGroupName/>
 <IsTrue>false</IsTrue>
-<VarValueString>0.0000</VarValueString>
+<VarValueString>0.9950</VarValueString>
 <SelectedArrayPath><Item name="root"/><Item name="PIParmD"/><Item name="qKi"/></SelectedArrayPath>
 <FractionalData>null</FractionalData>
 <FractionalIncrement>null</FractionalIncrement>
@@ -333,10 +333,10 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>PIParmD.qKi</SelectedSymbol>
 <SelectedArray/>
-<Address>0xC28</Address>
+<Address>0xBE0</Address>
  <FirstIndex>0</FirstIndex>
-<LastIndex>1</LastIndex>
-<SampleCount>2</SampleCount>
+<LastIndex>-1</LastIndex>
+<SampleCount>0</SampleCount>
 <IAddress>false</IAddress>
 <eVarType>eDynamic</eVarType>
 <eTabType>SLIDER</eTabType>
@@ -392,7 +392,7 @@
 <SequenceLength>1</SequenceLength>
 <ComboFieldGroupName/>
 <IsTrue>false</IsTrue>
-<VarValueString>0.0000</VarValueString>
+<VarValueString>0.9700</VarValueString>
 <SelectedArrayPath><Item name="root"/><Item name="PIParmW"/><Item name="qKp"/></SelectedArrayPath>
 <FractionalData>null</FractionalData>
 <FractionalIncrement>null</FractionalIncrement>
@@ -423,10 +423,10 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>PIParmW.qKp</SelectedSymbol>
 <SelectedArray/>
-<Address>0xC4E</Address>
+<Address>0xC06</Address>
  <FirstIndex>0</FirstIndex>
-<LastIndex>1</LastIndex>
-<SampleCount>2</SampleCount>
+<LastIndex>-1</LastIndex>
+<SampleCount>0</SampleCount>
 <IAddress>false</IAddress>
 <eVarType>eDynamic</eVarType>
 <eTabType>SLIDER</eTabType>
@@ -482,7 +482,7 @@
 <SequenceLength>1</SequenceLength>
 <ComboFieldGroupName/>
 <IsTrue>false</IsTrue>
-<VarValueString>0.0000</VarValueString>
+<VarValueString>0.9990</VarValueString>
 <SelectedArrayPath><Item name="root"/><Item name="PIParmW"/><Item name="qKi"/></SelectedArrayPath>
 <FractionalData>null</FractionalData>
 <FractionalIncrement>null</FractionalIncrement>
@@ -513,10 +513,10 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>PIParmW.qKi</SelectedSymbol>
 <SelectedArray/>
-<Address>0xC50</Address>
+<Address>0xC08</Address>
  <FirstIndex>0</FirstIndex>
-<LastIndex>1</LastIndex>
-<SampleCount>2</SampleCount>
+<LastIndex>-1</LastIndex>
+<SampleCount>0</SampleCount>
 <IAddress>false</IAddress>
 <eVarType>eDynamic</eVarType>
 <eTabType>SLIDER</eTabType>
@@ -551,7 +551,7 @@
 <Reset/>
 <AllowRefresh>true</AllowRefresh>
 <DisableNativeRTNotify>false</DisableNativeRTNotify>
-<DataSize>16 Bits</DataSize>
+<DataSize>1 Bit</DataSize>
 <DataRange>Signed</DataRange>
 <DisplayFormat>Decimal</DisplayFormat>
 <AllowRunTimeChanges/>
@@ -603,7 +603,7 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>uGF.bit.EnTorqueMod</SelectedSymbol>
 <SelectedArray/>
-<Address>0x86C</Address>
+<Address>0x824</Address>
  <FirstIndex>0</FirstIndex>
 <LastIndex>-1</LastIndex>
 <SampleCount>0</SampleCount>
@@ -641,7 +641,7 @@
 <Reset/>
 <AllowRefresh>true</AllowRefresh>
 <DisableNativeRTNotify>false</DisableNativeRTNotify>
-<DataSize>16 Bits</DataSize>
+<DataSize>1 Bit</DataSize>
 <DataRange>Signed</DataRange>
 <DisplayFormat>Decimal</DisplayFormat>
 <AllowRunTimeChanges/>
@@ -693,7 +693,97 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>DMCIFlags.Recorder</SelectedSymbol>
 <SelectedArray/>
-<Address>0x860</Address>
+<Address>0x810</Address>
+ <FirstIndex>0</FirstIndex>
+<LastIndex>-1</LastIndex>
+<SampleCount>0</SampleCount>
+<IAddress>false</IAddress>
+<eVarType>eDynamic</eVarType>
+<eTabType>BOOLEAN</eTabType>
+<IsCheckGraphAChecked>false</IsCheckGraphAChecked>
+<IsCheckGraphBChecked>false</IsCheckGraphBChecked>
+<IsCheckGraphCChecked>false</IsCheckGraphCChecked>
+<IsCheckGraphDChecked>false</IsCheckGraphDChecked>
+<IsCheckGraphAEnabled>false</IsCheckGraphAEnabled>
+<IsCheckGraphBEnabled>false</IsCheckGraphBEnabled>
+<IsCheckGraphCEnabled>false</IsCheckGraphCEnabled>
+<IsCheckGraphDEnabled>false</IsCheckGraphDEnabled>
+<IsInsertDataCaptureItemManually>false</IsInsertDataCaptureItemManually>
+<IsInsertRuntimeWatchItemManually>false</IsInsertRuntimeWatchItemManually>
+<SelectedTailPointerPath/>
+<SelectedTailPointerSymbol/>
+<IsGraphDataFromFile>false</IsGraphDataFromFile>
+<IsFullView>false</IsFullView>
+<IsHalfView>false</IsHalfView>
+<IsMaximize>false</IsMaximize>
+<ScaleFactor>1.0</ScaleFactor>
+<ScaleOffset>0.0</ScaleOffset>
+</Setting><Setting>
+ <ID>12</ID>
+<VarValue>0</VarValue>
+<ArrowIncrement>1</ArrowIncrement>
+<PageIncrement>5</PageIncrement>
+<AlternateLabel/>
+<ApplyRuntime>false</ApplyRuntime>
+<DisableRealTime>false</DisableRealTime>
+<Enabled>true</Enabled>
+<Configured>true</Configured>
+<Reset/>
+<AllowRefresh>true</AllowRefresh>
+<DisableNativeRTNotify>false</DisableNativeRTNotify>
+<DataSize>16 Bits</DataSize>
+<DataRange>Signed</DataRange>
+<DisplayFormat>Decimal</DisplayFormat>
+<AllowRunTimeChanges/>
+<RunTimeChangeType>eRunTimeHaltResetWriteRun</RunTimeChangeType>
+<TrueValue>1</TrueValue>
+<FalseValue>0</FalseValue>
+<UpperLimit>32767</UpperLimit>
+ <LowerLimit>-32768</LowerLimit>
+<UserUpperLimit>1</UserUpperLimit>
+<UserLowerLimit>0</UserLowerLimit>
+<AbsoluteAddress/>
+<FracDenomVal>32768</FracDenomVal>
+<EnumValues/>
+<EnumNames/>
+<IsEnum>false</IsEnum>
+<EnumByValues>false</EnumByValues>
+<SequenceType>Even</SequenceType>
+<SequenceLength>1</SequenceLength>
+<ComboFieldGroupName/>
+<IsTrue>false</IsTrue>
+<VarValueString/>
+<SelectedArrayPath><Item name="root"/><Item name="DMCIFlags"/><Item name="StartStop"/></SelectedArrayPath>
+<FractionalData>null</FractionalData>
+<FractionalIncrement>null</FractionalIncrement>
+<IncrementStep>0</IncrementStep>
+<UserDescription/>
+<Title>DMCIFlags.StartStop</Title>
+<XAxisLabel>X Axis</XAxisLabel>
+<YAxisLabel>Y Axis</YAxisLabel>
+<IsPPRSD>false</IsPPRSD>
+<IsAutoAssignTitle>true</IsAutoAssignTitle>
+<IsDataCapture>false</IsDataCapture>
+<IsRunTimeWatch>false</IsRunTimeWatch>
+<IsSimulatorRTU>false</IsSimulatorRTU>
+<RefreshRate>null</RefreshRate>
+<IsStandard>true</IsStandard>
+<IsCircular>false</IsCircular>
+<EnabledPPRSD>false</EnabledPPRSD>
+<EnabledTitle>false</EnabledTitle>
+<EnabledDataCapture>false</EnabledDataCapture>
+<EnabledRunTimeWatch>false</EnabledRunTimeWatch>
+<EnabledSimulatorRTU>false</EnabledSimulatorRTU>
+<EnabledSimulatorRTU>false</EnabledSimulatorRTU>
+<EnabledCircular>false</EnabledCircular>
+<EnabledHistory>false</EnabledHistory>
+<EnabledViewScale>false</EnabledViewScale>
+<HistoryBL>255</HistoryBL>
+<ViewScale>0</ViewScale>
+<RequiredResources>Array</RequiredResources>
+<SelectedSymbol>DMCIFlags.StartStop</SelectedSymbol>
+<SelectedArray/>
+<Address>0x810</Address>
  <FirstIndex>0</FirstIndex>
 <LastIndex>-1</LastIndex>
 <SampleCount>0</SampleCount>
@@ -783,7 +873,7 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>smc1.Gsmopos</SelectedSymbol>
 <SelectedArray/>
-<Address>0xBF8</Address>
+<Address>0xBB0</Address>
  <FirstIndex>0</FirstIndex>
 <LastIndex>-1</LastIndex>
 <SampleCount>0</SampleCount>
@@ -873,7 +963,7 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>RecorderBuffer1</SelectedSymbol>
 <SelectedArray/>
-<Address>0x8D0</Address>
+<Address>0x888</Address>
  <FirstIndex>0</FirstIndex>
 <LastIndex>99</LastIndex>
 <SampleCount>100</SampleCount>
@@ -963,7 +1053,7 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>RecorderBuffer2</SelectedSymbol>
 <SelectedArray/>
-<Address>0x998</Address>
+<Address>0x950</Address>
  <FirstIndex>0</FirstIndex>
 <LastIndex>99</LastIndex>
 <SampleCount>100</SampleCount>
@@ -1053,7 +1143,7 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>RecorderBuffer3</SelectedSymbol>
 <SelectedArray/>
-<Address>0xA60</Address>
+<Address>0xA18</Address>
  <FirstIndex>0</FirstIndex>
 <LastIndex>99</LastIndex>
 <SampleCount>100</SampleCount>
@@ -1143,7 +1233,7 @@
 <RequiredResources>Array</RequiredResources>
 <SelectedSymbol>RecorderBuffer4</SelectedSymbol>
 <SelectedArray/>
-<Address>0xB28</Address>
+<Address>0xAE0</Address>
  <FirstIndex>0</FirstIndex>
 <LastIndex>99</LastIndex>
 <SampleCount>100</SampleCount>
@@ -1175,7 +1265,7 @@
 <ForceWindowOnTop>false</ForceWindowOnTop>
 <DDIControlGroupNames><Item name="User Defined Group 1"/><Item name="User Defined Group 2"/><Item name="User Defined Group 3"/><Item name="User Defined Group 4"/><Item name="User Defined Group 5"/><Item name="User Defined Group 6"/><Item name="User Defined Group 7"/></DDIControlGroupNames>
 <BaudRate>38400</BaudRate>
-<Port>COM:=/dev/tty.usbserial</Port>
+<Port>\\.\COM:=/dev/tty.usbserial</Port>
 <SingleCtrlUpdates>true</SingleCtrlUpdates>
 <EnableRTDMUpdates>true</EnableRTDMUpdates>
 <AutomationRunning>false</AutomationRunning>

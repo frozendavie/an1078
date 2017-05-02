@@ -62,8 +62,8 @@
 
 //************** Motor Parameters **************
 
-#define POLEPAIRS      	5       // Number of pole pairs
-#define PHASERES		((float)2.67)	// Phase resistance in Ohms.
+#define POLEPAIRS      	3       // Number of pole pairs 9N6P
+#define PHASERES		((float)10.25)	// Phase resistance in Ohms.
 #define PHASEIND		((float)0.00192)// Phase inductance in Henrys.
 #define NOMINALSPEEDINRPM 3000	// Make sure NOMINALSPEEDINRPM generates a MAXOMEGA < 1.0
 								// Use this formula:
@@ -145,6 +145,7 @@
 #define SNAP4	    smc1.Theta
 #endif
 #endif
+#define DMCI_DEMO
 
 #define SPEEDDELAY 10 // Delay for the speed ramp.
 					  // Necessary for the PI control to work properly at high speeds.

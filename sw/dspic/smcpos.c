@@ -179,7 +179,7 @@ void SMC_Position_Estimation (SMC *s)
         s->Kslf = Q15(OMEGA0 * _PI / IRP_PERCALC);
         s->KslfFinal = Q15(OMEGA0 * _PI / IRP_PERCALC);
     }
-
+/*****Speed based compensation of filter is no longer required and hence commented*******
     // Theta compensation for different speed ranges. These are defined
     // based on Minimum and Maximum operating speed defined in UserParms.h
     if (s->OmegaFltred < Q15(OMEGA0))
@@ -222,7 +222,8 @@ void SMC_Position_Estimation (SMC *s)
     {
         s->ThetaOffset = DEFAULTCONSTANT;
     }
-    
+*/
+    s->ThetaOffset = DEFAULTCONSTANT;
     s->Theta = s->Theta + s->ThetaOffset;
 
     POPCORCON();

@@ -126,14 +126,19 @@ int * PtrRecBuffer4 = &RecorderBuffer4[0];  //Tail pointer for the DMCI Graph4
 int * RecBuffUpperLimit = RecorderBuffer4 + DATA_BUFFER_SIZE -1;    //Buffer Recorder Upper Limit
 typedef struct DMCIFlags{
             unsigned Recorder : 1;  // Flag needs to be set to start buffering data
+            unsigned StartStop : 1;
             unsigned unused : 15;  
 } DMCIFLAGS;
 DMCIFLAGS DMCIFlags;
 int SnapCount = 0;
 int SnapShotDelayCnt = 0;
 int SnapShotDelay = SNAPDELAY;
+int SpeedReference = 0;
 
 #endif // End of #ifdef RTDM
+
+int count = 0; // delay for ramping the reference velocity 
+int VelReq = 0;
 
 SMC smc1 = SMC_DEFAULTS;
 
@@ -262,6 +267,11 @@ int main ( void )
 #ifdef ENVOLTRIPPLE
     uGF.bit.EnVoltRipCo = 1;
 #endif
+    
+#ifdef RTDM
+	DMCIFlags.StartStop = 0;
+	DMCIFlags.Recorder = 0;
+#endif
 
     while(1)
     {
@@ -292,6 +302,15 @@ int main ( void )
 
         if(!uGF.bit.RunMotor)
         {
+#ifdef DMCI_DEMO
+            // Initialize current offset compensation
+            while(!DMCIFlags.StartStop)	// wait here until user starts motor 
+            {                          // with DMCI
+#ifdef RTDM
+               RTDM_ProcessMsgs();
+#endif
+            }
+#else
             // Initialize current offset compensation
             while(!pinButton1)                  //wait here until button 1 is pressed 
             {
@@ -299,7 +318,8 @@ int main ( void )
                 RTDM_ProcessMsgs();
 #endif
             }
-            while(pinButton1) { }               //when button 1 is released 
+            while(pinButton1) { }               //when button 1 is released
+#endif
             SetupParm();
             uGF.bit.RunMotor = 1;               //then start motor
         }
@@ -323,8 +343,14 @@ int main ( void )
                 {
                     break;
                 }
-                
-                  // Button 1 starts or stops the motor
+#ifdef DMCI_DEMO
+                if(!DMCIFlags.StartStop)
+                {	
+                    uGF.bit.RunMotor = 0;
+                    break;
+                }
+#else
+                 // Button 1 starts or stops the motor
                 if(pinButton1)  
                 {
                     DebounceDelay();
@@ -348,6 +374,7 @@ int main ( void )
                         }
                     }
                 }
+#endif
                 //while running button 2 will double/half the speed
                 if(pinButton2)
                 {
@@ -382,9 +409,9 @@ int main ( void )
 
 void DoControl( void )
 {
-
+#ifndef	DMCI_DEMO
     ReadSignedADC0( &ReadADCParm );
-
+#endif
     if( uGF.bit.OpenLoop )
     {
         // OPENLOOP:    force rotating angle, and control Iq and Id
@@ -479,18 +506,46 @@ void DoControl( void )
     else
     // Closed Loop Vector Control
     {
+#if 1
         // Pressing one of the push buttons, speed reference (or torque reference
         // if enabled) will be doubled. This is done to test transient response
         // of the controllers
-        if(uGF.bit.ChangeSpeed)
+        if( ++count == SPEEDDELAY ) 
         {
-            CtrlParm.qVelRef = ReadADCParm.qADValue + Q15((OMEGA5 + OMEGA1)/2.0);
-        }
-        else
-        {
-            CtrlParm.qVelRef = (ReadADCParm.qADValue + Q15((OMEGA5 + OMEGA1)/2.0)) / 2;
-        }
+#ifdef DMCI_DEMO
+            VelReq = FracMpy(SpeedReference, DQK) + Q15((OMEGA5 + OMEGA1)/2.0);
+#else
+            VelReq = ReadADCParm.qADValue + Q15((OMEGA5 + OMEGA1)/2.0);
+#endif
 
+            if((uGF.bit.ChangeSpeed) && (CtrlParm.qVelRef <= VelReq)) // 2x speed
+            {
+                CtrlParm.qVelRef += SPEEDDELAY; 
+            }
+            else if (CtrlParm.qVelRef <= VelReq/2) //normal speed
+            {
+                CtrlParm.qVelRef += SPEEDDELAY; 
+            }
+            else 
+            {
+                CtrlParm.qVelRef -= SPEEDDELAY ; 
+            }
+            count = 0;
+        }
+#else
+        // Pressing one of the push buttons, speed reference (or torque reference
+		// if enabled) will be doubled. This is done to test transient response
+		// of the controllers
+		if(uGF.bit.ChangeSpeed)
+		{
+		    CtrlParm.qVelRef = ReadADCParm.qADValue + Q15((OMEGA5 + OMEGA1)/2.0);
+		}
+		else
+		{
+		    CtrlParm.qVelRef = (ReadADCParm.qADValue + Q15((OMEGA5 + OMEGA1)/2.0)) / 2;
+		}
+#endif
+        
         // When it first transition from open to closed loop, this If statement is
         // executed
         if( uGF.bit.ChangeMode )
@@ -510,6 +565,8 @@ void DoControl( void )
             PIParmW.qdSum = (long)CtrlParm.qVqRef << 16;
             Startup_Lock = 0;
             Startup_Ramp = 0;
+            //velocity reference ramp begins at minimum speed
+			CtrlParm.qVelRef = MINSPEEDINRPM;
         }               
 
         // Check to see if new velocity information is available by comparing

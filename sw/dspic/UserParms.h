@@ -108,8 +108,8 @@
 
 //************** Slide Mode Controller Parameters **********
 
-#define SMCGAIN			0.6		// Slide Mode Controller Gain (0.0 to 0.9999)
-#define MAXLINEARSMC    0.1		// If measured current - estimated current
+#define SMCGAIN			0.85	// Slide Mode Controller Gain (0.0 to 0.9999)
+#define MAXLINEARSMC    0.005	// If measured current - estimated current
 								// is less than MAXLINEARSMC, the slide mode
 								// Controller will have a linear behavior
 								// instead of ON/OFF. Value from (0.0 to 0.9999)
@@ -131,13 +131,23 @@
 					// information in real time
 #ifdef RTDM
 #define DATA_BUFFER_SIZE 100  //Size in 16-bit Words
+#if 1
 #define SNAPDELAY	10 // In number of PWM Interrupts
 #define	SNAP1		ParkParm.qVd
 #define	SNAP2		smc1.OmegaFltred
 #define SNAP3	    ParkParm.qVq
 #define SNAP4	    DCbus
+#else
+#define SNAPDELAY	5 // In number of PWM Interrupts
+#define	SNAP1		ParkParm.qIa
+#define	SNAP2		ParkParm.qIq
+#define SNAP3	    smc1.OmegaFltred
+#define SNAP4	    smc1.Theta
+#endif
 #endif
 
+#define SPEEDDELAY 10 // Delay for the speed ramp.
+					  // Necessary for the PI control to work properly at high speeds.
 //*************** Optional Modes **************
 //#define TORQUEMODE
 //#define ENVOLTRIPPLE	// To use DC BUS ripple compensation with dsPIC33FJ256MC710
@@ -147,22 +157,22 @@
 //************** PI Coefficients **************
 
 //******** D Control Loop Coefficients *******
-#define     DKP        Q15(0.01)
-#define     DKI        Q15(0.005)
+#define     DKP        Q15(0.05)
+#define     DKI        Q15(0.01)
 #define     DKC        Q15(0.99999)
-#define     DOUTMAX    Q15(0.95)
+#define     DOUTMAX    Q15(0.99999)
 
 //******** Q Control Loop Coefficients *******
 #define     QKP        Q15(0.01)
 #define     QKI        Q15(0.005)
 #define     QKC        Q15(0.99999)
-#define     QOUTMAX    Q15(0.95)
+#define     QOUTMAX    Q15(0.99999)
 
 //*** Velocity Control Loop Coefficients *****
-#define     WKP        Q15(0.1)
-#define     WKI        Q15(0.005)
+#define     WKP        Q15(0.12)
+#define     WKI        Q15(0.01)
 #define     WKC        Q15(0.99999)
-#define     WOUTMAX    Q15(0.625)
+#define     WOUTMAX    Q15(0.95)
 
 //************** ADC Scaling **************
 // Scaling constants: Determined by calibration or hardware design. 

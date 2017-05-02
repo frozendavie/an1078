@@ -102,6 +102,11 @@ typedef SMC *SMC_handle;
 #define OMEGAFIELDWK	(float)(FIELDWEAKSPEEDRPM * LOOPTIMEINSEC * \
                 		IRP_PERCALC * POLEPAIRS * 2.0 / 60.0)
 
+#define OMEGANOMINAL	(float)(NOMINALSPEEDINRPM * LOOPTIMEINSEC * \
+                		IRP_PERCALC * POLEPAIRS * 2.0 / 60.0)
+#define OMEGAFIELDWK	(float)(FIELDWEAKSPEEDRPM * LOOPTIMEINSEC * \
+                		IRP_PERCALC * POLEPAIRS * 2.0 / 60.0)
+
 #define THETA0 (float)(THETA_AT_SPEED0 * 180.0 / 32768.0)
 #define THETA1 (float)(THETA_AT_SPEED1 * 180.0 / 32768.0)
 #define THETA2 (float)(THETA_AT_SPEED2 * 180.0 / 32768.0)

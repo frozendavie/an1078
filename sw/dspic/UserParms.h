@@ -38,7 +38,7 @@
 #define LOCKTIMEINSEC  0.25		// Initial rotor lock time in seconds
 								// Make sure LOCKTIMEINSEC*(1.0/LOOPTIMEINSEC)
 								// is less than 65535.
-#define OPENLOOPTIMEINSEC 5.0	// Open loop time in seconds. This is the time that
+#define OPENLOOPTIMEINSEC 2.0	// Open loop time in seconds. This is the time that
 								// will take from stand still to closed loop.
 #define INITIALTORQUE	1.0		// Initial Torque demand in Amps.
 								// Enter initial torque demand in Amps using REFINAMPS() 
@@ -108,8 +108,8 @@
 
 //************** Slide Mode Controller Parameters **********
 
-#define SMCGAIN			0.85	// Slide Mode Controller Gain (0.0 to 0.9999)
-#define MAXLINEARSMC    0.005	// If measured current - estimated current
+#define SMCGAIN			0.6     // Slide Mode Controller Gain (0.0 to 0.9999)
+#define MAXLINEARSMC    0.1 	// If measured current - estimated current
 								// is less than MAXLINEARSMC, the slide mode
 								// Controller will have a linear behavior
 								// instead of ON/OFF. Value from (0.0 to 0.9999)
@@ -158,22 +158,22 @@
 //************** PI Coefficients **************
 
 //******** D Control Loop Coefficients *******
-#define     DKP        Q15(0.05)
-#define     DKI        Q15(0.01)
+#define     DKP        Q15(0.01)
+#define     DKI        Q15(0.005)
 #define     DKC        Q15(0.99999)
-#define     DOUTMAX    Q15(0.99999)
+#define     DOUTMAX    Q15(0.95)
 
 //******** Q Control Loop Coefficients *******
 #define     QKP        Q15(0.01)
 #define     QKI        Q15(0.005)
 #define     QKC        Q15(0.99999)
-#define     QOUTMAX    Q15(0.99999)
+#define     QOUTMAX    Q15(0.95)
 
 //*** Velocity Control Loop Coefficients *****
-#define     WKP        Q15(0.12)
-#define     WKI        Q15(0.01)
+#define     WKP        Q15(0.1)
+#define     WKI        Q15(0.005)
 #define     WKC        Q15(0.99999)
-#define     WOUTMAX    Q15(0.95)
+#define     WOUTMAX    Q15(0.625)
 
 //************** ADC Scaling **************
 // Scaling constants: Determined by calibration or hardware design. 

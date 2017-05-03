@@ -287,7 +287,7 @@ int main ( void )
         if( SetupParm() )
         {
             // Error
-            uGF.bit.RunMotor=0;
+            uGF.bit.RunMotor = 0;
             return;
         }
         

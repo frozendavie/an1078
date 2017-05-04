@@ -140,13 +140,13 @@ Data Memory  [Origin = 0x800, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x4a  (74)
-.ndata                       0x84a                   0            0x12  (18)
-.bss                         0x85c                   0           0x408  (1032)
-.data                        0xc64                   0            0x28  (40)
-_04F01600590994fd           0x47f8                   0             0x8  (8)
+.nbss                        0x800                   0            0x48  (72)
+.ndata                       0x848                   0            0x12  (18)
+.bss                         0x85a                   0           0x408  (1032)
+.data                        0xc62                   0            0x28  (40)
+_04E38600590ad9bb           0x47f8                   0             0x8  (8)
 
-                 Total data memory used (bytes):          0x494  (1172) 7%
+                 Total data memory used (bytes):          0x492  (1170) 7%
 
 
 Dynamic Memory Usage
@@ -154,9 +154,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0xc8c                              0x3b6c  (15212)
+stack                        0xc8a                              0x3b6e  (15214)
 
-                 Maximum dynamic memory (bytes):         0x3b6c  (15212)
+                 Maximum dynamic memory (bytes):         0x3b6e  (15214)
 
 
 External Symbols in Data Memory (by address):
@@ -164,110 +164,110 @@ External Symbols in Data Memory (by address):
                     0x0800                  _SVGenParm
                     0x0808                  _MeasCurrParm
                     0x0810                  _DMCIFlags
-                    0x0814                  _SnapCount
-                    0x0816                  _SnapShotDelayCnt
-                    0x0818                  _SpeedReference
-                    0x081a                  _count
-                    0x081c                  _VelReq
-                    0x081e                  _Startup_Ramp
-                    0x0822                  _Startup_Lock
-                    0x0824                  _uGF
-                    0x0826                  _ReadADCParm
-                    0x082a                  _iADCisrCnt
-                    0x082c                  _PrevTheta
-                    0x082e                  _AccumTheta
-                    0x0830                  _AccumThetaCnt
-                    0x0832                  _qVdSquared
-                    0x0834                  _DCbus
-                    0x0836                  _TargetDCbus
-                    0x0838                  _Theta_error
-                    0x083a                  _RTDMRxBufferStartMsgPointer
-                    0x083c                  _RTDMRxBufferEndMsgPointer
-                    0x083e                  _RTDMcrcTemp
-                    0x0840                  _RTDMcrcTempH
-                    0x0842                  _RTDMcrcTempL
-                    0x0844                  _RTDMFlags
-                    0x0846                  _RTDM_UART_MODE_VALUE
-                    0x0848                  _RTDM_UART_STA_VALUE
-                    0x084a                  _PtrRecBuffer1
-                    0x084c                  _PtrRecBuffer2
-                    0x084e                  _PtrRecBuffer3
-                    0x0850                  _PtrRecBuffer4
-                    0x0852                  _RecBuffUpperLimit
-                    0x0854                  _SnapShotDelay
-                    0x0856                  _RTDMRxBufferLoLimit
-                    0x0858                  _RTDMRxBufferHiLimit
-                    0x085a                  _RTDMRxBufferIndex
-                    0x085c                  _MotorParm
-                    0x0862                  _CtrlParm
-                    0x0868                  _ParkParm
-                    0x0888                  _RecorderBuffer1
-                    0x0950                  _RecorderBuffer2
-                    0x0a18                  _RecorderBuffer3
-                    0x0ae0                  _RecorderBuffer4
-                    0x0ba8                  _smc1
-                    0x0bda                  _PIParmD
-                    0x0bee                  _PIParmQ
-                    0x0c02                  _PIParmW
-                    0x0c16                  _FdWeakParm
-                    0x0c44                  _RTDMRxBuffer
-                    0x0c84                  _RTDMErrorFrame
+                    0x0812                  _SnapCount
+                    0x0814                  _SnapShotDelayCnt
+                    0x0816                  _SpeedReference
+                    0x0818                  _count
+                    0x081a                  _VelReq
+                    0x081c                  _Startup_Ramp
+                    0x0820                  _Startup_Lock
+                    0x0822                  _uGF
+                    0x0824                  _ReadADCParm
+                    0x0828                  _iADCisrCnt
+                    0x082a                  _PrevTheta
+                    0x082c                  _AccumTheta
+                    0x082e                  _AccumThetaCnt
+                    0x0830                  _qVdSquared
+                    0x0832                  _DCbus
+                    0x0834                  _TargetDCbus
+                    0x0836                  _Theta_error
+                    0x0838                  _RTDMRxBufferStartMsgPointer
+                    0x083a                  _RTDMRxBufferEndMsgPointer
+                    0x083c                  _RTDMcrcTemp
+                    0x083e                  _RTDMcrcTempH
+                    0x0840                  _RTDMcrcTempL
+                    0x0842                  _RTDMFlags
+                    0x0844                  _RTDM_UART_MODE_VALUE
+                    0x0846                  _RTDM_UART_STA_VALUE
+                    0x0848                  _PtrRecBuffer1
+                    0x084a                  _PtrRecBuffer2
+                    0x084c                  _PtrRecBuffer3
+                    0x084e                  _PtrRecBuffer4
+                    0x0850                  _RecBuffUpperLimit
+                    0x0852                  _SnapShotDelay
+                    0x0854                  _RTDMRxBufferLoLimit
+                    0x0856                  _RTDMRxBufferHiLimit
+                    0x0858                  _RTDMRxBufferIndex
+                    0x085a                  _MotorParm
+                    0x0860                  _CtrlParm
+                    0x0866                  _ParkParm
+                    0x0886                  _RecorderBuffer1
+                    0x094e                  _RecorderBuffer2
+                    0x0a16                  _RecorderBuffer3
+                    0x0ade                  _RecorderBuffer4
+                    0x0ba6                  _smc1
+                    0x0bd8                  _PIParmD
+                    0x0bec                  _PIParmQ
+                    0x0c00                  _PIParmW
+                    0x0c14                  _FdWeakParm
+                    0x0c42                  _RTDMRxBuffer
+                    0x0c82                  _RTDMErrorFrame
                     0x47f8                  _ADCBuffer
 
 External Symbols in Data Memory (by name):
 
                     0x47f8                  _ADCBuffer
-                    0x082e                  _AccumTheta
-                    0x0830                  _AccumThetaCnt
-                    0x0862                  _CtrlParm
-                    0x0834                  _DCbus
+                    0x082c                  _AccumTheta
+                    0x082e                  _AccumThetaCnt
+                    0x0860                  _CtrlParm
+                    0x0832                  _DCbus
                     0x0810                  _DMCIFlags
-                    0x0c16                  _FdWeakParm
+                    0x0c14                  _FdWeakParm
                     0x0808                  _MeasCurrParm
-                    0x085c                  _MotorParm
-                    0x0bda                  _PIParmD
-                    0x0bee                  _PIParmQ
-                    0x0c02                  _PIParmW
-                    0x0868                  _ParkParm
-                    0x082c                  _PrevTheta
-                    0x084a                  _PtrRecBuffer1
-                    0x084c                  _PtrRecBuffer2
-                    0x084e                  _PtrRecBuffer3
-                    0x0850                  _PtrRecBuffer4
-                    0x0c84                  _RTDMErrorFrame
-                    0x0844                  _RTDMFlags
-                    0x0c44                  _RTDMRxBuffer
-                    0x083c                  _RTDMRxBufferEndMsgPointer
-                    0x0858                  _RTDMRxBufferHiLimit
-                    0x085a                  _RTDMRxBufferIndex
-                    0x0856                  _RTDMRxBufferLoLimit
-                    0x083a                  _RTDMRxBufferStartMsgPointer
-                    0x0846                  _RTDM_UART_MODE_VALUE
-                    0x0848                  _RTDM_UART_STA_VALUE
-                    0x083e                  _RTDMcrcTemp
-                    0x0840                  _RTDMcrcTempH
-                    0x0842                  _RTDMcrcTempL
-                    0x0826                  _ReadADCParm
-                    0x0852                  _RecBuffUpperLimit
-                    0x0888                  _RecorderBuffer1
-                    0x0950                  _RecorderBuffer2
-                    0x0a18                  _RecorderBuffer3
-                    0x0ae0                  _RecorderBuffer4
+                    0x085a                  _MotorParm
+                    0x0bd8                  _PIParmD
+                    0x0bec                  _PIParmQ
+                    0x0c00                  _PIParmW
+                    0x0866                  _ParkParm
+                    0x082a                  _PrevTheta
+                    0x0848                  _PtrRecBuffer1
+                    0x084a                  _PtrRecBuffer2
+                    0x084c                  _PtrRecBuffer3
+                    0x084e                  _PtrRecBuffer4
+                    0x0c82                  _RTDMErrorFrame
+                    0x0842                  _RTDMFlags
+                    0x0c42                  _RTDMRxBuffer
+                    0x083a                  _RTDMRxBufferEndMsgPointer
+                    0x0856                  _RTDMRxBufferHiLimit
+                    0x0858                  _RTDMRxBufferIndex
+                    0x0854                  _RTDMRxBufferLoLimit
+                    0x0838                  _RTDMRxBufferStartMsgPointer
+                    0x0844                  _RTDM_UART_MODE_VALUE
+                    0x0846                  _RTDM_UART_STA_VALUE
+                    0x083c                  _RTDMcrcTemp
+                    0x083e                  _RTDMcrcTempH
+                    0x0840                  _RTDMcrcTempL
+                    0x0824                  _ReadADCParm
+                    0x0850                  _RecBuffUpperLimit
+                    0x0886                  _RecorderBuffer1
+                    0x094e                  _RecorderBuffer2
+                    0x0a16                  _RecorderBuffer3
+                    0x0ade                  _RecorderBuffer4
                     0x0800                  _SVGenParm
-                    0x0814                  _SnapCount
-                    0x0854                  _SnapShotDelay
-                    0x0816                  _SnapShotDelayCnt
-                    0x0818                  _SpeedReference
-                    0x0822                  _Startup_Lock
-                    0x081e                  _Startup_Ramp
-                    0x0836                  _TargetDCbus
-                    0x0838                  _Theta_error
-                    0x081c                  _VelReq
-                    0x081a                  _count
-                    0x082a                  _iADCisrCnt
-                    0x0832                  _qVdSquared
-                    0x0ba8                  _smc1
-                    0x0824                  _uGF
+                    0x0812                  _SnapCount
+                    0x0852                  _SnapShotDelay
+                    0x0814                  _SnapShotDelayCnt
+                    0x0816                  _SpeedReference
+                    0x0820                  _Startup_Lock
+                    0x081c                  _Startup_Ramp
+                    0x0834                  _TargetDCbus
+                    0x0836                  _Theta_error
+                    0x081a                  _VelReq
+                    0x0818                  _count
+                    0x0828                  _iADCisrCnt
+                    0x0830                  _qVdSquared
+                    0x0ba6                  _smc1
+                    0x0822                  _uGF
 
 External Symbols in Program Memory (by address):
 
@@ -728,7 +728,7 @@ __FUID3
  .debug_abbrev    0x0012e1         0x14 build/default/production/_ext/1472/atan2CORDIC.o
  .debug_abbrev    0x0012f5         0xb9 build/default/production/_ext/1472/FdWeak.o
 
-.debug_line       0x000000       0x1396
+.debug_line       0x000000       0x1394
  *(.debug_line)
  .debug_line      0x000000         0x8e build/default/production/_ext/760574787/BusyUART1.o
  .debug_line      0x00008e         0x8e build/default/production/_ext/760574787/BusyUART2.o
@@ -758,11 +758,11 @@ __FUID3
  .debug_line      0x000cc2         0x4c build/default/production/_ext/1472/MeasCurr.o
  .debug_line      0x000d0e        0x24c build/default/production/_ext/1472/PMSM.o
  .debug_line      0x000f5a         0x93 build/default/production/_ext/1472/initdspic.o
- .debug_line      0x000fed         0xda build/default/production/_ext/1472/smcpos.o
- .debug_line      0x0010c7         0xd1 build/default/production/_ext/1472/smc.o
- .debug_line      0x001198        0x114 build/default/production/_ext/1472/RTDM.o
- .debug_line      0x0012ac         0x73 build/default/production/_ext/1472/atan2CORDIC.o
- .debug_line      0x00131f         0x77 build/default/production/_ext/1472/FdWeak.o
+ .debug_line      0x000fed         0xd8 build/default/production/_ext/1472/smcpos.o
+ .debug_line      0x0010c5         0xd1 build/default/production/_ext/1472/smc.o
+ .debug_line      0x001196        0x114 build/default/production/_ext/1472/RTDM.o
+ .debug_line      0x0012aa         0x73 build/default/production/_ext/1472/atan2CORDIC.o
+ .debug_line      0x00131d         0x77 build/default/production/_ext/1472/FdWeak.o
 
 .debug_frame      0x000000        0x62e
  *(.debug_frame)
@@ -2142,79 +2142,79 @@ __c30_signature
  __c30_signature
                   0x000cb3          0x6 c:/microchip/xc16/v1.31/bin/bin/../../lib\libc-elf.a(memset.eo)
 
-_04F01600590994fd
+_04E38600590ad9bb
                     0x47f8          0x8
- _04F01600590994fd
+ _04E38600590ad9bb
                     0x47f8          0x8 build/default/production/_ext/1472/PMSM.o
                     0x47f8                  _ADCBuffer
 
-.nbss               0x0800         0x4a
- .nbss              0x0800         0x3a build/default/production/_ext/1472/PMSM.o
+.nbss               0x0800         0x48
+ .nbss              0x0800         0x38 build/default/production/_ext/1472/PMSM.o
                     0x0800                  _SVGenParm
                     0x0808                  _MeasCurrParm
                     0x0810                  _DMCIFlags
-                    0x0814                  _SnapCount
-                    0x0816                  _SnapShotDelayCnt
-                    0x0818                  _SpeedReference
-                    0x081a                  _count
-                    0x081c                  _VelReq
-                    0x081e                  _Startup_Ramp
-                    0x0822                  _Startup_Lock
-                    0x0824                  _uGF
-                    0x0826                  _ReadADCParm
-                    0x082a                  _iADCisrCnt
-                    0x082c                  _PrevTheta
-                    0x082e                  _AccumTheta
-                    0x0830                  _AccumThetaCnt
-                    0x0832                  _qVdSquared
-                    0x0834                  _DCbus
-                    0x0836                  _TargetDCbus
-                    0x0838                  _Theta_error
- .nbss              0x083a         0x10 build/default/production/_ext/1472/RTDM.o
-                    0x083a                  _RTDMRxBufferStartMsgPointer
-                    0x083c                  _RTDMRxBufferEndMsgPointer
-                    0x083e                  _RTDMcrcTemp
-                    0x0840                  _RTDMcrcTempH
-                    0x0842                  _RTDMcrcTempL
-                    0x0844                  _RTDMFlags
-                    0x0846                  _RTDM_UART_MODE_VALUE
-                    0x0848                  _RTDM_UART_STA_VALUE
+                    0x0812                  _SnapCount
+                    0x0814                  _SnapShotDelayCnt
+                    0x0816                  _SpeedReference
+                    0x0818                  _count
+                    0x081a                  _VelReq
+                    0x081c                  _Startup_Ramp
+                    0x0820                  _Startup_Lock
+                    0x0822                  _uGF
+                    0x0824                  _ReadADCParm
+                    0x0828                  _iADCisrCnt
+                    0x082a                  _PrevTheta
+                    0x082c                  _AccumTheta
+                    0x082e                  _AccumThetaCnt
+                    0x0830                  _qVdSquared
+                    0x0832                  _DCbus
+                    0x0834                  _TargetDCbus
+                    0x0836                  _Theta_error
+ .nbss              0x0838         0x10 build/default/production/_ext/1472/RTDM.o
+                    0x0838                  _RTDMRxBufferStartMsgPointer
+                    0x083a                  _RTDMRxBufferEndMsgPointer
+                    0x083c                  _RTDMcrcTemp
+                    0x083e                  _RTDMcrcTempH
+                    0x0840                  _RTDMcrcTempL
+                    0x0842                  _RTDMFlags
+                    0x0844                  _RTDM_UART_MODE_VALUE
+                    0x0846                  _RTDM_UART_STA_VALUE
 
-.ndata              0x084a         0x12
- .ndata             0x084a          0xc build/default/production/_ext/1472/PMSM.o
-                    0x084a                  _PtrRecBuffer1
-                    0x084c                  _PtrRecBuffer2
-                    0x084e                  _PtrRecBuffer3
-                    0x0850                  _PtrRecBuffer4
-                    0x0852                  _RecBuffUpperLimit
-                    0x0854                  _SnapShotDelay
- .ndata             0x0856          0x6 build/default/production/_ext/1472/RTDM.o
-                    0x0856                  _RTDMRxBufferLoLimit
-                    0x0858                  _RTDMRxBufferHiLimit
-                    0x085a                  _RTDMRxBufferIndex
+.ndata              0x0848         0x12
+ .ndata             0x0848          0xc build/default/production/_ext/1472/PMSM.o
+                    0x0848                  _PtrRecBuffer1
+                    0x084a                  _PtrRecBuffer2
+                    0x084c                  _PtrRecBuffer3
+                    0x084e                  _PtrRecBuffer4
+                    0x0850                  _RecBuffUpperLimit
+                    0x0852                  _SnapShotDelay
+ .ndata             0x0854          0x6 build/default/production/_ext/1472/RTDM.o
+                    0x0854                  _RTDMRxBufferLoLimit
+                    0x0856                  _RTDMRxBufferHiLimit
+                    0x0858                  _RTDMRxBufferIndex
 
-.bss                0x085c        0x408
- .bss               0x085c        0x3ba build/default/production/_ext/1472/PMSM.o
-                    0x085c                  _MotorParm
-                    0x0862                  _CtrlParm
-                    0x0868                  _ParkParm
-                    0x0888                  _RecorderBuffer1
-                    0x0950                  _RecorderBuffer2
-                    0x0a18                  _RecorderBuffer3
-                    0x0ae0                  _RecorderBuffer4
-                    0x0ba8                  _smc1
-                    0x0bda                  _PIParmD
-                    0x0bee                  _PIParmQ
-                    0x0c02                  _PIParmW
- .bss               0x0c16         0x2e build/default/production/_ext/1472/FdWeak.o
-                    0x0c16                  _FdWeakParm
- .bss               0x0c44         0x20 build/default/production/_ext/1472/RTDM.o
-                    0x0c44                  _RTDMRxBuffer
+.bss                0x085a        0x408
+ .bss               0x085a        0x3ba build/default/production/_ext/1472/PMSM.o
+                    0x085a                  _MotorParm
+                    0x0860                  _CtrlParm
+                    0x0866                  _ParkParm
+                    0x0886                  _RecorderBuffer1
+                    0x094e                  _RecorderBuffer2
+                    0x0a16                  _RecorderBuffer3
+                    0x0ade                  _RecorderBuffer4
+                    0x0ba6                  _smc1
+                    0x0bd8                  _PIParmD
+                    0x0bec                  _PIParmQ
+                    0x0c00                  _PIParmW
+ .bss               0x0c14         0x2e build/default/production/_ext/1472/FdWeak.o
+                    0x0c14                  _FdWeakParm
+ .bss               0x0c42         0x20 build/default/production/_ext/1472/RTDM.o
+                    0x0c42                  _RTDMRxBuffer
 
-.data               0x0c64         0x28
- .data              0x0c64         0x20 build/default/production/_ext/1472/atan2CORDIC.o
- .data              0x0c84          0x8 build/default/production/_ext/1472/RTDM.o
-                    0x0c84                  _RTDMErrorFrame
+.data               0x0c62         0x28
+ .data              0x0c62         0x20 build/default/production/_ext/1472/atan2CORDIC.o
+ .data              0x0c82          0x8 build/default/production/_ext/1472/RTDM.o
+                    0x0c82                  _RTDMErrorFrame
 
 .config_JTAGEN    0xf8000e          0x2
  .config_JTAGEN

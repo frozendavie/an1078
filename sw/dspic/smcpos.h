@@ -36,29 +36,29 @@
 #include "UserParms.h"
 
 typedef struct {
-    SFRAC16 Valpha; // Input: Stationary alfa-axis stator voltage 
-    SFRAC16 Ealpha; // Variable: Stationary alfa-axis back EMF 
+    SFRAC16 Valpha; // Input: Stationary alfa-axis stator voltage
+    SFRAC16 Ealpha; // Variable: Stationary alfa-axis back EMF
     SFRAC16 EalphaFinal; // Variable: Filtered EMF for Angle calculation
-    SFRAC16 Zalpha; // Output: Stationary alfa-axis sliding control 
-    SFRAC16 Gsmopos; // Parameter: Motor dependent control gain 
-    SFRAC16 EstIalpha; // Variable: Estimated stationary alfa-axis stator current 
-    SFRAC16 Fsmopos; // Parameter: Motor dependent plant matrix 
-    SFRAC16 Vbeta; // Input: Stationary beta-axis stator voltage 
-    SFRAC16 Ebeta; // Variable: Stationary beta-axis back EMF 
+    SFRAC16 Zalpha; // Output: Stationary alfa-axis sliding control
+    SFRAC16 Gsmopos; // Parameter: Motor dependent control gain
+    SFRAC16 EstIalpha; // Variable: Estimated stationary alfa-axis stator current
+    SFRAC16 Fsmopos; // Parameter: Motor dependent plant matrix
+    SFRAC16 Vbeta; // Input: Stationary beta-axis stator voltage
+    SFRAC16 Ebeta; // Variable: Stationary beta-axis back EMF
     SFRAC16 EbetaFinal; // Variable: Filtered EMF for Angle calculation
-    SFRAC16 Zbeta; // Output: Stationary beta-axis sliding control 
-    SFRAC16 EstIbeta; // Variable: Estimated stationary beta-axis stator current 
-    SFRAC16 Ialpha; // Input: Stationary alfa-axis stator current 
-    SFRAC16 IalphaError; // Variable: Stationary alfa-axis current error                 
-    SFRAC16 Kslide; // Parameter: Sliding control gain 
-    SFRAC16 MaxSMCError; // Parameter: Maximum current error for linear SMC 
-    SFRAC16 Ibeta; // Input: Stationary beta-axis stator current 
-    SFRAC16 IbetaError; // Variable: Stationary beta-axis current error                 
-    SFRAC16 Kslf; // Parameter: Sliding control filter gain 
+    SFRAC16 Zbeta; // Output: Stationary beta-axis sliding control
+    SFRAC16 EstIbeta; // Variable: Estimated stationary beta-axis stator current
+    SFRAC16 Ialpha; // Input: Stationary alfa-axis stator current
+    SFRAC16 IalphaError; // Variable: Stationary alfa-axis current error
+    SFRAC16 Kslide; // Parameter: Sliding control gain
+    SFRAC16 MaxSMCError; // Parameter: Maximum current error for linear SMC
+    SFRAC16 Ibeta; // Input: Stationary beta-axis stator current
+    SFRAC16 IbetaError; // Variable: Stationary beta-axis current error
+    SFRAC16 Kslf; // Parameter: Sliding control filter gain
     SFRAC16 KslfFinal; // Parameter: BEMF Filter for angle calculation
     SFRAC16 FiltOmCoef; // Parameter: Filter Coef for Omega filtered calc
     SFRAC16 ThetaOffset; // Output: Offset used to compensate rotor angle
-    SFRAC16 Theta; // Output: Compensated rotor angle 
+    SFRAC16 Theta; // Output: Compensated rotor angle
     SFRAC16 Omega; // Output: Rotor speed
     SFRAC16 OmegaFltred; // Output: Filtered Rotor speed for speed PI
 } SMC;

@@ -62,26 +62,26 @@
 
 //************** Motor Parameters **************
 
-#define POLEPAIRS      	3       // Number of pole pairs 9N6P
-#define PHASERES		((float)10.25)	// Phase resistance in Ohms.
-#define PHASEIND		((float)0.00192)// Phase inductance in Henrys.
+#define POLEPAIRS      	7       // Number of pole pairs
+#define PHASERES		((float)0.11)       // Phase resistance in Ohms.
+#define PHASEIND		((float)0.000018)   // Phase inductance in Henrys.
 #define NOMINALSPEEDINRPM 3000	// Make sure NOMINALSPEEDINRPM generates a MAXOMEGA < 1.0
 								// Use this formula:
 								// MAXOMEGA = NOMINALSPEEDINRPM*SPEEDLOOPTIME*POLEPAIRS*2/60
 								// If MAXOMEGA > 1.0, reduce NOMINALSPEEDINRPM or execute
 								// speed loop faster by reducing SpeedLoopTime.
-								// Maximum position of POT will set a reference of 
+								// Maximum position of POT will set a reference of
 								// NOMINALSPEEDINRPM.
 #define MINSPEEDINRPM	500		// Minimum speed in RPM. Closed loop will operate at this
 								// speed. Open loop will transition to closed loop at
 								// this minimum speed. Minimum POT position (CCW) will set
 								// a speed reference of MINSPEEDINRPM
-#define FIELDWEAKSPEEDRPM 5500 	// Make sure FIELDWEAKSPEEDRPM generates a MAXOMEGA < 1.0
+#define FIELDWEAKSPEEDRPM 3000 	// Make sure FIELDWEAKSPEEDRPM generates a MAXOMEGA < 1.0
 								// Use this formula:
 								// MAXOMEGA = FIELDWEAKSPEEDRPM*SPEEDLOOPTIME*POLEPAIRS*2/60
 								// If MAXOMEGA > 1.0, reduce FIELDWEAKSPEEDRPM or execute
 								// speed loop faster by reducing SpeedLoopTime.
-								// Maximum position of POT will set a reference of 
+								// Maximum position of POT will set a reference of
 								// FIELDWEAKSPEEDRPM.
 /*
 // Values used to test Shinano Kenshi Motor "LA052-040E" at 24VDC input. Motor datasheet at www.shinano.com
@@ -103,7 +103,7 @@
 #define PWMFREQUENCY	20000		// PWM Frequency in Hertz
 #define DEADTIMESEC		0.000002	// Deadtime in seconds
 #define	BUTPOLLOOPTIME	0.100		// Button polling loop period in sec
-#define SPEEDLOOPFREQ	1000		// Speed loop Frequency in Hertz. This value must
+#define SPEEDLOOPFREQ	1500		// Speed loop Frequency in Hertz. This value must
 									// be an integer to avoid pre-compiler error
 
 //************** Slide Mode Controller Parameters **********
@@ -126,11 +126,12 @@
 
 //************** Real Time Data Monitor, RTDM *******************
 
-#define RTDM		// This definition enabled Real Time Data Monitor, UART interrupts
+#undef RTDM         // This definition enabled Real Time Data Monitor, UART interrupts
 					// to handle RTDM protocol, and array declarations for buffering
 					// information in real time
 #ifdef RTDM
 #define DATA_BUFFER_SIZE 100  //Size in 16-bit Words
+#define DMCI_DEMO
 #if 1
 #define SNAPDELAY	10 // In number of PWM Interrupts
 #define	SNAP1		ParkParm.qVd
@@ -145,7 +146,6 @@
 #define SNAP4	    smc1.Theta
 #endif
 #endif
-#define DMCI_DEMO
 
 #define SPEEDDELAY 10 // Delay for the speed ramp.
 					  // Necessary for the PI control to work properly at high speeds.

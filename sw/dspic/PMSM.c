@@ -127,7 +127,7 @@ int * RecBuffUpperLimit = RecorderBuffer4 + DATA_BUFFER_SIZE -1;    //Buffer Rec
 typedef struct DMCIFlags{
             unsigned Recorder : 1;  // Flag needs to be set to start buffering data
             unsigned StartStop : 1;
-            unsigned unused : 15;  
+            unsigned unused : 14;  
 } DMCIFLAGS;
 DMCIFLAGS DMCIFlags;
 int SnapCount = 0;

@@ -43,10 +43,12 @@ void SetupPorts( void )
 
     // ============= Port A ==============
     LATA  = 0x0000;
+    PORTA = 0x0000;
     TRISA = 0xFFFF;
 
     // ============= Port B ==============
     LATB  = 0x0000;
+    PORTB = 0x0000;
     TRISB = 0xFFFF;
     
     #ifdef RTDM

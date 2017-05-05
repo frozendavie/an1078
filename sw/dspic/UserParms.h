@@ -38,7 +38,7 @@
 #define LOCKTIMEINSEC  0.25		// Initial rotor lock time in seconds
 								// Make sure LOCKTIMEINSEC*(1.0/LOOPTIMEINSEC)
 								// is less than 65535.
-#define OPENLOOPTIMEINSEC 2.0	// Open loop time in seconds. This is the time that
+#define OPENLOOPTIMEINSEC 5.0	// Open loop time in seconds. This is the time that
 								// will take from stand still to closed loop.
 #define INITIALTORQUE	1.0		// Initial Torque demand in Amps.
 								// Enter initial torque demand in Amps using REFINAMPS() 
@@ -120,7 +120,7 @@
 //************** Hardware Parameters ****************
 
 #define RSHUNT			0.025	// Value in Ohms of shunt resistors used.
-#define DIFFAMPGAIN		10		// Gain of differential amplifier.
+#define DIFFAMPGAIN		20		// Gain of differential amplifier.
 #define VDD				3.3		// VDD voltage, only used to convert torque
 								// reference from Amps to internal variables
 
